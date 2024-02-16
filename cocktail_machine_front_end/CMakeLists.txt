@@ -23,6 +23,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(cocktail_machine_front_end
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        config_window.h config_window.cpp config_window.ui
+        system_status.h system_status.cpp system_status.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET cocktail_machine_front_end APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

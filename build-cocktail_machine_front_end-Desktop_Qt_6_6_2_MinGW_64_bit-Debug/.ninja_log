@@ -1,0 +1,10 @@
+# ninja log v5
+22	728	7297966934129551	cocktail_machine_front_end_autogen/timestamp	174aa05e5dc4ca9
+22	728	7297966934129551	cocktail_machine_front_end_autogen/mocs_compilation.cpp	174aa05e5dc4ca9
+739	2681	7297966954376428	CMakeFiles/cocktail_machine_front_end.dir/config_window.cpp.obj	a84d26bdc02bc81b
+729	2606	7297966953632476	CMakeFiles/cocktail_machine_front_end.dir/main.cpp.obj	f08c8fcc3262e6ab
+22	728	7297966934129551	C:/Users/Ethan Lavis/Desktop/School/Embedded Systems/team project/build-cocktail_machine_front_end-Desktop_Qt_6_6_2_MinGW_64_bit-Debug/cocktail_machine_front_end_autogen/timestamp	174aa05e5dc4ca9
+22	728	7297966934129551	C:/Users/Ethan Lavis/Desktop/School/Embedded Systems/team project/build-cocktail_machine_front_end-Desktop_Qt_6_6_2_MinGW_64_bit-Debug/cocktail_machine_front_end_autogen/mocs_compilation.cpp	174aa05e5dc4ca9
+734	2632	7297966953890625	CMakeFiles/cocktail_machine_front_end.dir/cocktail_machine_front_end_autogen/mocs_compilation.cpp.obj	2dc709649f07a730
+744	2957	7297966957130786	CMakeFiles/cocktail_machine_front_end.dir/mainwindow.cpp.obj	b0a2050ad2ea6b0e
+2957	3255	7297966960050796	cocktail_machine_front_end.exe	c46d7e5eb3f10ce

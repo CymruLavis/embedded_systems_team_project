@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-3c49f5f42cd92925d148.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "cocktail_machine_front_end",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "cocktail_machine_front_end::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cocktail_machine_front_end-Debug-3d6393e27df066ed16a9.json",
+					"name" : "cocktail_machine_front_end",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cocktail_machine_front_end_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cocktail_machine_front_end_autogen-Debug-3c82e1136c8cde3e3700.json",
+					"name" : "cocktail_machine_front_end_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cocktail_machine_front_end_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cocktail_machine_front_end_autogen_timestamp_deps-Debug-718e654fc606160f1a53.json",
+					"name" : "cocktail_machine_front_end_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Ethan Lavis/Desktop/School/Embedded Systems/team project/build-cocktail_machine_front_end-Desktop_Qt_6_6_2_MinGW_64_bit-Debug",
+		"source" : "C:/Users/Ethan Lavis/Desktop/School/Embedded Systems/team project/cocktail_machine_front_end"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
