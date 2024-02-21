@@ -1,9 +1,11 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+// inclue backend.cpp
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
+    // create object of sql connection
 {
     ui->setupUi(this);
 }
@@ -33,5 +35,7 @@ void MainWindow::on_btn_to_config_clicked()
     hide();
     configureWindow = new config_window(this);
     configureWindow->show();
+    // query for this to happen
+    // object.function()
 }
 

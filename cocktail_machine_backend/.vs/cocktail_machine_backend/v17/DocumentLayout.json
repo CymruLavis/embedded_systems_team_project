@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Ethan Lavis\\Desktop\\School\\Embedded Systems\\team project\\cocktail_machine_backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DA9CA2DC-2222-4BC9-8EF2-3A9F0337991F}|cocktail_machine_backend\\cocktail_machine_backend.vcxproj|C:\\Users\\Ethan Lavis\\Desktop\\School\\Embedded Systems\\team project\\cocktail_machine_backend\\cocktail_machine_backend\\backend.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DA9CA2DC-2222-4BC9-8EF2-3A9F0337991F}|cocktail_machine_backend\\cocktail_machine_backend.vcxproj|solutionrelative:cocktail_machine_backend\\backend.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 250,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "backend.cpp",
+              "DocumentMoniker": "C:\\Users\\Ethan Lavis\\Desktop\\School\\Embedded Systems\\team project\\cocktail_machine_backend\\cocktail_machine_backend\\backend.cpp",
+              "RelativeDocumentMoniker": "cocktail_machine_backend\\backend.cpp",
+              "ToolTip": "C:\\Users\\Ethan Lavis\\Desktop\\School\\Embedded Systems\\team project\\cocktail_machine_backend\\cocktail_machine_backend\\backend.cpp",
+              "RelativeToolTip": "cocktail_machine_backend\\backend.cpp",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAAAEAAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-02-19T21:44:14.134Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
