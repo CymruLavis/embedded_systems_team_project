@@ -1,2 +1,0 @@
-﻿  backend.cpp
-C:\Users\Ethan Lavis\Desktop\School\Embedded Systems\team project\cocktail_machine_backend\cocktail_machine_backend\backend.cpp(2,10): error C1083: Cannot open include file: 'mysql_connection.h': No such file or directory
