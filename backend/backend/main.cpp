@@ -3,16 +3,17 @@
 #include <sstream>
 #include <vector>
 #include <string>
-#include <filesystem>
+//#include <filesystem>
+#include <Windows.h>
 #include <unordered_set>
 
 using namespace std;
 
-class data {
+class Data {
 public:
 	vector<vector<string>> df_menu;
 	
-	data() {
+	Data() {
 		df_menu = getData(getFilePath());
 	}
 	string getFilePath() {
@@ -46,27 +47,34 @@ public:
 
 		for (const auto& row : this->df_menu) {
 			for (size_t i = 1; i < row.size()-2; i += 2) {
-				// Check if the item is already in the set
-				if (i == 2 || i == 4 || i == 6 || i == 8 || i == 10 || i == 12) {
-					if (ingredients.find(row[i]) == ingredients.end()) {
-						// If not found, add it to the set and result vector
-						ingredients.insert(row[i]);
-						results.push_back(row[i]);
-					}
+				// Check if the item is already in the set			
+				if (ingredients.find(row[i]) == ingredients.end() && row[i] != "N/A") {
+					// If not found, add it to the set and result vector
+					ingredients.insert(row[i]);
+					results.push_back(row[i]);
 				}
 				
 			}
 		}
-
 		return results;
 
 	}
 	vector<vector<string>> getDrinkDescription(string drink) {
+		vector<string> drink_list = this->getWholeDrinkList();
+
 	}
 	vector<vector<string>> getRecipe(string drink) {
 
 	}
-	vector<vector<string>> getDrinkList(vector<string> ingredients) {
+	vector<string> getActiveDrinkList(vector<string> ingredients) {
+	}
+	vector<string> getWholeDrinkList() {
+		vector<string> drinkList;
+		// strange character ??? to fix 
+		for (const auto& row : this->df_menu) {
+			drinkList.push_back(row[0]);
+		}
+		return drinkList;
 	}
 };
 class Ingredient {
@@ -89,7 +97,17 @@ public:
 	}
 };
 
-int main() {
+void printData(vector<string> data);
 
-	return 0;
+int main() {
+	Data* conn = new Data();
+	vector<string> data = conn->getWholeDrinkList();
+	cout << "hello" << endl;
+	printData(data);
+}
+
+void printData(const vector<string> data) {
+	for (const string& str : data) {
+		cout << str << endl;
+	}
 }
