@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Ethan Lavis\\Desktop\\School\\Embedded Systems\\team project\\backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4A9E6B8C-ED03-4FBA-B34C-1695F7812E5E}|backend\\backend.vcxproj|C:\\Users\\Ethan Lavis\\Desktop\\School\\Embedded Systems\\team project\\backend\\backend\\LightgateClass.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4A9E6B8C-ED03-4FBA-B34C-1695F7812E5E}|backend\\backend.vcxproj|solutionrelative:backend\\LightgateClass.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A9E6B8C-ED03-4FBA-B34C-1695F7812E5E}|backend\\backend.vcxproj|C:\\Users\\Ethan Lavis\\Desktop\\School\\Embedded Systems\\team project\\backend\\backend\\MotorClass.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4A9E6B8C-ED03-4FBA-B34C-1695F7812E5E}|backend\\backend.vcxproj|solutionrelative:backend\\MotorClass.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A9E6B8C-ED03-4FBA-B34C-1695F7812E5E}|backend\\backend.vcxproj|C:\\Users\\Ethan Lavis\\Desktop\\School\\Embedded Systems\\team project\\backend\\backend\\SensorClass.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4A9E6B8C-ED03-4FBA-B34C-1695F7812E5E}|backend\\backend.vcxproj|solutionrelative:backend\\SensorClass.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4A9E6B8C-ED03-4FBA-B34C-1695F7812E5E}|backend\\backend.vcxproj|C:\\Users\\Ethan Lavis\\Desktop\\School\\Embedded Systems\\team project\\backend\\backend\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4A9E6B8C-ED03-4FBA-B34C-1695F7812E5E}|backend\\backend.vcxproj|solutionrelative:backend\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -19,12 +31,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "LightgateClass.cpp",
+              "DocumentMoniker": "C:\\Users\\Ethan Lavis\\Desktop\\School\\Embedded Systems\\team project\\backend\\backend\\LightgateClass.cpp",
+              "RelativeDocumentMoniker": "backend\\LightgateClass.cpp",
+              "ToolTip": "C:\\Users\\Ethan Lavis\\Desktop\\School\\Embedded Systems\\team project\\backend\\backend\\LightgateClass.cpp",
+              "RelativeToolTip": "backend\\LightgateClass.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-02-28T19:23:38.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MotorClass.cpp",
+              "DocumentMoniker": "C:\\Users\\Ethan Lavis\\Desktop\\School\\Embedded Systems\\team project\\backend\\backend\\MotorClass.cpp",
+              "RelativeDocumentMoniker": "backend\\MotorClass.cpp",
+              "ToolTip": "C:\\Users\\Ethan Lavis\\Desktop\\School\\Embedded Systems\\team project\\backend\\backend\\MotorClass.cpp",
+              "RelativeToolTip": "backend\\MotorClass.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-02-28T19:23:21.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SensorClass.cpp",
+              "DocumentMoniker": "C:\\Users\\Ethan Lavis\\Desktop\\School\\Embedded Systems\\team project\\backend\\backend\\SensorClass.cpp",
+              "RelativeDocumentMoniker": "backend\\SensorClass.cpp",
+              "ToolTip": "C:\\Users\\Ethan Lavis\\Desktop\\School\\Embedded Systems\\team project\\backend\\backend\\SensorClass.cpp",
+              "RelativeToolTip": "backend\\SensorClass.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-02-28T19:23:06.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\Ethan Lavis\\Desktop\\School\\Embedded Systems\\team project\\backend\\backend\\main.cpp",
               "RelativeDocumentMoniker": "backend\\main.cpp",
               "ToolTip": "C:\\Users\\Ethan Lavis\\Desktop\\School\\Embedded Systems\\team project\\backend\\backend\\main.cpp",
               "RelativeToolTip": "backend\\main.cpp",
-              "ViewState": "AQIAAGYAAAAAAAAAAAAiwEQAAABAAAAA",
+              "ViewState": "AQIAAIAAAAAAAAAAAAAAAIoAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-02-26T20:10:17.043Z",
               "EditorCaption": ""
