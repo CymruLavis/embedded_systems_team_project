@@ -1,0 +1,3 @@
+/home/admin/Desktop/cocktail_machine/CMakeFiles/rebuild_cache.dir
+/home/admin/Desktop/cocktail_machine/CMakeFiles/edit_cache.dir
+/home/admin/Desktop/cocktail_machine/CMakeFiles/cocktail_machine.dir
