@@ -10,6 +10,7 @@ public:
 	int pin;
 	int state;
 	
+	LimitSwitch(int pin);
 	int getPin();
 	void setPin(int p);
 	int getState();

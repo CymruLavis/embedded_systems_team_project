@@ -3,6 +3,9 @@
 
 using namespace std;
 
+LimitSwitch::LimitSwitch(int pin){
+	this->setPin(pin);
+}
 int LimitSwitch::getPin(){
 	return this->pin;
 }
