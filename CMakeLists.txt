@@ -4,4 +4,4 @@ project(cocktail_machine)
 include_directories(include)
 include_directories(src)
 
-add_executable(cocktail_machine main.cpp)
+add_executable(cocktail_machine main.cpp src/DataClass.cpp)

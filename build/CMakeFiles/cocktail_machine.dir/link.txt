@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/cocktail_machine.dir/main.cpp.o -o cocktail_machine 
+/usr/bin/c++ -rdynamic CMakeFiles/cocktail_machine.dir/main.cpp.o CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o -o cocktail_machine 
