@@ -1,18 +1,11 @@
-Commands for using git bash.
+SMART DRINKER COCKTAIL MACHINE PROJECT  
+![Logo]()
 
-git add. -->adds all local files to staging area
-git add <file name> --> adds selected files to staging area
-git commit -m "commit comment" --> commits to the repo 
+This is our team project for embedded systems at the University of Glasgow with team members:
+Ethan Lavis
+Daraigh O'Toole Eglington
+Joshua Varghese
+Roykeane Syangu
 
-git status --> checks the status of files in the staging area
-git push --> push local repo to remote repo
-git push -u <name> <branch> --> pushes changes to remote repo
-git pull --> pulls changes from remote repo to local repo
-git clone --> copies a remote repo
+The goal of this project is to create an automcatic cocktail dispensor using real time embedded programming on the raspberry pi
 
-git rm --chached <file name> --> removes a file from the repo
-
-git branch <name> --> adds a new branch
-git checkout <branch name> --> changes your location to a branch
-git merge <branch> --> merges branch to master branch
-git remote add <name> <url> --> adds a new remote repo
