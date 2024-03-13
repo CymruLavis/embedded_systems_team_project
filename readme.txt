@@ -9,3 +9,4 @@ Roykeane Syangu
 
 The goal of this project is to create an automcatic cocktail dispensor using real time embedded programming on the raspberry pi
 
+![CAD]()
