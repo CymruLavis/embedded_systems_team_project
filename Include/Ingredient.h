@@ -2,6 +2,7 @@
 #define INGREDIENT_H
 
 #include <iostream>
+#include <vector> 
 
 using namespace std;
 
@@ -11,7 +12,6 @@ public:
 	int fillLevel;
 	int position;
 	
-	Ingredient(string ing, int pos);
 	string getIngredient();
 	void setIngredient(string ingred);
 

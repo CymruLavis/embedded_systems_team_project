@@ -37,6 +37,8 @@ public:
 	
 	vector<string> getWholeDrinkList();
 	string indexToDrink(int drinkIndex);
+	int ingredientToIndex(string ingredient);
+
 };
 
 #endif

@@ -13,8 +13,7 @@ public:
 	vector<string> indexes;
 	vector<vector<string>> df;
 	
-	vector<string>  getIngredients(vector<vector<string>> data);
-	vector<string>  getIndexes(vector<vector<string>> data);
+	vector<string>  getCol(vector<vector<string>> data, int colIndex);
 	
 };
 

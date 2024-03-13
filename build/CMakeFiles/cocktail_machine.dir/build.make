@@ -97,19 +97,51 @@ CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/Desktop/cocktail_machine/src/DataClass.cpp -o CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.s
 
+CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o: CMakeFiles/cocktail_machine.dir/flags.make
+CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o: /home/admin/Desktop/cocktail_machine/src/IngredientIndexClass.cpp
+CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o: CMakeFiles/cocktail_machine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin/Desktop/cocktail_machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o -MF CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o.d -o CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o -c /home/admin/Desktop/cocktail_machine/src/IngredientIndexClass.cpp
+
+CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin/Desktop/cocktail_machine/src/IngredientIndexClass.cpp > CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.i
+
+CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/Desktop/cocktail_machine/src/IngredientIndexClass.cpp -o CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.s
+
+CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o: CMakeFiles/cocktail_machine.dir/flags.make
+CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o: /home/admin/Desktop/cocktail_machine/src/IngredientClass.cpp
+CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o: CMakeFiles/cocktail_machine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin/Desktop/cocktail_machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o -MF CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o.d -o CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o -c /home/admin/Desktop/cocktail_machine/src/IngredientClass.cpp
+
+CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin/Desktop/cocktail_machine/src/IngredientClass.cpp > CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.i
+
+CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/Desktop/cocktail_machine/src/IngredientClass.cpp -o CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.s
+
 # Object files for target cocktail_machine
 cocktail_machine_OBJECTS = \
 "CMakeFiles/cocktail_machine.dir/main.cpp.o" \
-"CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o"
+"CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o" \
+"CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o" \
+"CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o"
 
 # External object files for target cocktail_machine
 cocktail_machine_EXTERNAL_OBJECTS =
 
 cocktail_machine: CMakeFiles/cocktail_machine.dir/main.cpp.o
 cocktail_machine: CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o
+cocktail_machine: CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o
+cocktail_machine: CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o
 cocktail_machine: CMakeFiles/cocktail_machine.dir/build.make
 cocktail_machine: CMakeFiles/cocktail_machine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/admin/Desktop/cocktail_machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable cocktail_machine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/admin/Desktop/cocktail_machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable cocktail_machine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cocktail_machine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -177,6 +177,54 @@ src/DataClass.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.s
 .PHONY : src/DataClass.cpp.s
 
+src/IngredientClass.o: src/IngredientClass.cpp.o
+.PHONY : src/IngredientClass.o
+
+# target to build an object file
+src/IngredientClass.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o
+.PHONY : src/IngredientClass.cpp.o
+
+src/IngredientClass.i: src/IngredientClass.cpp.i
+.PHONY : src/IngredientClass.i
+
+# target to preprocess a source file
+src/IngredientClass.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.i
+.PHONY : src/IngredientClass.cpp.i
+
+src/IngredientClass.s: src/IngredientClass.cpp.s
+.PHONY : src/IngredientClass.s
+
+# target to generate assembly for a file
+src/IngredientClass.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.s
+.PHONY : src/IngredientClass.cpp.s
+
+src/IngredientIndexClass.o: src/IngredientIndexClass.cpp.o
+.PHONY : src/IngredientIndexClass.o
+
+# target to build an object file
+src/IngredientIndexClass.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o
+.PHONY : src/IngredientIndexClass.cpp.o
+
+src/IngredientIndexClass.i: src/IngredientIndexClass.cpp.i
+.PHONY : src/IngredientIndexClass.i
+
+# target to preprocess a source file
+src/IngredientIndexClass.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.i
+.PHONY : src/IngredientIndexClass.cpp.i
+
+src/IngredientIndexClass.s: src/IngredientIndexClass.cpp.s
+.PHONY : src/IngredientIndexClass.s
+
+# target to generate assembly for a file
+src/IngredientIndexClass.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.s
+.PHONY : src/IngredientIndexClass.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +240,12 @@ help:
 	@echo "... src/DataClass.o"
 	@echo "... src/DataClass.i"
 	@echo "... src/DataClass.s"
+	@echo "... src/IngredientClass.o"
+	@echo "... src/IngredientClass.i"
+	@echo "... src/IngredientClass.s"
+	@echo "... src/IngredientIndexClass.o"
+	@echo "... src/IngredientIndexClass.i"
+	@echo "... src/IngredientIndexClass.s"
 .PHONY : help
 
 

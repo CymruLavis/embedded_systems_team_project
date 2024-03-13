@@ -1,5 +1,6 @@
 #include "../Include/Data.h"
 #include "../Include/Indexes.h"
+#include "../Include/Ingredient.h"
 
 #include <iostream>
 #include <fstream>
@@ -17,8 +18,8 @@ using namespace std;
 Data::Data(){
 	this->df_menu = getData(getFilePath());
 	this->ingredient_indexes.df = getData(getIndexFilePath());
-	//this->ingredient_indexes.ingredients = this->ingredient_indexes.getIngredients(this->ingredient_indexes.df);
-	//this->ingredient_indexes.indexes = this->ingredient_indexes.getIndexes(this->ingredient_indexes.df);
+	this->ingredient_indexes.ingredients = this->ingredient_indexes.getCol(this->ingredient_indexes.df,0);
+	this->ingredient_indexes.indexes = this->ingredient_indexes.getCol(this->ingredient_indexes.df,1);
 
 }
 
@@ -70,21 +71,6 @@ vector<vector<string>> Data::getData(string filePath) {
 // Gets all unique ingredients in the menu --> to be used when configuring the carousel
 vector<string> Data::getIngredients() { 
 	return this->ingredient_indexes.ingredients;
-	//unordered_set<string> ingredients;
-	//vector<string> results;
-	//for (const auto& row : this->df_menu) {
-	//	for (size_t i = 1; i < row.size()-2; i += 2) {
-	//		// Check if the item is already in the set			
-	//		if (ingredients.find(row[i]) == ingredients.end() && row[i] != "N/A") {
-	//			// If not found, add it to the set and result vector
-	//			ingredients.insert(row[i]);
-	//			results.push_back(row[i]);
-	//		}
-	//		
-	//	}
-	//}
-	//return results;
-
 }
 
 // returns the string for a selected drink --> to be inputed into the UI textbox when a drink is selected
@@ -101,6 +87,33 @@ string Data::getDrinkDescription(string drink) {
 }
 
 vector<vector<string>> Data::getRecipe(string drink) {
+	vector<string> drink_row;
+	vector<int> ings;
+	vector<int> quantity;
+	vector<int> pos;
+	//"N/A" = 4
+	for(const auto& row: this->df_menu){
+		if(row[0] == drink){
+			drink_row = row;
+			break;
+		}
+	}
+
+	for(int i = 1; i < drink_row.size()-1; i++){
+		if(i>12){
+			break;
+		}
+		else{
+			if (i % 2 == 0) {
+				quantity.push_back(drink_row[i]);
+			}
+			else{
+				ings.push_back(drink_row[i]);
+			}
+	}
+
+
+
 	// Need position of ingredients
 	// make queue of positions to visit
 	// make quantities of how many times the drink needs to dispense 
@@ -152,4 +165,14 @@ vector<string> Data::getWholeDrinkList() {
 
 string Data::indexToDrink(int drinkIndex) {
 	return this->ingredient_indexes.ingredients[drinkIndex];
+}
+int Data::ingredientToIndex(string drink) {
+	vector<string> vec = Data::ingredient_indexes.ingredients;
+
+	for (size_t i = 0; i < vec.size(); ++i) {
+        if (vec[i] == drink) {
+            return i; // Found the target string, return its index
+        }
+    }
+    return -1;
 }

@@ -5,17 +5,10 @@
 #include <vector>
 #include <string>
 
-vector<string> IngredientIndexes::getIngredients(vector<vector<string>> data) {
+vector<string> IngredientIndexes::getCol(vector<vector<string>> data, int colIndex) {
 	vector<string> thisList;
 	for (const auto& row : data) {
-		thisList.push_back(row[0]);
-	}
-	return thisList;
-}
-vector<string> IngredientIndexes::getIndexes(vector<vector<string>> data) {
-	vector<string> thisList;
-	for (const auto& row : data) {
-		thisList.push_back(row[1]);
+		thisList.push_back(row[colIndex]);
 	}
 	return thisList;
 }
