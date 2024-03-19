@@ -2,6 +2,7 @@
 #define DATA_H
 
 #include "Indexes.h"
+#include "SystemConfig.h"
 
 #include <iostream>
 #include <fstream>
@@ -18,6 +19,7 @@ public:
 	string data_file_path;
 	string indexes_file_path;
 	IngredientIndexes ingredient_indexes;
+	SystemConfig sys;
 	
 	Data();
 	

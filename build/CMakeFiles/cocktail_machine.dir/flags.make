@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/admin/Desktop/cocktail_machine/include -I/home/admin/Desktop/cocktail_machine/src
+CXX_INCLUDES = -I/home/admin/admin/Desktop/cocktail_machine/include -I/home/admin/admin/Desktop/cocktail_machine/src
 
 CXX_FLAGS = 
 

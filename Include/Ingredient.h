@@ -8,15 +8,18 @@ using namespace std;
 
 class Ingredient {
 public:
-	string ingredient;
-	int fillLevel;
+	int ingredient;
+	double fillLevel;
 	int position;
-	
-	string getIngredient();
-	void setIngredient(string ingred);
+	Ingredient(int ing, int pos);
+
+	int getIngredient();
+	void setIngredient(int ingred);
 
 	int getFillLevel();
 	void setFillLevel(int level);
+	void resetFillLevel();
+	void takeADrink();
 
 	int getPosition();
 	void setPosition(int pos);

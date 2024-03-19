@@ -1,8 +1,8 @@
 CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o: \
- /home/admin/Desktop/cocktail_machine/src/DataClass.cpp \
+ /home/admin/admin/Desktop/cocktail_machine/src/DataClass.cpp \
  /usr/include/stdc-predef.h \
- /home/admin/Desktop/cocktail_machine/src/../Include/Data.h \
- /home/admin/Desktop/cocktail_machine/src/../Include/Indexes.h \
+ /home/admin/admin/Desktop/cocktail_machine/src/../Include/Data.h \
+ /home/admin/admin/Desktop/cocktail_machine/src/../Include/Indexes.h \
  /usr/include/c++/12/iostream \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/c++config.h \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/os_defines.h \
@@ -158,8 +158,11 @@ CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o: \
  /usr/include/c++/12/bits/stl_uninitialized.h \
  /usr/include/c++/12/bits/stl_vector.h \
  /usr/include/c++/12/bits/stl_bvector.h \
- /usr/include/c++/12/bits/vector.tcc /usr/include/c++/12/fstream \
- /usr/include/c++/12/bits/codecvt.h \
+ /usr/include/c++/12/bits/vector.tcc \
+ /home/admin/admin/Desktop/cocktail_machine/src/../Include/SystemConfig.h \
+ /home/admin/admin/Desktop/cocktail_machine/src/../Include/Ingredient.h \
+ /usr/include/c++/12/array /usr/include/c++/12/compare \
+ /usr/include/c++/12/fstream /usr/include/c++/12/bits/codecvt.h \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/basic_file.h \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/c++io.h \
  /usr/include/c++/12/bits/fstream.tcc /usr/include/c++/12/sstream \
@@ -180,5 +183,6 @@ CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o: \
  /usr/include/c++/12/bits/node_handle.h \
  /usr/include/c++/12/bits/unordered_set.h \
  /usr/include/c++/12/bits/erase_if.h \
- /home/admin/Desktop/cocktail_machine/src/../Include/Indexes.h \
- /home/admin/Desktop/cocktail_machine/src/../Include/Ingredient.h
+ /home/admin/admin/Desktop/cocktail_machine/src/../Include/Indexes.h \
+ /home/admin/admin/Desktop/cocktail_machine/src/../Include/Ingredient.h \
+ /home/admin/admin/Desktop/cocktail_machine/src/../Include/SystemConfig.h

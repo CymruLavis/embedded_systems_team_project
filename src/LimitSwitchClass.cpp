@@ -1,5 +1,6 @@
 #include "../Include/LimitSwitch.h"
 #include <iostream>
+#include <pigpio.h>
 
 using namespace std;
 
@@ -26,4 +27,29 @@ void LimitSwitch::changeState(){
 	else{
 		this->setState(0);
 	}
+	
+}
+bool LimitSwitch::intialize() {
+    if (gpioInitialise()< 0){
+        std::cout<<"unable to intialize to pigpio.\n";
+        return false;
+    }
+    for(int Pin:switchPins){
+    	gpioSetMode(Pin, PI_INPUT);
+	}
+    return true;
+}
+
+//initializes the gpio pin
+
+//checks if the switchs is on 
+bool LimitSwitch::isSwitchOn(int index) {
+    if (index < 0 ){
+        if (index >= switchPins.size()){
+        std::cout<<"invalid index.\n";
+        return false;
+       }
+      }
+    return gpioRead(switchPins[index]) == 1;
+
 }

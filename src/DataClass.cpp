@@ -1,6 +1,7 @@
 #include "../Include/Data.h"
 #include "../Include/Indexes.h"
 #include "../Include/Ingredient.h"
+#include "../Include/SystemConfig.h"
 
 #include <iostream>
 #include <fstream>
@@ -88,9 +89,9 @@ string Data::getDrinkDescription(string drink) {
 
 vector<vector<string>> Data::getRecipe(string drink) {
 	vector<string> drink_row;
-	vector<int> ings;
-	vector<int> quantity;
-	vector<int> pos;
+	vector<string> ings;
+	vector<string> quantity;
+	// vector<int> pos;
 	//"N/A" = 4
 	for(const auto& row: this->df_menu){
 		if(row[0] == drink){
@@ -98,27 +99,24 @@ vector<vector<string>> Data::getRecipe(string drink) {
 			break;
 		}
 	}
-
 	for(int i = 1; i < drink_row.size()-1; i++){
-		if(i>12){
-			break;
+		if (i % 2 == 0) {
+			quantity.push_back(drink_row[i]);
 		}
 		else{
-			if (i % 2 == 0) {
-				quantity.push_back(drink_row[i]);
-			}
-			else{
-				ings.push_back(drink_row[i]);
-			}
+			ings.push_back(drink_row[i]);
+		}		
 	}
 
-
+	vector<vector<string>> allData;
+	allData.push_back(ings);
+	allData.push_back(quantity);
 
 	// Need position of ingredients
 	// make queue of positions to visit
 	// make quantities of how many times the drink needs to dispense 
-	vector<vector<string>> return_val;
-	return return_val;
+
+	return allData;
 }
 
 // returns of list of the drinks that can be made with the loaded ingredients
@@ -164,7 +162,7 @@ vector<string> Data::getWholeDrinkList() {
 }
 
 string Data::indexToDrink(int drinkIndex) {
-	return this->ingredient_indexes.ingredients[drinkIndex];
+	return this->ingredient_indexes.ingredients[drinkIndex-1];
 }
 int Data::ingredientToIndex(string drink) {
 	vector<string> vec = Data::ingredient_indexes.ingredients;
