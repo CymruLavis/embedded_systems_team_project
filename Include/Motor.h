@@ -2,6 +2,7 @@
 #define MOTOR_H
 
 #include <iostream>
+#include <vector>
 
 
 using namespace std;
@@ -35,9 +36,15 @@ public:
 
     void initializePins(int dir, int step, int sleep, int fault);
 	void setMotorCharacteristics(double step_angle);
-
+    int decideDirection(int currentPos, int desiredPos);
     void step();
 
+    int getDistanceBetweenPositions(int currentPos, int desiredPos);
+    double getDegreesToSpin(int distanceBetweenPositions);
+    int getStepsToRotoate(double degreesToSpin);
+
+    vector<int> getStepQueue(vector<int> positionQueue);    
+    
 
     // Pin out
     int direction_pin;  //1 = clockwise; 0 = counter clockwise

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <unistd.h>
+#include <vector>
 
 Motor::Motor(int dir, int step, int sleep, int fault, double step_size){
     Motor::setDirPin(dir);
@@ -96,4 +97,18 @@ void Motor::step(){
 
 int Motor::decideDirection(int currentPos, int desiredPos){
 	return 0;
+}
+
+int Motor::getDistanceBetweenPositions(int currentPos, int desiredPos){
+
+}
+double Motor::getDegreesToSpin(int distanceBetweenPositions){
+
+}
+int Motor::getStepsToRotoate(double degreesToSpin){
+
+}
+
+vector<int> Motor::getStepQueue(vector<int> positionQueue){
+
 }
