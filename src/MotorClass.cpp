@@ -101,10 +101,16 @@ int Motor::decideDirection(int currentPos, int desiredPos){
 }
 
 int Motor::getDistanceBetweenPositions(int currentPos, int desiredPos){
-    return 0;
+
+    int distanceBetweenPostion = std::abs(currentPos-desiredPos);
+    
+    return distanceBetweenPostion;
+
 }
 double Motor::getDegreesToSpin(int distanceBetweenPositions){
-    return 0.0;
+   double degreesToSpin = distanceBetweenPositions * 60; 
+    return degreesToSpin;
+
 }
 int Motor::getStepsToRotoate(double degreesToSpin){
     double step_angle = this->getStepAngle();
