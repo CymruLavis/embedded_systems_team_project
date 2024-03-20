@@ -4,6 +4,7 @@
 #include <iostream>
 #include <unistd.h>
 #include <vector>
+#include <math>
 
 Motor::Motor(int dir, int step, int sleep, int fault, double step_size){
     Motor::setDirPin(dir);
@@ -101,9 +102,14 @@ int Motor::decideDirection(int currentPos, int desiredPos){
 
 int Motor::getDistanceBetweenPositions(int currentPos, int desiredPos){
 
+    int distanceBetweenPostion = std::abs(currentPos-desiredPos);
+    
+    return distanceBetweenPostion;
+
 }
 double Motor::getDegreesToSpin(int distanceBetweenPositions){
-        // commit test bitches
+   double degreesToSpin = distanceBetweenPositions * 60; 
+    return degreesToSpin;
 
 }
 int Motor::getStepsToRotoate(double degreesToSpin){
