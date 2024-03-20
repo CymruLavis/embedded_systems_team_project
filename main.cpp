@@ -1,7 +1,10 @@
 #include <iostream>
+#include <thread>
+
 #include "Include/Data.h"
 #include "Include/SystemConfig.h"
 #include "Include/Motor.h"
+#include "Include/LimitSwitch.h"
 
 using namespace std;
 
@@ -20,8 +23,9 @@ void printList(vector<string> list){
 }
 void printListOfInts(vector<int> list){
 	for (const auto& str : list) {
-		cout << str << endl;
+		cout << str << "\t";
 	}
+	cout << endl;
 }
 void printColum(vector<vector<string>> list){
 	for (const auto& str : list) {
@@ -50,30 +54,30 @@ void printSys(SystemConfig sys){
 }
 int main(){
 
-	Data* myData = new Data();
-	SystemConfig* sys = new SystemConfig();
+	// Data* myData = new Data();
+	// SystemConfig* sys = new SystemConfig();
 	// Motor* myMotor = new Motor(1,2,3,4, 1.8);
 
-	vector<vector<string>> df = myData->df_menu;
-	vector<vector<string>> ing_df = myData->ingredient_indexes.df;
-	vector<string> ing = myData->ingredient_indexes.ingredients;
-	vector<string> idx = myData->ingredient_indexes.indexes;
+	// vector<vector<string>> df = myData->df_menu;
+	// vector<vector<string>> ing_df = myData->ingredient_indexes.df;
+	// vector<string> ing = myData->ingredient_indexes.ingredients;
+	// vector<string> idx = myData->ingredient_indexes.indexes;
 
-	vector<string> system_ingredients = {"Vodka","Gin", "Cointreau", "Cranberry Juice", "Mezcal","Lime Juice"};
-	setIngredientPositions(myData, sys, &system_ingredients);
+	// vector<string> system_ingredients = {"Vodka","Gin", "Cointreau", "Cranberry Juice", "Mezcal","Lime Juice"};
+	// setIngredientPositions(myData, sys, &system_ingredients);
 
-	printSys(*sys);
+	// printSys(*sys);
 
-	string desired_drink = "Cosmopolitan";
-	vector<int> drink_queue = myData->getRecipe(desired_drink, *sys);
+	// string desired_drink = "Cosmopolitan";
+	// vector<int> drink_queue = myData->getRecipe(desired_drink, *sys);
 
 	// vector<int> step_queue = myMotor->getStepQueue(drink_queue);
 
-	printListOfInts(drink_queue);
+	// printListOfInts(drink_queue);
+	// printListOfInts(step_queue);
 
-	// get currecnt position
-	// calculate degrees between current and desired
-	//spin to position
+	LimitSwitch* PIR_sensor = new LimitSwitch(37); //GPIO 26 = pin 37
+	
 	return 0;
 
 }

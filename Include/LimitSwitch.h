@@ -5,6 +5,8 @@
 #include  <pigpio.h>
 #include  <vector>
 
+class PIRSensor;
+
 using namespace std;
 
 class LimitSwitch{

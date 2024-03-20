@@ -6,6 +6,10 @@ using namespace std;
 
 LimitSwitch::LimitSwitch(int pin){
 	this->setPin(pin);
+	gpioSetMode(pin, PI_INPUT);
+	// if (gpioInitialise()< 0){
+    //     std::cout<<"unable to intialize to pigpio.\n";
+    // }
 }
 int LimitSwitch::getPin(){
 	return this->pin;
