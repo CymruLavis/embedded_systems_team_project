@@ -113,9 +113,23 @@ double Motor::getDegreesToSpin(int distanceBetweenPositions){
 
 }
 int Motor::getStepsToRotoate(double degreesToSpin){
+    double step_angle = this->getStepAngle();
+    int steps = degreesToSpin/step_angle;
+
+    return steps;
 
 }
 
 vector<int> Motor::getStepQueue(vector<int> positionQueue){
+    vector<int> step_queue;
+    int currentPos = 0;
+    for(int i = 0; i < positionQueue.size(); i++){
+        int dist = Motor::getDistanceBetweenPositions(currentPos, positionQueue[i]);
+        double deg_to_rototae = Motor::getDegreesToSpin(dist);
+        int steps = Motor::getStepsToRotoate(deg_to_rototae);
+        step_queue.push_back(steps);
+        currentPos = positionQueue[i];
+    }
 
+    return step_queue;
 }
