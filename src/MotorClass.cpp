@@ -4,21 +4,32 @@
 #include <iostream>
 #include <unistd.h>
 
-Motor::Motor(int dir, int step, int sleep, int fault, double step_size){
+#include <cstdlib>
+#include <cmath>
+#include <algorithm>
+
+#include <vector>
+
+Motor::Motor(const vector<int>& directions, const vector<int>& posits,const vector<int>& verts, int degrees, int direc, int dir, int step, int sleep, int fault){
+    //MAIN RUN: input a vector of degree's and vector of vertical flags
+    //FIRST THE FUNCTION WILL PARSE VERTS AND CALL VERRT_TURN WHEN VERTS VECTOR =1
+    //THEN IT WILL PARSE THE FIRST VALUE OF POSITS AND PASS THAT TO THE MAIN_TURN, 
+    //MAIN TURN WILL EXECUTE
+    // A TURN AND THEN RETURN A 1 UPON SUCCESS.
+    // THE SYSTEM WILL THEN LOOP THROUGH THE VECTORS
+    Motor::MOTORS_RUN(directions, posits, verts); 
+    Motor::MAIN_TURN(direc, degrees); //inputs:degrees, output:success
+    Motor::VERT_TURN(); //input nothing, just call it and it runs, output: int success
+
+
     Motor::setDirPin(dir);
     Motor::setStepPin(step);
     Motor::setSleepPin(sleep);
     Motor::setFaultPin(fault);
 	Motor::initializePins(dir, step, sleep, fault);
 
-	Motor::step_angle = step_size;
-	Motor::setMotorCharacteristics(Motor::step_angle);
-
-
 }
-void Motor::setMotorCharacteristics(double step_angle){
-	this->step_per_rev = 360/step_angle;
-}
+
 void Motor::setDirPin(int pin){
     this->direction_pin = pin;
 }
@@ -68,32 +79,22 @@ void Motor::setFaultState(int val){
 int Motor::getFaultState(){
     return this->fault_state;
 }
-void Motor::setStepPerRev(int val){
-    this->step_per_rev = val;
-}
-int Motor::getStepPerRev(){
-    return this->step_per_rev;
-}
-void Motor::setStepAngle(double val){
-    this->step_angle = val;
-}
-double Motor::getStepAngle(){
-    return this->step_angle;
-}
+
 void Motor::initializePins(int dir, int step, int sleep, int fault){
     gpioSetMode(dir, PI_OUTPUT);
     gpioSetMode(step, PI_OUTPUT);
     gpioSetMode(sleep, PI_OUTPUT);
-    gpioSetMode(fault, PI_OUTPUT);
+    gpioSetMode(fault, PI_INPUT);
 
 }
-void Motor::step(){
-    gpioWrite(this->getStepPin(), 1);
-    usleep(1000);
-    gpioWrite(this->getStepPin(), 0);
-    usleep(1000);
-}
 
-int Motor::decideDirection(int currentPos, int desiredPos){
-	return 0;
-}
+int Motor::MOTORS_RUN(const vector<int>& directions, const std::vector<int>& posits, const std::vector<int>& verts){ //input a vector of degree's and vector of vertical flags
+
+} 
+int Motor::MAIN_TURN(int direc, int degrees){ //inputs:degrees, output:success
+
+} 
+int Motor::VERT_TURN(){//input nothing, just call it and it runs, output: int success
+
+} 
+

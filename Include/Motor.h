@@ -2,13 +2,18 @@
 #define MOTOR_H
 
 #include <iostream>
-
+#include <vector>
 
 using namespace std;
 
 class Motor{
 public:
-    Motor(int dir, int step, int sleep, int fault, double step_angle);
+    Motor(const vector<int>& directions, const vector<int>& posits,const vector<int>& verts, int degrees, int direc, int dir, int step, int sleep, int fault);
+    
+    int MOTORS_RUN(const vector<int>& directions, const std::vector<int>& posits, const std::vector<int>& verts); //input a vector of degree's and vector of vertical flags
+    int MAIN_TURN(int direc, int degrees); //inputs:degrees, output:success
+    int VERT_TURN(); //input nothing, just call it and it runs, output: int success
+
 
     void setDirPin(int pin);
     int getDirPin();
@@ -28,15 +33,7 @@ public:
     void setFaultState(int val);
     int getFaultState();
 
-    void setStepPerRev(int val);
-    int getStepPerRev();
-    void setStepAngle(double val);
-    double getStepAngle();
-
     void initializePins(int dir, int step, int sleep, int fault);
-	void setMotorCharacteristics(double step_angle);
-
-    void step();
 
 
     // Pin out
@@ -51,11 +48,6 @@ public:
     int sleep_state;
     int fault_state;
 
-    // Motor Characteristics
-    int step_per_rev;
-    double step_angle;
-    int clockwise = 1;
-    int counterClockwise = 0;
 };
 
 #endif
