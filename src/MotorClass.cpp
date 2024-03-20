@@ -101,10 +101,9 @@ int Motor::decideDirection(int currentPos, int desiredPos){
 
 int Motor::getDistanceBetweenPositions(int currentPos, int desiredPos){
 
-    //ommenting here
-
 }
 double Motor::getDegreesToSpin(int distanceBetweenPositions){
+        // commit test bitches
 
 }
 int Motor::getStepsToRotoate(double degreesToSpin){
