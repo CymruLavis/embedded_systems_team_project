@@ -11,7 +11,7 @@ public:
 	int ingredient;
 	double fillLevel;
 	int position;
-	Ingredient(int ing, int pos);
+	Ingredient();
 
 	int getIngredient();
 	void setIngredient(int ingred);

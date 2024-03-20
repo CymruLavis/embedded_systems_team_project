@@ -21,7 +21,6 @@ Data::Data(){
 	this->ingredient_indexes.df = getData(getIndexFilePath());
 	this->ingredient_indexes.ingredients = this->ingredient_indexes.getCol(this->ingredient_indexes.df,0);
 	this->ingredient_indexes.indexes = this->ingredient_indexes.getCol(this->ingredient_indexes.df,1);
-
 }
 
 // returns the location of the menu csv
@@ -87,10 +86,10 @@ string Data::getDrinkDescription(string drink) {
 
 }
 
-vector<vector<string>> Data::getRecipe(string drink) {
+vector<int> Data::getRecipe(string drink, SystemConfig sys) {
 	vector<string> drink_row;
-	vector<string> ings;
-	vector<string> quantity;
+	vector<int> ings;
+	vector<int> quantity;
 	// vector<int> pos;
 	//"N/A" = 4
 	for(const auto& row: this->df_menu){
@@ -101,22 +100,28 @@ vector<vector<string>> Data::getRecipe(string drink) {
 	}
 	for(int i = 1; i < drink_row.size()-1; i++){
 		if (i % 2 == 0) {
-			quantity.push_back(drink_row[i]);
+			quantity.push_back(stoi(drink_row[i]));
 		}
 		else{
-			ings.push_back(drink_row[i]);
+			ings.push_back(stoi(drink_row[i]));
 		}		
 	}
 
-	vector<vector<string>> allData;
-	allData.push_back(ings);
-	allData.push_back(quantity);
-
+	// vector<vector<int>> allData;
+	// allData.push_back(ings);
+	// allData.push_back(quantity);
+	vector<int> positionQueue;
+	for(int i = 0; i < ings.size(); i++){
+		int pos = sys.getPosition(ings[i]);
+		for(int j = 0; j < quantity[i]; j++){
+			positionQueue.push_back(pos);
+		}
+	}
 	// Need position of ingredients
 	// make queue of positions to visit
 	// make quantities of how many times the drink needs to dispense 
 
-	return allData;
+	return positionQueue;
 }
 
 // returns of list of the drinks that can be made with the loaded ingredients
@@ -161,15 +166,15 @@ vector<string> Data::getWholeDrinkList() {
 	return drinkList;
 }
 
-string Data::indexToDrink(int drinkIndex) {
-	return this->ingredient_indexes.ingredients[drinkIndex-1];
+string Data::indexToIngredient(int ingredient_idx) {
+	return this->ingredient_indexes.ingredients[ingredient_idx-1];
 }
 int Data::ingredientToIndex(string drink) {
 	vector<string> vec = Data::ingredient_indexes.ingredients;
 
 	for (size_t i = 0; i < vec.size(); ++i) {
         if (vec[i] == drink) {
-            return i; // Found the target string, return its index
+            return i+1; // Found the target string, return its index
         }
     }
     return -1;

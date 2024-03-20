@@ -8,4 +8,5 @@ add_executable(cocktail_machine
                 main.cpp 
                 src/DataClass.cpp 
                 src/IngredientIndexClass.cpp 
-                src/IngredientClass.cpp)
+                src/IngredientClass.cpp
+                src/SystemConfig.cpp)

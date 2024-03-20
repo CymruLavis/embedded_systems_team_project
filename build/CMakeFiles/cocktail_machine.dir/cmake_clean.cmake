@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o.d"
   "CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o"
   "CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o.d"
+  "CMakeFiles/cocktail_machine.dir/src/SystemConfig.cpp.o"
+  "CMakeFiles/cocktail_machine.dir/src/SystemConfig.cpp.o.d"
   "cocktail_machine"
   "cocktail_machine.pdb"
 )

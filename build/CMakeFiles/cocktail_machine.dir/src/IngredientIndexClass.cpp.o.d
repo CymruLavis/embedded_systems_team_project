@@ -1,7 +1,7 @@
 CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o: \
- /home/admin/admin/Desktop/cocktail_machine/src/IngredientIndexClass.cpp \
+ /home/admin/Desktop/cocktail_machine/src/IngredientIndexClass.cpp \
  /usr/include/stdc-predef.h \
- /home/admin/admin/Desktop/cocktail_machine/src/../Include/Indexes.h \
+ /home/admin/Desktop/cocktail_machine/src/../Include/Indexes.h \
  /usr/include/c++/12/iostream \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/c++config.h \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/os_defines.h \

@@ -19,7 +19,7 @@ public:
 	string data_file_path;
 	string indexes_file_path;
 	IngredientIndexes ingredient_indexes;
-	SystemConfig sys;
+	// SystemConfig sys;
 	
 	Data();
 	
@@ -32,13 +32,13 @@ public:
 	
 	string getDrinkDescription(string drink);
 	
-	vector<vector<string>> getRecipe(string drink);
+	vector<int> getRecipe(string drink, SystemConfig sys);
 	
 	vector<string> getActiveDrinkList(vector<string> ingredients);
 	bool isDrinkMakable(vector<string> recipie, vector<string> ingredients);
 	
 	vector<string> getWholeDrinkList();
-	string indexToDrink(int drinkIndex);
+	string indexToIngredient(int ingredient_idx);
 	int ingredientToIndex(string ingredient);
 
 };

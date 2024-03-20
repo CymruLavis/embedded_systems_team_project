@@ -1,6 +1,6 @@
 CMakeFiles/cocktail_machine.dir/main.cpp.o: \
- /home/admin/admin/Desktop/cocktail_machine/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/12/iostream \
+ /home/admin/Desktop/cocktail_machine/main.cpp /usr/include/stdc-predef.h \
+ /usr/include/c++/12/iostream \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/c++config.h \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -152,14 +152,14 @@ CMakeFiles/cocktail_machine.dir/main.cpp.o: \
  /usr/include/c++/12/bits/basic_ios.tcc \
  /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
  /usr/include/c++/12/bits/istream.tcc \
- /home/admin/admin/Desktop/cocktail_machine/Include/Data.h \
- /home/admin/admin/Desktop/cocktail_machine/Include/Indexes.h \
+ /home/admin/Desktop/cocktail_machine/Include/Data.h \
+ /home/admin/Desktop/cocktail_machine/Include/Indexes.h \
  /usr/include/c++/12/vector /usr/include/c++/12/bits/stl_uninitialized.h \
  /usr/include/c++/12/bits/stl_vector.h \
  /usr/include/c++/12/bits/stl_bvector.h \
  /usr/include/c++/12/bits/vector.tcc \
- /home/admin/admin/Desktop/cocktail_machine/Include/SystemConfig.h \
- /home/admin/admin/Desktop/cocktail_machine/Include/Ingredient.h \
+ /home/admin/Desktop/cocktail_machine/Include/SystemConfig.h \
+ /home/admin/Desktop/cocktail_machine/Include/Ingredient.h \
  /usr/include/c++/12/array /usr/include/c++/12/compare \
  /usr/include/c++/12/fstream /usr/include/c++/12/bits/codecvt.h \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/basic_file.h \
@@ -181,4 +181,5 @@ CMakeFiles/cocktail_machine.dir/main.cpp.o: \
  /usr/include/c++/12/bits/enable_special_members.h \
  /usr/include/c++/12/bits/node_handle.h \
  /usr/include/c++/12/bits/unordered_set.h \
- /usr/include/c++/12/bits/erase_if.h
+ /usr/include/c++/12/bits/erase_if.h \
+ /home/admin/Desktop/cocktail_machine/Include/SystemConfig.h

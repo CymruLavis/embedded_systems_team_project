@@ -6,10 +6,10 @@
 
 using namespace std;
 	
-Ingredient::Ingredient(int ing, int pos) {
+Ingredient::Ingredient() {
 	this->setFillLevel(100.0);
-	this->setIngredient(ing);
-	this->setPosition(pos);
+	this->setIngredient(0);
+	this->setPosition(0);
 }
 
 int Ingredient::getIngredient() {return this->ingredient;}

@@ -1,5 +1,5 @@
 CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o: \
- /home/admin/admin/Desktop/cocktail_machine/src/IngredientClass.cpp \
+ /home/admin/Desktop/cocktail_machine/src/IngredientClass.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/12/iostream \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/c++config.h \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/os_defines.h \
@@ -156,4 +156,4 @@ CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o: \
  /usr/include/c++/12/bits/stl_vector.h \
  /usr/include/c++/12/bits/stl_bvector.h \
  /usr/include/c++/12/bits/vector.tcc \
- /home/admin/admin/Desktop/cocktail_machine/src/../Include/Ingredient.h
+ /home/admin/Desktop/cocktail_machine/src/../Include/Ingredient.h

@@ -1,8 +1,8 @@
-CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o: \
- /home/admin/Desktop/cocktail_machine/src/DataClass.cpp \
+CMakeFiles/cocktail_machine.dir/src/SystemConfig.cpp.o: \
+ /home/admin/Desktop/cocktail_machine/src/SystemConfig.cpp \
  /usr/include/stdc-predef.h \
- /home/admin/Desktop/cocktail_machine/src/../Include/Data.h \
- /home/admin/Desktop/cocktail_machine/src/../Include/Indexes.h \
+ /home/admin/Desktop/cocktail_machine/src/../Include/SystemConfig.h \
+ /home/admin/Desktop/cocktail_machine/src/../Include/Ingredient.h \
  /usr/include/c++/12/iostream \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/c++config.h \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/os_defines.h \
@@ -158,31 +158,6 @@ CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o: \
  /usr/include/c++/12/bits/stl_uninitialized.h \
  /usr/include/c++/12/bits/stl_vector.h \
  /usr/include/c++/12/bits/stl_bvector.h \
- /usr/include/c++/12/bits/vector.tcc \
- /home/admin/Desktop/cocktail_machine/src/../Include/SystemConfig.h \
- /home/admin/Desktop/cocktail_machine/src/../Include/Ingredient.h \
- /usr/include/c++/12/array /usr/include/c++/12/compare \
- /usr/include/c++/12/fstream /usr/include/c++/12/bits/codecvt.h \
- /usr/include/arm-linux-gnueabihf/c++/12/bits/basic_file.h \
- /usr/include/arm-linux-gnueabihf/c++/12/bits/c++io.h \
- /usr/include/c++/12/bits/fstream.tcc /usr/include/c++/12/sstream \
- /usr/include/c++/12/bits/sstream.tcc /usr/include/c++/12/algorithm \
- /usr/include/c++/12/bits/stl_algo.h \
- /usr/include/c++/12/bits/algorithmfwd.h \
- /usr/include/c++/12/bits/stl_heap.h \
- /usr/include/c++/12/bits/stl_tempbuf.h \
- /usr/include/c++/12/bits/uniform_int_dist.h \
- /usr/include/c++/12/pstl/glue_algorithm_defs.h \
- /usr/include/c++/12/pstl/execution_defs.h \
- /usr/include/c++/12/unordered_set \
- /usr/include/c++/12/ext/aligned_buffer.h \
- /usr/include/c++/12/bits/hashtable.h \
- /usr/include/c++/12/bits/hashtable_policy.h /usr/include/c++/12/tuple \
- /usr/include/c++/12/bits/uses_allocator.h \
- /usr/include/c++/12/bits/enable_special_members.h \
- /usr/include/c++/12/bits/node_handle.h \
- /usr/include/c++/12/bits/unordered_set.h \
- /usr/include/c++/12/bits/erase_if.h \
- /home/admin/Desktop/cocktail_machine/src/../Include/Indexes.h \
- /home/admin/Desktop/cocktail_machine/src/../Include/Ingredient.h \
- /home/admin/Desktop/cocktail_machine/src/../Include/SystemConfig.h
+ /usr/include/c++/12/bits/vector.tcc /usr/include/c++/12/array \
+ /usr/include/c++/12/compare \
+ /home/admin/Desktop/cocktail_machine/src/../Include/Ingredient.h

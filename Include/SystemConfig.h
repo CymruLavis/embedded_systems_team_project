@@ -10,9 +10,10 @@
 using namespace std;
 class SystemConfig {
 public:
-    static array<Ingredient, 6> positions;
-    void updatePosition(int index, int new_ingredient);
+    vector<Ingredient> positions{6};
 
+    void updatePosition(int index, int new_ingredient);
     Ingredient getIngredient(int index);
+    int getPosition(int drink_idx);
 };
 #endif

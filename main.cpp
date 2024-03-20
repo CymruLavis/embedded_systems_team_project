@@ -1,5 +1,7 @@
 #include <iostream>
 #include "Include/Data.h"
+#include "Include/SystemConfig.h"
+
 using namespace std;
 
 void printDF(vector<vector<string>> df){
@@ -15,24 +17,59 @@ void printList(vector<string> list){
 		cout << str << endl;
 	}
 }
-
+void printListOfInts(vector<int> list){
+	for (const auto& str : list) {
+		cout << str << endl;
+	}
+}
 void printColum(vector<vector<string>> list){
 	for (const auto& str : list) {
 		cout << str[1] << endl;
 	}
 }
+void setIngredientPositions(Data *myData, SystemConfig *sys, vector<string> const *ingredients){
+	int index = 0;
+	for(auto& ing: *ingredients){
+		int temp_ingredient_idx = myData->ingredientToIndex(ing);
+		sys->updatePosition(index, temp_ingredient_idx);
+		cout << index << "\t" << temp_ingredient_idx << "\t" << ing << endl;
+		index ++;
+	}
+
+}
+void printSys(SystemConfig sys){
+	for(auto& ing: sys.positions){
+		cout << ing.getIngredient() << "\t" << ing.getPosition() << endl;
+		// int a = 2, b = 4;
+		// ing.setIngredient(a);
+		// ing.setPosition(b);
+		// cout << ing.ingredient << "\t" << ing.position << endl;
+
+	}
+}
 int main(){
 
 	Data* myData = new Data();
+	SystemConfig* sys = new SystemConfig();
+
 	vector<vector<string>> df = myData->df_menu;
 	vector<vector<string>> ing_df = myData->ingredient_indexes.df;
 	vector<string> ing = myData->ingredient_indexes.ingredients;
 	vector<string> idx = myData->ingredient_indexes.indexes;
+
+	vector<string> system_ingredients = {"Vodka","Gin", "Cointreau", "Cranberry Juice", "Mezcal","Lime Juice"};
+	setIngredientPositions(myData, sys, &system_ingredients);
+
+	printSys(*sys);
+
 	string desired_drink = "Cosmopolitan";
-	vector<vector<string>> drink_data = myData->getRecipe(desired_drink);
-	printDF(drink_data);
+	vector<int> drink_queue = myData->getRecipe(desired_drink, *sys);
+	printListOfInts(drink_queue);
+	
 	return 0;
 }
+
+
 
 // int main(){
 // MOTOR TEST

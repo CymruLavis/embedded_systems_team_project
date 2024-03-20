@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/admin/admin/Desktop/cocktail_machine
+CMAKE_SOURCE_DIR = /home/admin/Desktop/cocktail_machine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/admin/admin/Desktop/cocktail_machine/build
+CMAKE_BINARY_DIR = /home/admin/Desktop/cocktail_machine/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin/admin/Desktop/cocktail_machine/build/CMakeFiles /home/admin/admin/Desktop/cocktail_machine/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin/Desktop/cocktail_machine/build/CMakeFiles /home/admin/Desktop/cocktail_machine/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin/admin/Desktop/cocktail_machine/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin/Desktop/cocktail_machine/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -225,6 +225,30 @@ src/IngredientIndexClass.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.s
 .PHONY : src/IngredientIndexClass.cpp.s
 
+src/SystemConfig.o: src/SystemConfig.cpp.o
+.PHONY : src/SystemConfig.o
+
+# target to build an object file
+src/SystemConfig.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/src/SystemConfig.cpp.o
+.PHONY : src/SystemConfig.cpp.o
+
+src/SystemConfig.i: src/SystemConfig.cpp.i
+.PHONY : src/SystemConfig.i
+
+# target to preprocess a source file
+src/SystemConfig.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/src/SystemConfig.cpp.i
+.PHONY : src/SystemConfig.cpp.i
+
+src/SystemConfig.s: src/SystemConfig.cpp.s
+.PHONY : src/SystemConfig.s
+
+# target to generate assembly for a file
+src/SystemConfig.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/src/SystemConfig.cpp.s
+.PHONY : src/SystemConfig.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -246,6 +270,9 @@ help:
 	@echo "... src/IngredientIndexClass.o"
 	@echo "... src/IngredientIndexClass.i"
 	@echo "... src/IngredientIndexClass.s"
+	@echo "... src/SystemConfig.o"
+	@echo "... src/SystemConfig.i"
+	@echo "... src/SystemConfig.s"
 .PHONY : help
 
 
