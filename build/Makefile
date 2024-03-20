@@ -225,6 +225,30 @@ src/IngredientIndexClass.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.s
 .PHONY : src/IngredientIndexClass.cpp.s
 
+src/MotorClass.o: src/MotorClass.cpp.o
+.PHONY : src/MotorClass.o
+
+# target to build an object file
+src/MotorClass.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/src/MotorClass.cpp.o
+.PHONY : src/MotorClass.cpp.o
+
+src/MotorClass.i: src/MotorClass.cpp.i
+.PHONY : src/MotorClass.i
+
+# target to preprocess a source file
+src/MotorClass.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/src/MotorClass.cpp.i
+.PHONY : src/MotorClass.cpp.i
+
+src/MotorClass.s: src/MotorClass.cpp.s
+.PHONY : src/MotorClass.s
+
+# target to generate assembly for a file
+src/MotorClass.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/src/MotorClass.cpp.s
+.PHONY : src/MotorClass.cpp.s
+
 src/SystemConfig.o: src/SystemConfig.cpp.o
 .PHONY : src/SystemConfig.o
 
@@ -270,6 +294,9 @@ help:
 	@echo "... src/IngredientIndexClass.o"
 	@echo "... src/IngredientIndexClass.i"
 	@echo "... src/IngredientIndexClass.s"
+	@echo "... src/MotorClass.o"
+	@echo "... src/MotorClass.i"
+	@echo "... src/MotorClass.s"
 	@echo "... src/SystemConfig.o"
 	@echo "... src/SystemConfig.i"
 	@echo "... src/SystemConfig.s"

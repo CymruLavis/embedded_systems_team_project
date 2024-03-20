@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/admin/Desktop/cocktail_machine/src/DataClass.cpp" "CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o" "gcc" "CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o.d"
   "/home/admin/Desktop/cocktail_machine/src/IngredientClass.cpp" "CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o" "gcc" "CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o.d"
   "/home/admin/Desktop/cocktail_machine/src/IngredientIndexClass.cpp" "CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o" "gcc" "CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o.d"
+  "/home/admin/Desktop/cocktail_machine/src/MotorClass.cpp" "CMakeFiles/cocktail_machine.dir/src/MotorClass.cpp.o" "gcc" "CMakeFiles/cocktail_machine.dir/src/MotorClass.cpp.o.d"
   "/home/admin/Desktop/cocktail_machine/src/SystemConfig.cpp" "CMakeFiles/cocktail_machine.dir/src/SystemConfig.cpp.o" "gcc" "CMakeFiles/cocktail_machine.dir/src/SystemConfig.cpp.o.d"
   )
 

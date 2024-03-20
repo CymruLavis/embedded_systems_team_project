@@ -52,7 +52,7 @@ int main(){
 
 	Data* myData = new Data();
 	SystemConfig* sys = new SystemConfig();
-	Motor* myMotor = new Motor(1,2,3,4, 1.8);
+	// Motor* myMotor = new Motor(1,2,3,4, 1.8);
 
 	vector<vector<string>> df = myData->df_menu;
 	vector<vector<string>> ing_df = myData->ingredient_indexes.df;
@@ -67,7 +67,7 @@ int main(){
 	string desired_drink = "Cosmopolitan";
 	vector<int> drink_queue = myData->getRecipe(desired_drink, *sys);
 
-	vector<int> step_queue = myMotor->getStepQueue(drink_queue);
+	// vector<int> step_queue = myMotor->getStepQueue(drink_queue);
 
 	printListOfInts(drink_queue);
 

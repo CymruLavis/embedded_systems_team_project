@@ -221,6 +221,18 @@ cocktail_machine_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 cocktail_machine_SOURCE_DIR:STATIC=/home/admin/Desktop/cocktail_machine
 
+//Path to a file.
+pigpio_INCLUDE_DIR:PATH=/usr/local/include
+
+//Path to a library.
+pigpio_LIBRARY:FILEPATH=/usr/local/lib/libpigpio.so
+
+//Path to a library.
+pigpiod_if2_LIBRARY:FILEPATH=/usr/local/lib/libpigpiod_if2.so
+
+//Path to a library.
+pigpiod_if_LIBRARY:FILEPATH=/usr/local/lib/libpigpiod_if.so
+
 
 ########################
 # INTERNAL cache entries
@@ -369,6 +381,8 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding pigpio
+FIND_PACKAGE_MESSAGE_DETAILS_pigpio:INTERNAL=[/usr/local/include][/usr/local/lib/libpigpio.so][/usr/local/lib/libpigpiod_if.so][/usr/local/lib/libpigpiod_if2.so][v()]
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 

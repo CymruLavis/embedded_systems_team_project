@@ -1,5 +1,7 @@
-CMakeFiles/cocktail_machine.dir/main.cpp.o: \
- /home/admin/Desktop/cocktail_machine/main.cpp /usr/include/stdc-predef.h \
+CMakeFiles/cocktail_machine.dir/src/MotorClass.cpp.o: \
+ /home/admin/Desktop/cocktail_machine/src/MotorClass.cpp \
+ /usr/include/stdc-predef.h \
+ /home/admin/Desktop/cocktail_machine/src/../Include/Motor.h \
  /usr/include/c++/12/iostream \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/c++config.h \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/os_defines.h \
@@ -151,36 +153,16 @@ CMakeFiles/cocktail_machine.dir/main.cpp.o: \
  /usr/include/c++/12/bits/locale_facets.tcc \
  /usr/include/c++/12/bits/basic_ios.tcc \
  /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
- /usr/include/c++/12/bits/istream.tcc \
- /home/admin/Desktop/cocktail_machine/Include/Data.h \
- /home/admin/Desktop/cocktail_machine/Include/Indexes.h \
- /usr/include/c++/12/vector /usr/include/c++/12/bits/stl_uninitialized.h \
+ /usr/include/c++/12/bits/istream.tcc /usr/include/c++/12/vector \
+ /usr/include/c++/12/bits/stl_uninitialized.h \
  /usr/include/c++/12/bits/stl_vector.h \
  /usr/include/c++/12/bits/stl_bvector.h \
- /usr/include/c++/12/bits/vector.tcc \
- /home/admin/Desktop/cocktail_machine/Include/SystemConfig.h \
- /home/admin/Desktop/cocktail_machine/Include/Ingredient.h \
- /usr/include/c++/12/array /usr/include/c++/12/compare \
- /usr/include/c++/12/fstream /usr/include/c++/12/bits/codecvt.h \
- /usr/include/arm-linux-gnueabihf/c++/12/bits/basic_file.h \
- /usr/include/arm-linux-gnueabihf/c++/12/bits/c++io.h \
- /usr/include/c++/12/bits/fstream.tcc /usr/include/c++/12/sstream \
- /usr/include/c++/12/bits/sstream.tcc /usr/include/c++/12/algorithm \
- /usr/include/c++/12/bits/stl_algo.h \
- /usr/include/c++/12/bits/algorithmfwd.h \
- /usr/include/c++/12/bits/stl_heap.h \
- /usr/include/c++/12/bits/stl_tempbuf.h \
- /usr/include/c++/12/bits/uniform_int_dist.h \
- /usr/include/c++/12/pstl/glue_algorithm_defs.h \
- /usr/include/c++/12/pstl/execution_defs.h \
- /usr/include/c++/12/unordered_set \
- /usr/include/c++/12/ext/aligned_buffer.h \
- /usr/include/c++/12/bits/hashtable.h \
- /usr/include/c++/12/bits/hashtable_policy.h /usr/include/c++/12/tuple \
- /usr/include/c++/12/bits/uses_allocator.h \
- /usr/include/c++/12/bits/enable_special_members.h \
- /usr/include/c++/12/bits/node_handle.h \
- /usr/include/c++/12/bits/unordered_set.h \
- /usr/include/c++/12/bits/erase_if.h \
- /home/admin/Desktop/cocktail_machine/Include/SystemConfig.h \
- /home/admin/Desktop/cocktail_machine/Include/Motor.h
+ /usr/include/c++/12/bits/vector.tcc /usr/local/include/pigpio.h \
+ /usr/local/include/pigpiod_if2.h /usr/local/include/pigpio.h \
+ /usr/include/unistd.h /usr/include/arm-linux-gnueabihf/bits/posix_opt.h \
+ /usr/include/arm-linux-gnueabihf/bits/environments.h \
+ /usr/include/arm-linux-gnueabihf/bits/confname.h \
+ /usr/include/arm-linux-gnueabihf/bits/getopt_posix.h \
+ /usr/include/arm-linux-gnueabihf/bits/getopt_core.h \
+ /usr/include/arm-linux-gnueabihf/bits/unistd_ext.h \
+ /usr/include/linux/close_range.h

@@ -9,4 +9,10 @@ add_executable(cocktail_machine
                 src/DataClass.cpp 
                 src/IngredientIndexClass.cpp 
                 src/IngredientClass.cpp
-                src/SystemConfig.cpp)
+                src/SystemConfig.cpp
+                src/MotorClass.cpp)
+find_path(pigpio_INCLUDE_DIR 
+NAMES pigpio.h pigpiod_if.h pigpiod_if2.h
+HINTS /usr/local/include)
+
+target_link_libraries(cocktail_machine pigpio)

@@ -1,5 +1,6 @@
 #include "../Include/Motor.h"
 #include <pigpio.h>
+#include <pigpiod_if2.h>
 
 #include <iostream>
 #include <unistd.h>
@@ -100,15 +101,29 @@ int Motor::decideDirection(int currentPos, int desiredPos){
 }
 
 int Motor::getDistanceBetweenPositions(int currentPos, int desiredPos){
+    return 0;
 }
 double Motor::getDegreesToSpin(int distanceBetweenPositions){
-        // commit test bitches
-
+    return 0.0;
 }
 int Motor::getStepsToRotoate(double degreesToSpin){
+    double step_angle = this->getStepAngle();
+    int steps = degreesToSpin/step_angle;
+
+    return steps;
 
 }
 
 vector<int> Motor::getStepQueue(vector<int> positionQueue){
+    vector<int> step_queue;
+    int currentPos = 0;
+    for(int i = 0; i < positionQueue.size(); i++){
+        int dist = Motor::getDistanceBetweenPositions(currentPos, positionQueue[i]);
+        double deg_to_rototae = Motor::getDegreesToSpin(dist);
+        int steps = Motor::getStepsToRotoate(deg_to_rototae);
+        step_queue.push_back(steps);
+        currentPos = positionQueue[i];
+    }
 
+    return step_queue;
 }
