@@ -101,6 +101,8 @@ int Motor::decideDirection(int currentPos, int desiredPos){
 
 int Motor::getDistanceBetweenPositions(int currentPos, int desiredPos){
 
+    //ommenting here
+
 }
 double Motor::getDegreesToSpin(int distanceBetweenPositions){
 
