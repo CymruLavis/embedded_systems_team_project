@@ -6,7 +6,7 @@ ensure pigpio library is installed
 'sudo apt install pigpio'  
 
 install diver for the LCD touch display
-'git clone https://github.com/osoyoo/LCD-show.git'  
+$git clone https://github.com/osoyoo/LCD-show.git'  
 'cd LCD-show/'  
 'chmod +x lcd35b-show'  
 './lcd35b-show'  
