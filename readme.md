@@ -21,11 +21,24 @@ $./cocktail_machine
 ![Logo]()
 
 # University of Glasgow team members:
-Ethan Lavis
-Daraigh O'Toole Eglington
-Joshua Varghese
-Roykeane Syangu
+Ethan Lavis  
+Daraigh O'Toole Eglington  
+Joshua Varghese  
+Roykeane Syangu  
 
-The goal of this project is to create an automcatic cocktail dispensor using real time embedded programming on the raspberry pi
-
+# Introduction
+- project overview
+- what problem are we solving
+# Mechanical Design
 ![CAD]()
+
+# Real Time Components
+
+# Testing/Results
+
+# How to build
+- description of the base and cad files
+- BOM
+- Wiring Diagram
+- Required Libraries
+- 
