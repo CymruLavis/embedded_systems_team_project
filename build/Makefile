@@ -129,6 +129,78 @@ cocktail_machine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/build
 .PHONY : cocktail_machine/fast
 
+UnitTests/DataBaseUnitTest.o: UnitTests/DataBaseUnitTest.cpp.o
+.PHONY : UnitTests/DataBaseUnitTest.o
+
+# target to build an object file
+UnitTests/DataBaseUnitTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.o
+.PHONY : UnitTests/DataBaseUnitTest.cpp.o
+
+UnitTests/DataBaseUnitTest.i: UnitTests/DataBaseUnitTest.cpp.i
+.PHONY : UnitTests/DataBaseUnitTest.i
+
+# target to preprocess a source file
+UnitTests/DataBaseUnitTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.i
+.PHONY : UnitTests/DataBaseUnitTest.cpp.i
+
+UnitTests/DataBaseUnitTest.s: UnitTests/DataBaseUnitTest.cpp.s
+.PHONY : UnitTests/DataBaseUnitTest.s
+
+# target to generate assembly for a file
+UnitTests/DataBaseUnitTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.s
+.PHONY : UnitTests/DataBaseUnitTest.cpp.s
+
+UnitTests/LimitSwitchUnitTest.o: UnitTests/LimitSwitchUnitTest.cpp.o
+.PHONY : UnitTests/LimitSwitchUnitTest.o
+
+# target to build an object file
+UnitTests/LimitSwitchUnitTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.o
+.PHONY : UnitTests/LimitSwitchUnitTest.cpp.o
+
+UnitTests/LimitSwitchUnitTest.i: UnitTests/LimitSwitchUnitTest.cpp.i
+.PHONY : UnitTests/LimitSwitchUnitTest.i
+
+# target to preprocess a source file
+UnitTests/LimitSwitchUnitTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.i
+.PHONY : UnitTests/LimitSwitchUnitTest.cpp.i
+
+UnitTests/LimitSwitchUnitTest.s: UnitTests/LimitSwitchUnitTest.cpp.s
+.PHONY : UnitTests/LimitSwitchUnitTest.s
+
+# target to generate assembly for a file
+UnitTests/LimitSwitchUnitTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.s
+.PHONY : UnitTests/LimitSwitchUnitTest.cpp.s
+
+UnitTests/PIRUnitTest.o: UnitTests/PIRUnitTest.cpp.o
+.PHONY : UnitTests/PIRUnitTest.o
+
+# target to build an object file
+UnitTests/PIRUnitTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/UnitTests/PIRUnitTest.cpp.o
+.PHONY : UnitTests/PIRUnitTest.cpp.o
+
+UnitTests/PIRUnitTest.i: UnitTests/PIRUnitTest.cpp.i
+.PHONY : UnitTests/PIRUnitTest.i
+
+# target to preprocess a source file
+UnitTests/PIRUnitTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/UnitTests/PIRUnitTest.cpp.i
+.PHONY : UnitTests/PIRUnitTest.cpp.i
+
+UnitTests/PIRUnitTest.s: UnitTests/PIRUnitTest.cpp.s
+.PHONY : UnitTests/PIRUnitTest.s
+
+# target to generate assembly for a file
+UnitTests/PIRUnitTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/UnitTests/PIRUnitTest.cpp.s
+.PHONY : UnitTests/PIRUnitTest.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -225,6 +297,30 @@ src/IngredientIndexClass.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.s
 .PHONY : src/IngredientIndexClass.cpp.s
 
+src/LimitSwitchClass.o: src/LimitSwitchClass.cpp.o
+.PHONY : src/LimitSwitchClass.o
+
+# target to build an object file
+src/LimitSwitchClass.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/src/LimitSwitchClass.cpp.o
+.PHONY : src/LimitSwitchClass.cpp.o
+
+src/LimitSwitchClass.i: src/LimitSwitchClass.cpp.i
+.PHONY : src/LimitSwitchClass.i
+
+# target to preprocess a source file
+src/LimitSwitchClass.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/src/LimitSwitchClass.cpp.i
+.PHONY : src/LimitSwitchClass.cpp.i
+
+src/LimitSwitchClass.s: src/LimitSwitchClass.cpp.s
+.PHONY : src/LimitSwitchClass.s
+
+# target to generate assembly for a file
+src/LimitSwitchClass.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/src/LimitSwitchClass.cpp.s
+.PHONY : src/LimitSwitchClass.cpp.s
+
 src/MotorClass.o: src/MotorClass.cpp.o
 .PHONY : src/MotorClass.o
 
@@ -282,6 +378,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... cocktail_machine"
+	@echo "... UnitTests/DataBaseUnitTest.o"
+	@echo "... UnitTests/DataBaseUnitTest.i"
+	@echo "... UnitTests/DataBaseUnitTest.s"
+	@echo "... UnitTests/LimitSwitchUnitTest.o"
+	@echo "... UnitTests/LimitSwitchUnitTest.i"
+	@echo "... UnitTests/LimitSwitchUnitTest.s"
+	@echo "... UnitTests/PIRUnitTest.o"
+	@echo "... UnitTests/PIRUnitTest.i"
+	@echo "... UnitTests/PIRUnitTest.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -294,6 +399,9 @@ help:
 	@echo "... src/IngredientIndexClass.o"
 	@echo "... src/IngredientIndexClass.i"
 	@echo "... src/IngredientIndexClass.s"
+	@echo "... src/LimitSwitchClass.o"
+	@echo "... src/LimitSwitchClass.i"
+	@echo "... src/LimitSwitchClass.s"
 	@echo "... src/MotorClass.o"
 	@echo "... src/MotorClass.i"
 	@echo "... src/MotorClass.s"
