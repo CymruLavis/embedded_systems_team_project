@@ -20,10 +20,10 @@ make is the command that will compile the project with our cmake architecture
 ./cocktail_machine executes/runs the project
 
 
-#SMART DRINKER COCKTAIL MACHINE PROJECT  
+# SMART DRINKER COCKTAIL MACHINE PROJECT  
 ![Logo]()
 
-#University of Glasgow team members:
+# University of Glasgow team members:
 Ethan Lavis
 Daraigh O'Toole Eglington
 Joshua Varghese
