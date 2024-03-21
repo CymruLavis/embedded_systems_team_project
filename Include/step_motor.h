@@ -5,6 +5,7 @@
 #include <stdexcept>
 
 
+
 class DRV8825 {
 public:
     DRV8825() {
