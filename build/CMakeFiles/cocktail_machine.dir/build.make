@@ -153,6 +153,62 @@ CMakeFiles/cocktail_machine.dir/src/MotorClass.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cocktail_machine.dir/src/MotorClass.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/Desktop/cocktail_machine/src/MotorClass.cpp -o CMakeFiles/cocktail_machine.dir/src/MotorClass.cpp.s
 
+CMakeFiles/cocktail_machine.dir/src/LimitSwitchClass.cpp.o: CMakeFiles/cocktail_machine.dir/flags.make
+CMakeFiles/cocktail_machine.dir/src/LimitSwitchClass.cpp.o: /home/admin/Desktop/cocktail_machine/src/LimitSwitchClass.cpp
+CMakeFiles/cocktail_machine.dir/src/LimitSwitchClass.cpp.o: CMakeFiles/cocktail_machine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin/Desktop/cocktail_machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/cocktail_machine.dir/src/LimitSwitchClass.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cocktail_machine.dir/src/LimitSwitchClass.cpp.o -MF CMakeFiles/cocktail_machine.dir/src/LimitSwitchClass.cpp.o.d -o CMakeFiles/cocktail_machine.dir/src/LimitSwitchClass.cpp.o -c /home/admin/Desktop/cocktail_machine/src/LimitSwitchClass.cpp
+
+CMakeFiles/cocktail_machine.dir/src/LimitSwitchClass.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cocktail_machine.dir/src/LimitSwitchClass.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin/Desktop/cocktail_machine/src/LimitSwitchClass.cpp > CMakeFiles/cocktail_machine.dir/src/LimitSwitchClass.cpp.i
+
+CMakeFiles/cocktail_machine.dir/src/LimitSwitchClass.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cocktail_machine.dir/src/LimitSwitchClass.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/Desktop/cocktail_machine/src/LimitSwitchClass.cpp -o CMakeFiles/cocktail_machine.dir/src/LimitSwitchClass.cpp.s
+
+CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.o: CMakeFiles/cocktail_machine.dir/flags.make
+CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.o: /home/admin/Desktop/cocktail_machine/UnitTests/LimitSwitchUnitTest.cpp
+CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.o: CMakeFiles/cocktail_machine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin/Desktop/cocktail_machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.o -MF CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.o.d -o CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.o -c /home/admin/Desktop/cocktail_machine/UnitTests/LimitSwitchUnitTest.cpp
+
+CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin/Desktop/cocktail_machine/UnitTests/LimitSwitchUnitTest.cpp > CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.i
+
+CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/Desktop/cocktail_machine/UnitTests/LimitSwitchUnitTest.cpp -o CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.s
+
+CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.o: CMakeFiles/cocktail_machine.dir/flags.make
+CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.o: /home/admin/Desktop/cocktail_machine/UnitTests/DataBaseUnitTest.cpp
+CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.o: CMakeFiles/cocktail_machine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin/Desktop/cocktail_machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.o -MF CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.o.d -o CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.o -c /home/admin/Desktop/cocktail_machine/UnitTests/DataBaseUnitTest.cpp
+
+CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin/Desktop/cocktail_machine/UnitTests/DataBaseUnitTest.cpp > CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.i
+
+CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/Desktop/cocktail_machine/UnitTests/DataBaseUnitTest.cpp -o CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.s
+
+CMakeFiles/cocktail_machine.dir/UnitTests/PIRUnitTest.cpp.o: CMakeFiles/cocktail_machine.dir/flags.make
+CMakeFiles/cocktail_machine.dir/UnitTests/PIRUnitTest.cpp.o: /home/admin/Desktop/cocktail_machine/UnitTests/PIRUnitTest.cpp
+CMakeFiles/cocktail_machine.dir/UnitTests/PIRUnitTest.cpp.o: CMakeFiles/cocktail_machine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin/Desktop/cocktail_machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/cocktail_machine.dir/UnitTests/PIRUnitTest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cocktail_machine.dir/UnitTests/PIRUnitTest.cpp.o -MF CMakeFiles/cocktail_machine.dir/UnitTests/PIRUnitTest.cpp.o.d -o CMakeFiles/cocktail_machine.dir/UnitTests/PIRUnitTest.cpp.o -c /home/admin/Desktop/cocktail_machine/UnitTests/PIRUnitTest.cpp
+
+CMakeFiles/cocktail_machine.dir/UnitTests/PIRUnitTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cocktail_machine.dir/UnitTests/PIRUnitTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin/Desktop/cocktail_machine/UnitTests/PIRUnitTest.cpp > CMakeFiles/cocktail_machine.dir/UnitTests/PIRUnitTest.cpp.i
+
+CMakeFiles/cocktail_machine.dir/UnitTests/PIRUnitTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cocktail_machine.dir/UnitTests/PIRUnitTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/Desktop/cocktail_machine/UnitTests/PIRUnitTest.cpp -o CMakeFiles/cocktail_machine.dir/UnitTests/PIRUnitTest.cpp.s
+
 # Object files for target cocktail_machine
 cocktail_machine_OBJECTS = \
 "CMakeFiles/cocktail_machine.dir/main.cpp.o" \
@@ -160,7 +216,11 @@ cocktail_machine_OBJECTS = \
 "CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o" \
 "CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o" \
 "CMakeFiles/cocktail_machine.dir/src/SystemConfig.cpp.o" \
-"CMakeFiles/cocktail_machine.dir/src/MotorClass.cpp.o"
+"CMakeFiles/cocktail_machine.dir/src/MotorClass.cpp.o" \
+"CMakeFiles/cocktail_machine.dir/src/LimitSwitchClass.cpp.o" \
+"CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.o" \
+"CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.o" \
+"CMakeFiles/cocktail_machine.dir/UnitTests/PIRUnitTest.cpp.o"
 
 # External object files for target cocktail_machine
 cocktail_machine_EXTERNAL_OBJECTS =
@@ -171,9 +231,13 @@ cocktail_machine: CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o
 cocktail_machine: CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o
 cocktail_machine: CMakeFiles/cocktail_machine.dir/src/SystemConfig.cpp.o
 cocktail_machine: CMakeFiles/cocktail_machine.dir/src/MotorClass.cpp.o
+cocktail_machine: CMakeFiles/cocktail_machine.dir/src/LimitSwitchClass.cpp.o
+cocktail_machine: CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.o
+cocktail_machine: CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.o
+cocktail_machine: CMakeFiles/cocktail_machine.dir/UnitTests/PIRUnitTest.cpp.o
 cocktail_machine: CMakeFiles/cocktail_machine.dir/build.make
 cocktail_machine: CMakeFiles/cocktail_machine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/admin/Desktop/cocktail_machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable cocktail_machine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/admin/Desktop/cocktail_machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable cocktail_machine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cocktail_machine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
