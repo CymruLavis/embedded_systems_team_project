@@ -18,7 +18,8 @@ $./cocktail_machine
 
 
 # SMART DRINKER COCKTAIL MACHINE PROJECT  
-![Logo]()
+![logo](https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/ada58828-ce8b-49c5-b7a1-eae68de5f26a)
+
 
 # University of Glasgow team members:
 Ethan Lavis  
