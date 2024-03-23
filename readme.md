@@ -11,7 +11,12 @@ $cd LCD-show/
 $chmod +x lcd35b-show  
 $./lcd35b-show  
 
+install cmake
+$sudo apt install cmake
+
+
 to run the program make sure you are in the build directory then run the following to first compile the project the run the executable  
+$cmake ..
 $make  
 $./cocktail_machine  
   
