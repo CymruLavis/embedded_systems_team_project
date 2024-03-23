@@ -18,8 +18,9 @@ $./cocktail_machine
 
 
 # SMART DRINKER COCKTAIL MACHINE PROJECT  
-![logo](https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/ada58828-ce8b-49c5-b7a1-eae68de5f26a)
-
+<p alighn="center">
+  <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/ada58828-ce8b-49c5-b7a1-eae68de5f26a" width="500" height="500" />
+</p>
 
 # University of Glasgow team members:
 Ethan Lavis  
@@ -31,8 +32,9 @@ Roykeane Syangu
 - project overview
 - what problem are we solving
 # Mechanical Design
-<img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/9f9864b9-6a9f-4e1d-8966-a4f2ba2529d1" width="500" height="500" />
-
+<p alighn="center">
+  <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/9f9864b9-6a9f-4e1d-8966-a4f2ba2529d1" width="300" height="500" />
+</p>
 # Real Time Components
 
 # Testing/Results
