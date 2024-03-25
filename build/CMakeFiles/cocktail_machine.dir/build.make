@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/admin/admin/Desktop/cocktail_machine
+CMAKE_SOURCE_DIR = /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/admin/admin/Desktop/cocktail_machine/build
+CMAKE_BINARY_DIR = /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/cocktail_machine.dir/depend.make
@@ -70,60 +70,60 @@ include CMakeFiles/cocktail_machine.dir/progress.make
 include CMakeFiles/cocktail_machine.dir/flags.make
 
 CMakeFiles/cocktail_machine.dir/main.cpp.o: CMakeFiles/cocktail_machine.dir/flags.make
-CMakeFiles/cocktail_machine.dir/main.cpp.o: /home/admin/admin/Desktop/cocktail_machine/main.cpp
+CMakeFiles/cocktail_machine.dir/main.cpp.o: /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/main.cpp
 CMakeFiles/cocktail_machine.dir/main.cpp.o: CMakeFiles/cocktail_machine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin/admin/Desktop/cocktail_machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cocktail_machine.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cocktail_machine.dir/main.cpp.o -MF CMakeFiles/cocktail_machine.dir/main.cpp.o.d -o CMakeFiles/cocktail_machine.dir/main.cpp.o -c /home/admin/admin/Desktop/cocktail_machine/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cocktail_machine.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cocktail_machine.dir/main.cpp.o -MF CMakeFiles/cocktail_machine.dir/main.cpp.o.d -o CMakeFiles/cocktail_machine.dir/main.cpp.o -c /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/main.cpp
 
 CMakeFiles/cocktail_machine.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cocktail_machine.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin/admin/Desktop/cocktail_machine/main.cpp > CMakeFiles/cocktail_machine.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/main.cpp > CMakeFiles/cocktail_machine.dir/main.cpp.i
 
 CMakeFiles/cocktail_machine.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cocktail_machine.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/admin/Desktop/cocktail_machine/main.cpp -o CMakeFiles/cocktail_machine.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/main.cpp -o CMakeFiles/cocktail_machine.dir/main.cpp.s
 
 CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o: CMakeFiles/cocktail_machine.dir/flags.make
-CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o: /home/admin/admin/Desktop/cocktail_machine/src/DataClass.cpp
+CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o: /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/DataClass.cpp
 CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o: CMakeFiles/cocktail_machine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin/admin/Desktop/cocktail_machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o -MF CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o.d -o CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o -c /home/admin/admin/Desktop/cocktail_machine/src/DataClass.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o -MF CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o.d -o CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o -c /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/DataClass.cpp
 
 CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin/admin/Desktop/cocktail_machine/src/DataClass.cpp > CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/DataClass.cpp > CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.i
 
 CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/admin/Desktop/cocktail_machine/src/DataClass.cpp -o CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/DataClass.cpp -o CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.s
 
 CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o: CMakeFiles/cocktail_machine.dir/flags.make
-CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o: /home/admin/admin/Desktop/cocktail_machine/src/IngredientIndexClass.cpp
+CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o: /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/IngredientIndexClass.cpp
 CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o: CMakeFiles/cocktail_machine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin/admin/Desktop/cocktail_machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o -MF CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o.d -o CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o -c /home/admin/admin/Desktop/cocktail_machine/src/IngredientIndexClass.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o -MF CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o.d -o CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o -c /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/IngredientIndexClass.cpp
 
 CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin/admin/Desktop/cocktail_machine/src/IngredientIndexClass.cpp > CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/IngredientIndexClass.cpp > CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.i
 
 CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/admin/Desktop/cocktail_machine/src/IngredientIndexClass.cpp -o CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/IngredientIndexClass.cpp -o CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.s
 
 CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o: CMakeFiles/cocktail_machine.dir/flags.make
-CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o: /home/admin/admin/Desktop/cocktail_machine/src/IngredientClass.cpp
+CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o: /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/IngredientClass.cpp
 CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o: CMakeFiles/cocktail_machine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin/admin/Desktop/cocktail_machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o -MF CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o.d -o CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o -c /home/admin/admin/Desktop/cocktail_machine/src/IngredientClass.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o -MF CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o.d -o CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o -c /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/IngredientClass.cpp
 
 CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin/admin/Desktop/cocktail_machine/src/IngredientClass.cpp > CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/IngredientClass.cpp > CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.i
 
 CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/admin/Desktop/cocktail_machine/src/IngredientClass.cpp -o CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/IngredientClass.cpp -o CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.s
 
 # Object files for target cocktail_machine
 cocktail_machine_OBJECTS = \
@@ -141,7 +141,7 @@ cocktail_machine: CMakeFiles/cocktail_machine.dir/src/IngredientIndexClass.cpp.o
 cocktail_machine: CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o
 cocktail_machine: CMakeFiles/cocktail_machine.dir/build.make
 cocktail_machine: CMakeFiles/cocktail_machine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/admin/admin/Desktop/cocktail_machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable cocktail_machine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable cocktail_machine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cocktail_machine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -153,6 +153,6 @@ CMakeFiles/cocktail_machine.dir/clean:
 .PHONY : CMakeFiles/cocktail_machine.dir/clean
 
 CMakeFiles/cocktail_machine.dir/depend:
-	cd /home/admin/admin/Desktop/cocktail_machine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/admin/admin/Desktop/cocktail_machine /home/admin/admin/Desktop/cocktail_machine /home/admin/admin/Desktop/cocktail_machine/build /home/admin/admin/Desktop/cocktail_machine/build /home/admin/admin/Desktop/cocktail_machine/build/CMakeFiles/cocktail_machine.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/build /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/build /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/build/CMakeFiles/cocktail_machine.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cocktail_machine.dir/depend
 

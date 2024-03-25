@@ -1,8 +1,8 @@
 CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o: \
- /home/admin/admin/Desktop/cocktail_machine/src/DataClass.cpp \
+ /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/DataClass.cpp \
  /usr/include/stdc-predef.h \
- /home/admin/admin/Desktop/cocktail_machine/src/../Include/Data.h \
- /home/admin/admin/Desktop/cocktail_machine/src/../Include/Indexes.h \
+ /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/../Include/Data.h \
+ /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/../Include/Indexes.h \
  /usr/include/c++/12/iostream \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/c++config.h \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/os_defines.h \
@@ -134,8 +134,8 @@ CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o: \
  /usr/include/arm-linux-gnueabihf/bits/stdio_lim.h \
  /usr/include/c++/12/cerrno /usr/include/errno.h \
  /usr/include/arm-linux-gnueabihf/bits/errno.h /usr/include/linux/errno.h \
- /usr/include/arm-linux-gnueabihf/asm/errno.h \
- /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/lib/linux/uapi/arm/asm/errno.h /usr/include/asm-generic/errno.h \
+ /usr/include/asm-generic/errno-base.h \
  /usr/include/arm-linux-gnueabihf/bits/types/error_t.h \
  /usr/include/c++/12/bits/charconv.h \
  /usr/include/c++/12/bits/basic_string.tcc \
@@ -159,8 +159,8 @@ CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o: \
  /usr/include/c++/12/bits/stl_vector.h \
  /usr/include/c++/12/bits/stl_bvector.h \
  /usr/include/c++/12/bits/vector.tcc \
- /home/admin/admin/Desktop/cocktail_machine/src/../Include/SystemConfig.h \
- /home/admin/admin/Desktop/cocktail_machine/src/../Include/Ingredient.h \
+ /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/../Include/SystemConfig.h \
+ /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/../Include/Ingredient.h \
  /usr/include/c++/12/array /usr/include/c++/12/compare \
  /usr/include/c++/12/fstream /usr/include/c++/12/bits/codecvt.h \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/basic_file.h \
@@ -183,6 +183,6 @@ CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o: \
  /usr/include/c++/12/bits/node_handle.h \
  /usr/include/c++/12/bits/unordered_set.h \
  /usr/include/c++/12/bits/erase_if.h \
- /home/admin/admin/Desktop/cocktail_machine/src/../Include/Indexes.h \
- /home/admin/admin/Desktop/cocktail_machine/src/../Include/Ingredient.h \
- /home/admin/admin/Desktop/cocktail_machine/src/../Include/SystemConfig.h
+ /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/../Include/Indexes.h \
+ /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/../Include/Ingredient.h \
+ /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/../Include/SystemConfig.h

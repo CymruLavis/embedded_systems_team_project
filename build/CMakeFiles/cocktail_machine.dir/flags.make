@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/admin/admin/Desktop/cocktail_machine/include -I/home/admin/admin/Desktop/cocktail_machine/src
+CXX_INCLUDES = -I/home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/include -I/home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src
 
 CXX_FLAGS = 
 

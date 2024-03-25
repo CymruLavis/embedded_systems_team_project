@@ -6,22 +6,10 @@
 
 class DRV8825 {
 public:
-    DRV8825() {
-        // Initialize pigpio library
-        if (gpioInitialise() < 0) {
-            throw std::runtime_error("pigpio initialization failed");
-        }
-    }
-
-    ~DRV8825() {
-        // Terminate pigpio library
-        gpioTerminate();
-    }
-
     void motor_go(bool clockwise, double degrees) {
         // Pin assignments
-        int direction_pin = 20; // Direction pin
-        int step_pin = 21; // Step pin
+        int direction_pin = 8; // Direction pin
+        int step_pin = 10; // Step pin
         int FLT_pin = 16; // Fault detection pin
         int SLP_pin = 17; // Sleep mode pin
 
@@ -42,13 +30,13 @@ public:
 
         // Hardcoded delay values
         double stepdelay = 0.005; // Seconds between steps
-
+        this_thread::sleep_for(chrono::seconds(1));
         for (int i = 0; i < steps; ++i) {
             // Check for motor fault
-            if (gpioRead(FLT_pin) == PI_LOW) {
-                gpioWrite(SLP_pin, PI_LOW); // Put the motor driver in sleep mode
-                throw std::runtime_error("MOTOR FAULT");
-            }
+            //if (gpioRead(FLT_pin) == PI_LOW) {
+            //    gpioWrite(SLP_pin, PI_LOW); // Put the motor driver in sleep mode
+            //    throw std::runtime_error("MOTOR FAULT");
+            //}
 
             // Perform a step
             gpioWrite(step_pin, PI_HIGH);
@@ -176,19 +164,3 @@ public:
         gpioWrite(SLP_pin, PI_LOW);
     }
 };
-
-// Main function to demonstrate usage
-int main() {
-    std::cout << "TEST START\n";
-
-    try {
-        DRV8825 mymotor;
-        // Example call: Rotate 180 degrees clockwise
-        mymotor.motor_go(true, 180);
-    } catch (const std::exception& e) {
-        std::cerr << e.what() << '\n';
-    }
-
-    std::cout << "TEST END\n";
-    return 0;
-}

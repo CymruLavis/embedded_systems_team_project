@@ -1,5 +1,5 @@
 CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o: \
- /home/admin/admin/Desktop/cocktail_machine/src/IngredientClass.cpp \
+ /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/IngredientClass.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/12/iostream \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/c++config.h \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/os_defines.h \
@@ -131,8 +131,8 @@ CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o: \
  /usr/include/arm-linux-gnueabihf/bits/stdio_lim.h \
  /usr/include/c++/12/cerrno /usr/include/errno.h \
  /usr/include/arm-linux-gnueabihf/bits/errno.h /usr/include/linux/errno.h \
- /usr/include/arm-linux-gnueabihf/asm/errno.h \
- /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/lib/linux/uapi/arm/asm/errno.h /usr/include/asm-generic/errno.h \
+ /usr/include/asm-generic/errno-base.h \
  /usr/include/arm-linux-gnueabihf/bits/types/error_t.h \
  /usr/include/c++/12/bits/charconv.h \
  /usr/include/c++/12/bits/basic_string.tcc \
@@ -156,4 +156,4 @@ CMakeFiles/cocktail_machine.dir/src/IngredientClass.cpp.o: \
  /usr/include/c++/12/bits/stl_vector.h \
  /usr/include/c++/12/bits/stl_bvector.h \
  /usr/include/c++/12/bits/vector.tcc \
- /home/admin/admin/Desktop/cocktail_machine/src/../Include/Ingredient.h
+ /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/../Include/Ingredient.h

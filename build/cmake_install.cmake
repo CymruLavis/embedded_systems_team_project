@@ -1,4 +1,4 @@
-# Install script for directory: /home/admin/admin/Desktop/cocktail_machine
+# Install script for directory: /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/admin/admin/Desktop/cocktail_machine/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
