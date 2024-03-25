@@ -9,7 +9,7 @@ using namespace std;
 
 int main() {
     // Print to terminal
-    cout << "Printing to terminal..." << endl;
+    cout << "STARTING" << endl;
 
     // Wait for 5 seconds
     this_thread::sleep_for(chrono::seconds(1));
@@ -22,9 +22,10 @@ int main() {
 	try {
         DRV8825 mymotor;
         // Perform vertical movement between limits
-        mymotor.motor_go(true, 90);
+        bool clockwise = true;
+        mymotor.motor_go(clockwise, 30);
     } catch (const std::exception& e) {
-        std::cerr << e.what() << '\n';
+        cerr << e.what() << '\n';
     }
 	gpioTerminate();
     std::cout << "TEST END\n";
