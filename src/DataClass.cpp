@@ -120,8 +120,9 @@ vector<int> Data::getRecipe(string drink, SystemConfig sys) {
 	// Need position of ingredients
 	// make queue of positions to visit
 	// make quantities of how many times the drink needs to dispense 
-
 	return positionQueue;
+
+	// instead of return position queue, tell motor to go to position
 }
 
 // returns of list of the drinks that can be made with the loaded ingredients

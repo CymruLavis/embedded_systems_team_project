@@ -8,7 +8,9 @@
 
 // #include "UnitTests/LimitSwitchUnitTest.h"
 // #include "UnitTests/PIRUnitTest.h"
-// #include "UnitTests/DataBaseUnitTest.h"
+// #include "UnitTests/DataBaseUnitTest.h"	
+#include "UnitTests/LogicTest.h"
+
 
 
 using namespace std;
@@ -42,7 +44,9 @@ void initializePins(){
 }
 
 int main(){
-    return 0;
+    LogicTestExecutable();
+	
+	return 0;
 }
 
 

@@ -37,6 +37,8 @@ public:
     void initializePins(int dir, int step, int sleep, int fault);
 	void setMotorCharacteristics(double step_angle);
     int decideDirection(int currentPos, int desiredPos);
+    void changeDirection();
+
     void step();
 
     int getDistanceBetweenPositions(int currentPos, int desiredPos);

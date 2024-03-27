@@ -96,6 +96,14 @@ void Motor::step(){
     usleep(1000);
 }
 
+void Motor::changeDirection(){
+    if (this->getDirState() == 1){
+        this->setDirPin(0);
+    }
+    else if(this->getDirState() == 0){
+        this->setDirPin(1);
+    }
+}
 int Motor::decideDirection(int currentPos, int desiredPos){
 	return 0;
 }

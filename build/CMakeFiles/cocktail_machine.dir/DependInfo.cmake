@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/admin/Desktop/cocktail_machine/UnitTests/DataBaseUnitTest.cpp" "CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.o" "gcc" "CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.o.d"
   "/home/admin/Desktop/cocktail_machine/UnitTests/LimitSwitchUnitTest.cpp" "CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.o" "gcc" "CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.o.d"
+  "/home/admin/Desktop/cocktail_machine/UnitTests/LogicTest.cpp" "CMakeFiles/cocktail_machine.dir/UnitTests/LogicTest.cpp.o" "gcc" "CMakeFiles/cocktail_machine.dir/UnitTests/LogicTest.cpp.o.d"
   "/home/admin/Desktop/cocktail_machine/UnitTests/PIRUnitTest.cpp" "CMakeFiles/cocktail_machine.dir/UnitTests/PIRUnitTest.cpp.o" "gcc" "CMakeFiles/cocktail_machine.dir/UnitTests/PIRUnitTest.cpp.o.d"
   "/home/admin/Desktop/cocktail_machine/main.cpp" "CMakeFiles/cocktail_machine.dir/main.cpp.o" "gcc" "CMakeFiles/cocktail_machine.dir/main.cpp.o.d"
   "/home/admin/Desktop/cocktail_machine/src/DataClass.cpp" "CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o" "gcc" "CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o.d"

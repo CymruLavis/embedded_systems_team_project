@@ -16,7 +16,7 @@ void printListOfInts(vector<int> list);
 void printColum(vector<vector<string>> list);
 void setIngredientPositions(Data *myData, SystemConfig *sys, vector<string> const *ingredients);
 void printSys(SystemConfig sys);
-int DataBaseExecutable();
+vector<vector<int>> DataBaseExecutable();
 
 
 #endif

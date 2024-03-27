@@ -14,7 +14,8 @@ add_executable(cocktail_machine
                 src/LimitSwitchClass.cpp
                 UnitTests/LimitSwitchUnitTest.cpp
                 UnitTests/DataBaseUnitTest.cpp
-                UnitTests/PIRUnitTest.cpp)
+                UnitTests/PIRUnitTest.cpp
+                UnitTests/LogicTest.cpp)
 
 
 find_path(pigpio_INCLUDE_DIR 

@@ -177,6 +177,30 @@ UnitTests/LimitSwitchUnitTest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.s
 .PHONY : UnitTests/LimitSwitchUnitTest.cpp.s
 
+UnitTests/LogicTest.o: UnitTests/LogicTest.cpp.o
+.PHONY : UnitTests/LogicTest.o
+
+# target to build an object file
+UnitTests/LogicTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/UnitTests/LogicTest.cpp.o
+.PHONY : UnitTests/LogicTest.cpp.o
+
+UnitTests/LogicTest.i: UnitTests/LogicTest.cpp.i
+.PHONY : UnitTests/LogicTest.i
+
+# target to preprocess a source file
+UnitTests/LogicTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/UnitTests/LogicTest.cpp.i
+.PHONY : UnitTests/LogicTest.cpp.i
+
+UnitTests/LogicTest.s: UnitTests/LogicTest.cpp.s
+.PHONY : UnitTests/LogicTest.s
+
+# target to generate assembly for a file
+UnitTests/LogicTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/UnitTests/LogicTest.cpp.s
+.PHONY : UnitTests/LogicTest.cpp.s
+
 UnitTests/PIRUnitTest.o: UnitTests/PIRUnitTest.cpp.o
 .PHONY : UnitTests/PIRUnitTest.o
 
@@ -384,6 +408,9 @@ help:
 	@echo "... UnitTests/LimitSwitchUnitTest.o"
 	@echo "... UnitTests/LimitSwitchUnitTest.i"
 	@echo "... UnitTests/LimitSwitchUnitTest.s"
+	@echo "... UnitTests/LogicTest.o"
+	@echo "... UnitTests/LogicTest.i"
+	@echo "... UnitTests/LogicTest.s"
 	@echo "... UnitTests/PIRUnitTest.o"
 	@echo "... UnitTests/PIRUnitTest.i"
 	@echo "... UnitTests/PIRUnitTest.s"
