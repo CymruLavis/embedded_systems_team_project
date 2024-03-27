@@ -49,4 +49,8 @@ Roykeane Syangu
 - BOM
 - Wiring Diagram
 - Required Libraries
-- 
+
+
+# References
+- links to documentation
+
