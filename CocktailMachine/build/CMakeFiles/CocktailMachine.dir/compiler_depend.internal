@@ -1445,11 +1445,6 @@ CMakeFiles/CocktailMachine.dir/main.cpp.o
  /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/Include/Motor.h
  /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/Include/LimitSwitch.h
  /usr/local/include/pigpio.h
- /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/UnitTests/DataBaseUnitTest.h
- /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/Include/Data.h
- /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/Include/SystemConfig.h
- /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/Include/Motor.h
- /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/Include/LimitSwitch.h
 
 CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o
  /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/mainwindow.cpp

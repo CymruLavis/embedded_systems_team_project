@@ -1439,12 +1439,7 @@ CMakeFiles/CocktailMachine.dir/main.cpp.o: ../main.cpp \
   ../Include/SystemConfig.h \
   ../Include/Motor.h \
   ../Include/LimitSwitch.h \
-  /usr/local/include/pigpio.h \
-  ../UnitTests/DataBaseUnitTest.h \
-  ../Include/Data.h \
-  ../Include/SystemConfig.h \
-  ../Include/Motor.h \
-  ../Include/LimitSwitch.h
+  /usr/local/include/pigpio.h
 
 CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o: ../mainwindow.cpp \
   /usr/include/stdc-predef.h \
