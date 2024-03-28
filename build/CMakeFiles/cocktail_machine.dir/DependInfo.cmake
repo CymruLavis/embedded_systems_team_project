@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/admin/Desktop/cocktail_machine/UnitTests/DataBaseUnitTest.cpp" "CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.o" "gcc" "CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.o.d"
+  "/home/admin/Desktop/cocktail_machine/UnitTests/LimSwitchWithMotorUnitTest.cpp" "CMakeFiles/cocktail_machine.dir/UnitTests/LimSwitchWithMotorUnitTest.cpp.o" "gcc" "CMakeFiles/cocktail_machine.dir/UnitTests/LimSwitchWithMotorUnitTest.cpp.o.d"
   "/home/admin/Desktop/cocktail_machine/UnitTests/LimitSwitchUnitTest.cpp" "CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.o" "gcc" "CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.o.d"
   "/home/admin/Desktop/cocktail_machine/UnitTests/LogicTest.cpp" "CMakeFiles/cocktail_machine.dir/UnitTests/LogicTest.cpp.o" "gcc" "CMakeFiles/cocktail_machine.dir/UnitTests/LogicTest.cpp.o.d"
   "/home/admin/Desktop/cocktail_machine/UnitTests/PIRUnitTest.cpp" "CMakeFiles/cocktail_machine.dir/UnitTests/PIRUnitTest.cpp.o" "gcc" "CMakeFiles/cocktail_machine.dir/UnitTests/PIRUnitTest.cpp.o.d"

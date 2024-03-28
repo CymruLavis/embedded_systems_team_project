@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.o"
   "CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.o.d"
+  "CMakeFiles/cocktail_machine.dir/UnitTests/LimSwitchWithMotorUnitTest.cpp.o"
+  "CMakeFiles/cocktail_machine.dir/UnitTests/LimSwitchWithMotorUnitTest.cpp.o.d"
   "CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.o"
   "CMakeFiles/cocktail_machine.dir/UnitTests/LimitSwitchUnitTest.cpp.o.d"
   "CMakeFiles/cocktail_machine.dir/UnitTests/LogicTest.cpp.o"

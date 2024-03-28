@@ -153,6 +153,30 @@ UnitTests/DataBaseUnitTest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/UnitTests/DataBaseUnitTest.cpp.s
 .PHONY : UnitTests/DataBaseUnitTest.cpp.s
 
+UnitTests/LimSwitchWithMotorUnitTest.o: UnitTests/LimSwitchWithMotorUnitTest.cpp.o
+.PHONY : UnitTests/LimSwitchWithMotorUnitTest.o
+
+# target to build an object file
+UnitTests/LimSwitchWithMotorUnitTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/UnitTests/LimSwitchWithMotorUnitTest.cpp.o
+.PHONY : UnitTests/LimSwitchWithMotorUnitTest.cpp.o
+
+UnitTests/LimSwitchWithMotorUnitTest.i: UnitTests/LimSwitchWithMotorUnitTest.cpp.i
+.PHONY : UnitTests/LimSwitchWithMotorUnitTest.i
+
+# target to preprocess a source file
+UnitTests/LimSwitchWithMotorUnitTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/UnitTests/LimSwitchWithMotorUnitTest.cpp.i
+.PHONY : UnitTests/LimSwitchWithMotorUnitTest.cpp.i
+
+UnitTests/LimSwitchWithMotorUnitTest.s: UnitTests/LimSwitchWithMotorUnitTest.cpp.s
+.PHONY : UnitTests/LimSwitchWithMotorUnitTest.s
+
+# target to generate assembly for a file
+UnitTests/LimSwitchWithMotorUnitTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cocktail_machine.dir/build.make CMakeFiles/cocktail_machine.dir/UnitTests/LimSwitchWithMotorUnitTest.cpp.s
+.PHONY : UnitTests/LimSwitchWithMotorUnitTest.cpp.s
+
 UnitTests/LimitSwitchUnitTest.o: UnitTests/LimitSwitchUnitTest.cpp.o
 .PHONY : UnitTests/LimitSwitchUnitTest.o
 
@@ -405,6 +429,9 @@ help:
 	@echo "... UnitTests/DataBaseUnitTest.o"
 	@echo "... UnitTests/DataBaseUnitTest.i"
 	@echo "... UnitTests/DataBaseUnitTest.s"
+	@echo "... UnitTests/LimSwitchWithMotorUnitTest.o"
+	@echo "... UnitTests/LimSwitchWithMotorUnitTest.i"
+	@echo "... UnitTests/LimSwitchWithMotorUnitTest.s"
 	@echo "... UnitTests/LimitSwitchUnitTest.o"
 	@echo "... UnitTests/LimitSwitchUnitTest.i"
 	@echo "... UnitTests/LimitSwitchUnitTest.s"

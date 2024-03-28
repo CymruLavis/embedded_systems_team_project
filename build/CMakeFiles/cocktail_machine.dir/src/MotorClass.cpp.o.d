@@ -157,9 +157,11 @@ CMakeFiles/cocktail_machine.dir/src/MotorClass.cpp.o: \
  /usr/include/c++/12/bits/stl_uninitialized.h \
  /usr/include/c++/12/bits/stl_vector.h \
  /usr/include/c++/12/bits/stl_bvector.h \
- /usr/include/c++/12/bits/vector.tcc /usr/local/include/pigpio.h \
- /usr/local/include/pigpiod_if2.h /usr/local/include/pigpio.h \
- /usr/include/unistd.h /usr/include/arm-linux-gnueabihf/bits/posix_opt.h \
+ /usr/include/c++/12/bits/vector.tcc \
+ /home/admin/Desktop/cocktail_machine/src/../Include/LimitSwitch.h \
+ /usr/local/include/pigpio.h /usr/local/include/pigpiod_if2.h \
+ /usr/local/include/pigpio.h /usr/include/unistd.h \
+ /usr/include/arm-linux-gnueabihf/bits/posix_opt.h \
  /usr/include/arm-linux-gnueabihf/bits/environments.h \
  /usr/include/arm-linux-gnueabihf/bits/confname.h \
  /usr/include/arm-linux-gnueabihf/bits/getopt_posix.h \
