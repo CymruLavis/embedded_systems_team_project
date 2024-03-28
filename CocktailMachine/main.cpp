@@ -8,6 +8,10 @@
 #include "Include/Motor.h"
 #include "Include/LimitSwitch.h"
 
+// #include "UnitTests/LimitSwitchUnitTest.h"
+// #include "UnitTests/PIRUnitTest.h"
+//#include "UnitTests/DataBaseUnitTest.h"
+
 using namespace std;
 
 LimitSwitch* PIR_sensor = new LimitSwitch(26); //physical pin 37
