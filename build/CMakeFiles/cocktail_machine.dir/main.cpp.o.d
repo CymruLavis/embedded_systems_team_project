@@ -192,4 +192,4 @@ CMakeFiles/cocktail_machine.dir/main.cpp.o: \
  /home/admin/Desktop/cocktail_machine/Include/Motor.h \
  /home/admin/Desktop/cocktail_machine/Include/LimitSwitch.h \
  /usr/local/include/pigpio.h \
- /home/admin/Desktop/cocktail_machine/UnitTests/LogicTest.h
+ /home/admin/Desktop/cocktail_machine/UnitTests/LimitSwitchUnitTest.h

@@ -21,7 +21,7 @@ LimitSwitch* calibration_switch = new LimitSwitch(22); //
 Motor* carousel_motor = new Motor(0, 19,3,2,1.8);
 Motor* riser_motor = new Motor(20,18,21,16,1.8);
 
-atomic<bool> PIR_running(true);
+atomic<bool> PIR_thread_running(true);
 atomic<bool> upperLimitSwitchInterrupt(false);
 atomic<bool> Lower_LST_running(true);
 atomic<bool> Base_motor_running(true);
