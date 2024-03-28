@@ -40,6 +40,8 @@ public:
 	vector<string> getWholeDrinkList();
 	string indexToIngredient(int ingredient_idx);
 	int ingredientToIndex(string ingredient);
+	void convertToCsvFile(vector<vector<string>>matrix, string fileName);
+	vector<vector<string>> readCsvFile( string fileNamePath);
 
 };
 

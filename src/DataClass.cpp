@@ -10,9 +10,10 @@
 #include <string>
 #include <algorithm>
 #include <unordered_set>
+#include <filesystem>
 
 
-
+namespace fs = std::filesystem;
 using namespace std;
 
 	
@@ -179,3 +180,76 @@ int Data::ingredientToIndex(string drink) {
     }
     return -1;
 }
+
+//Function to save a 6 by 3 matrix represented as vector of strings to a CSV file
+void Data::convertToCsvFile(vector<vector<string>>matrix, string filenamePath){
+	// Constructing the relative path to the file
+    fs::path filepath = fs::current_path() / filenamePath;
+	
+    ofstream file(filepath);
+    if (file.is_open()) {
+        // Writing matrix data to the file, loop through each row in  the matrix
+        for (const auto& row : matrix) {
+			// Loop over each element in the current row
+            for (size_t i = 0; i < row.size(); ++i) {
+				// Write the current element to the file
+                file << row[i];
+				// If it's not the last element in the row, add a comma
+                if (i != row.size() - 1) {
+                    file << ",";
+                }
+            }
+            file << endl;
+        }
+        file.close();
+        //cout << "Matrix saved to " << filepath << " successfully." << endl;
+    } else {
+        // Print error message if file cannot be opened
+        cerr << "Unable to open file: " << filepath << endl;
+    }
+
+}
+
+// Function to read a 6 by 3 matrix from a CSV file
+vector<vector<string>> Data::readCsvFile(string matrixFilepath){
+	vector<vector<string>> matrix;
+	// Constructing the relative path to the file
+    fs::path filepath = fs::current_path() / matrixFilepath;
+	ifstream file(filepath);
+    if (file.is_open()) {
+        string line;
+        // Read each line of the file
+        while (getline(file, line)) {
+			//vector to store the elements of the current row
+            vector<string> row;
+			//Create a stringstream to split the line into individual elements
+            stringstream ss(line);
+            string cell;
+            // Loop to extract each element from the stringstream
+        // and add it to the current row
+            while (getline(ss, cell, ',')) {
+                row.push_back(cell);
+            }
+            // Add the current row to the matrix
+            matrix.push_back(row);
+        }
+        file.close();
+        //cout << "Matrix read from " << filepath << " successfully." << endl;
+    } else {
+        // Print error message if file cannot be opened
+        cerr << "Unable to open file: " << filepath << endl;
+    }
+    return matrix;
+}
+
+
+
+    
+
+
+    //string filenamePath = "matrix_data.csv";
+
+    //saveMatrixToCSV(matrix, filenamePath);
+
+    //vector<vector<string>> readMatrix = readMatrixFromCSV(filenamePath);
+
