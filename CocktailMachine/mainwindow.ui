@@ -49,6 +49,11 @@
         <height>25</height>
        </rect>
       </property>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
      </widget>
      <widget class="QPushButton" name="pushButton">
       <property name="geometry">

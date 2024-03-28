@@ -79,6 +79,7 @@ public:
         label->setGeometry(QRect(200, 20, 75, 25));
         label->setAlignment(Qt::AlignCenter);
         comboBox = new QComboBox(page);
+        comboBox->addItem(QString());
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
         comboBox->setGeometry(QRect(20, 60, 180, 25));
         pushButton = new QPushButton(page);
@@ -197,6 +198,8 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Home", nullptr));
+        comboBox->setItemText(0, QString());
+
         pushButton->setText(QCoreApplication::translate("MainWindow", "Make Drink", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "Status Menu", nullptr));
         pushButton_3->setText(QCoreApplication::translate("MainWindow", "Settings", nullptr));
