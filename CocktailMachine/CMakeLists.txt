@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.5)
 
 project(CocktailMachine VERSION 0.1 LANGUAGES CXX)
 
+include_directories(include)
+include_directories(src)
+
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -17,6 +20,15 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        src/DataClass.cpp 
+        src/IngredientIndexClass.cpp 
+        src/IngredientClass.cpp
+        src/SystemConfig.cpp
+        src/MotorClass.cpp
+        src/LimitSwitchClass.cpp
+        UnitTests/LimitSwitchUnitTest.cpp
+        UnitTests/DataBaseUnitTest.cpp
+        UnitTests/PIRUnitTest.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -42,7 +54,11 @@ else()
     endif()
 endif()
 
-target_link_libraries(CocktailMachine PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+find_path(pigpio_INCLUDE_DIR 
+NAMES pigpio.h pigpiod_if.h pigpiod_if2.h
+HINTS /usr/local/include)
+
+target_link_libraries(CocktailMachine PRIVATE Qt${QT_VERSION_MAJOR}::Widgets pigpio)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
@@ -68,3 +84,4 @@ install(TARGETS CocktailMachine
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(CocktailMachine)
 endif()
+
