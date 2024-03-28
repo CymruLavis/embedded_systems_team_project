@@ -1,9 +1,15 @@
+#include <pigpio.h>
 
 #include <iostream>
+#include <unistd.h>
+
+#include <cstdlib>
+#include <cmath>
+#include <algorithm>
 #include <thread>
-#include <functional>
-#include <pigpio.h>
 #include <atomic>
+
+#include <vector>
 
 #include "LogicTest.h"
 #include "DataBaseUnitTest.h"
@@ -14,18 +20,15 @@ using namespace std;
 
 
 LimitSwitch* PIR_sensor = new LimitSwitch(26); //physical pin 37
-LimitSwitch* upper_switch = new LimitSwitch(4); //
+LimitSwitch* upper_switch = new LimitSwitch(22); //
 LimitSwitch* lower_switch = new LimitSwitch(27); //
 LimitSwitch* calibration_switch = new LimitSwitch(22); //
 
-Motor* carousel_motor = new Motor(0, 19,3,2,1.8);
+Motor* carousel_motor = new Motor(0, 19,3,2,1.8); //int dir, int step, int sleep, int fault
 Motor* riser_motor = new Motor(20,18,21,16,1.8);
 
-atomic<bool> PIR_thread_running(true);
-atomic<bool> upperLimitSwitchInterrupt(false);
-atomic<bool> Lower_LST_running(true);
-atomic<bool> Base_motor_running(true);
-atomic<bool> Riser_motor_running(true);
+atomic<bool> system_running(true);
+atomic<bool> program_running(true);
 
 void initializePins(){
 	//PIR Sensor
@@ -39,40 +42,60 @@ void initializePins(){
 	//Light Gate
 
 	//Motors
-	gpioSetMode(carousel_motor->getDirPin(), PI_OUTPUT);
+    carousel_motor->initializePins(carousel_motor->getDirPin(),
+                                    carousel_motor->getStepPin(),
+                                    carousel_motor->getSleepPin(),
+                                    carousel_motor->getFaultPin());
 
-
+    riser_motor->initializePins(riser_motor->getDirPin(),
+                                riser_motor->getStepPin(),
+                                riser_motor->getSleepPin(),
+                                riser_motor->getFaultPin());
 
 }
 
-void safteyThread(){
-}
-void motorThread(){
-    while(true){
-        cout << "motor thread " << endl;
+void safteyCallback(int gpio, int level, uint32_t tick){
+    if(level == PI_HIGH){
+        system_running = false;
+    }
+    else{
+        system_running = true;
     }
 }
-void upperLimitSwitchCallback(int gpio, int level, uint32_t tick) {
-    if (level == PI_HIGH) {
-        upperLimitSwitchInterrupt = true;
+void makeDrinkThread(vector<int>& step_queue){
+    while(program_running){
+        while(system_running){
+            // call set to pos 0
+            carousel_motor->MAIN_MOTOR_RESET(calibration_switch);
+            for(auto& step:step_queue){
+                carousel_motor->motor_go(carousel_motor->decideDirection(step), abs(step));
+                riser_motor->VERT_MOVE(upper_switch, lower_switch);                
+            }
+        }
     }
-}
+    
 
+}
 int LogicTestExecutable(){
     vector<vector<int>> queues = DataBaseExecutable();
-    vector<int> step_queue = queues[0];
-    vector<int> pos_queue = queues[1];
+    vector<int> step_queue = carousel_motor->getStepQueue(queues[1]);
 	int current_position = 0;
 
-    // starts saftey thread (PIR and saftey switch)        
-    thread myMotorThread(motorThread);
-    myMotorThread.detach();
-
-    while(true){
-        cout << "Main Loop " << endl;
+    if (gpioInitialise() < 0) {
+        std::cerr << "pigpio initialization failed." << std::endl;
+        return 1;
     }
+    // start PIR thread
+    //start motor thread
+    
+    gpioSetAlertFunc(upper_switch->getPin(), safteyCallback);
+    thread myThread(makeDrinkThread, ref(step_queue));
+    
+    cin.get();
+    program_running = false;
+    myThread.join();
 
-    myMotorThread.join();
+    gpioTerminate();
 
     // terminate saftey thread (PIR and saftey switch)
     return 0;

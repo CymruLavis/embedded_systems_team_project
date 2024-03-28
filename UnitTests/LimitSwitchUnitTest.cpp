@@ -13,19 +13,7 @@ using namespace std;
 
 // Global atomic booleans to control thread execution
 std::atomic<bool> LimitSwitch_running(true);
-// atomic<int> ledPin(0);
 
-
-// Function to monitor switch and control LED
-// void changeLEDStateCallback(int gpio, int level, uint32_t tick){
-//     if (gpioRead(ledPin) == 1){
-//         gpioWrite(ledPin, 0);
-//     }
-//     else{
-//         gpioWrite(ledPin, 1);
-//     }
-
-// }
 
 
 void aFunction(int gpio, int level, uint32_t tick)

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include "LimitSwitch.h"
 
 
 using namespace std;
@@ -36,7 +37,7 @@ public:
 
     void initializePins(int dir, int step, int sleep, int fault);
 	void setMotorCharacteristics(double step_angle);
-    int decideDirection(int currentPos, int desiredPos);
+    bool decideDirection(int steps);
     void changeDirection();
 
     void step();
@@ -46,7 +47,9 @@ public:
     int getStepsToRotoate(double degreesToSpin);
 
     vector<int> getStepQueue(vector<int> positionQueue);    
-    
+    void VERT_MOVE(LimitSwitch* upper_switch, LimitSwitch* lower_switch);
+    void Motor::motor_go(bool clockwise, double degrees);
+    void Motor::MAIN_MOTOR_RESET(LimitSwitch* calibration_switch);
 
     // Pin out
     int direction_pin;  //1 = clockwise; 0 = counter clockwise

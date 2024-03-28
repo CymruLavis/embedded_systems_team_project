@@ -6,10 +6,11 @@
 #include "Include/Motor.h"
 #include "Include/LimitSwitch.h"
 
-#include "UnitTests/LimitSwitchUnitTest.h"
+// #include "UnitTests/LimitSwitchUnitTest.h"
 // #include "UnitTests/PIRUnitTest.h"
 // #include "UnitTests/DataBaseUnitTest.h"	
-// #include "UnitTests/LogicTest.h"
+#include "UnitTests/LogicTest.h"
+// #include "UnitTests/LimSwitchWithMotorUnitTest.h"
 
 
 
@@ -44,7 +45,7 @@ using namespace std;
 // }
 
 int main(){
-    LimitSwitchExecutable();
+    LogicTestExecutable();
 	
 	return 0;
 }
