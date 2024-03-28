@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/joshua/QtProjects/CocktailMachine/build/CocktailMachine_autogen/mocs_compilation.cpp" "CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o.d"
-  "/home/joshua/QtProjects/CocktailMachine/main.cpp" "CMakeFiles/CocktailMachine.dir/main.cpp.o" "gcc" "CMakeFiles/CocktailMachine.dir/main.cpp.o.d"
-  "/home/joshua/QtProjects/CocktailMachine/mainwindow.cpp" "CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o" "gcc" "CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o.d"
+  "/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CocktailMachine_autogen/mocs_compilation.cpp" "CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o.d"
+  "/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/main.cpp" "CMakeFiles/CocktailMachine.dir/main.cpp.o" "gcc" "CMakeFiles/CocktailMachine.dir/main.cpp.o.d"
+  "/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/mainwindow.cpp" "CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o" "gcc" "CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o.d"
   )
 
 # Targets to which this target links.

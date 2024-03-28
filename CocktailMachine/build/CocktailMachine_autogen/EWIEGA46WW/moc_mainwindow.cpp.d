@@ -1,5 +1,5 @@
-/home/joshua/QtProjects/CocktailMachine/build/CocktailMachine_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/joshua/QtProjects/CocktailMachine/mainwindow.h \
-  /home/joshua/QtProjects/CocktailMachine/build/CocktailMachine_autogen/moc_predefs.h \
+/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CocktailMachine_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/mainwindow.h \
+  /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CocktailMachine_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

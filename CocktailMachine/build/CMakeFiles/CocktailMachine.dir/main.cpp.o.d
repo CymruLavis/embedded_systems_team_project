@@ -1,7 +1,7 @@
 CMakeFiles/CocktailMachine.dir/main.cpp.o: \
- /home/joshua/QtProjects/CocktailMachine/main.cpp \
+ /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/main.cpp \
  /usr/include/stdc-predef.h \
- /home/joshua/QtProjects/CocktailMachine/mainwindow.h \
+ /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \

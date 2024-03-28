@@ -1,8 +1,8 @@
-/home/joshua/QtProjects/CocktailMachine/build/CMakeFiles/CocktailMachine.dir
-/home/joshua/QtProjects/CocktailMachine/build/CMakeFiles/edit_cache.dir
-/home/joshua/QtProjects/CocktailMachine/build/CMakeFiles/rebuild_cache.dir
-/home/joshua/QtProjects/CocktailMachine/build/CMakeFiles/list_install_components.dir
-/home/joshua/QtProjects/CocktailMachine/build/CMakeFiles/install.dir
-/home/joshua/QtProjects/CocktailMachine/build/CMakeFiles/install/local.dir
-/home/joshua/QtProjects/CocktailMachine/build/CMakeFiles/install/strip.dir
-/home/joshua/QtProjects/CocktailMachine/build/CMakeFiles/CocktailMachine_autogen.dir
+/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir
+/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/edit_cache.dir
+/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/rebuild_cache.dir
+/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/list_install_components.dir
+/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/install.dir
+/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/install/local.dir
+/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/install/strip.dir
+/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine_autogen.dir

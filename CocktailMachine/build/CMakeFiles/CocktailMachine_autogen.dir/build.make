@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/joshua/QtProjects/CocktailMachine
+CMAKE_SOURCE_DIR = /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/joshua/QtProjects/CocktailMachine/build
+CMAKE_BINARY_DIR = /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build
 
 # Utility rule file for CocktailMachine_autogen.
 
@@ -67,8 +67,8 @@ include CMakeFiles/CocktailMachine_autogen.dir/compiler_depend.make
 include CMakeFiles/CocktailMachine_autogen.dir/progress.make
 
 CMakeFiles/CocktailMachine_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/joshua/QtProjects/CocktailMachine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target CocktailMachine"
-	/usr/bin/cmake -E cmake_autogen /home/joshua/QtProjects/CocktailMachine/build/CMakeFiles/CocktailMachine_autogen.dir/AutogenInfo.json ""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target CocktailMachine"
+	/usr/bin/cmake -E cmake_autogen /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine_autogen.dir/AutogenInfo.json ""
 
 CocktailMachine_autogen: CMakeFiles/CocktailMachine_autogen
 CocktailMachine_autogen: CMakeFiles/CocktailMachine_autogen.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/CocktailMachine_autogen.dir/clean:
 .PHONY : CMakeFiles/CocktailMachine_autogen.dir/clean
 
 CMakeFiles/CocktailMachine_autogen.dir/depend:
-	cd /home/joshua/QtProjects/CocktailMachine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/joshua/QtProjects/CocktailMachine /home/joshua/QtProjects/CocktailMachine /home/joshua/QtProjects/CocktailMachine/build /home/joshua/QtProjects/CocktailMachine/build /home/joshua/QtProjects/CocktailMachine/build/CMakeFiles/CocktailMachine_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/CocktailMachine_autogen.dir/depend
 

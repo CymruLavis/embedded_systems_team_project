@@ -1,7 +1,7 @@
 CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o: \
- /home/joshua/QtProjects/CocktailMachine/mainwindow.cpp \
+ /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/mainwindow.cpp \
  /usr/include/stdc-predef.h \
- /home/joshua/QtProjects/CocktailMachine/mainwindow.h \
+ /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
@@ -314,7 +314,7 @@ CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qkeysequence.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qicon.h \
- /home/joshua/QtProjects/CocktailMachine/build/CocktailMachine_autogen/include/./ui_mainwindow.h \
+ /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CocktailMachine_autogen/include/./ui_mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qmap.h \

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/joshua/QtProjects/CocktailMachine
+CMAKE_SOURCE_DIR = /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/joshua/QtProjects/CocktailMachine/build
+CMAKE_BINARY_DIR = /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/CocktailMachine.dir/depend.make
@@ -72,44 +72,44 @@ include CMakeFiles/CocktailMachine.dir/flags.make
 CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o: CMakeFiles/CocktailMachine.dir/flags.make
 CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o: CocktailMachine_autogen/mocs_compilation.cpp
 CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o: CMakeFiles/CocktailMachine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joshua/QtProjects/CocktailMachine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o -MF CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o -c /home/joshua/QtProjects/CocktailMachine/build/CocktailMachine_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o -MF CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o -c /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CocktailMachine_autogen/mocs_compilation.cpp
 
 CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joshua/QtProjects/CocktailMachine/build/CocktailMachine_autogen/mocs_compilation.cpp > CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CocktailMachine_autogen/mocs_compilation.cpp > CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joshua/QtProjects/CocktailMachine/build/CocktailMachine_autogen/mocs_compilation.cpp -o CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CocktailMachine_autogen/mocs_compilation.cpp -o CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/CocktailMachine.dir/main.cpp.o: CMakeFiles/CocktailMachine.dir/flags.make
 CMakeFiles/CocktailMachine.dir/main.cpp.o: ../main.cpp
 CMakeFiles/CocktailMachine.dir/main.cpp.o: CMakeFiles/CocktailMachine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joshua/QtProjects/CocktailMachine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CocktailMachine.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CocktailMachine.dir/main.cpp.o -MF CMakeFiles/CocktailMachine.dir/main.cpp.o.d -o CMakeFiles/CocktailMachine.dir/main.cpp.o -c /home/joshua/QtProjects/CocktailMachine/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CocktailMachine.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CocktailMachine.dir/main.cpp.o -MF CMakeFiles/CocktailMachine.dir/main.cpp.o.d -o CMakeFiles/CocktailMachine.dir/main.cpp.o -c /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/main.cpp
 
 CMakeFiles/CocktailMachine.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CocktailMachine.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joshua/QtProjects/CocktailMachine/main.cpp > CMakeFiles/CocktailMachine.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/main.cpp > CMakeFiles/CocktailMachine.dir/main.cpp.i
 
 CMakeFiles/CocktailMachine.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CocktailMachine.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joshua/QtProjects/CocktailMachine/main.cpp -o CMakeFiles/CocktailMachine.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/main.cpp -o CMakeFiles/CocktailMachine.dir/main.cpp.s
 
 CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o: CMakeFiles/CocktailMachine.dir/flags.make
 CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o: ../mainwindow.cpp
 CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o: CMakeFiles/CocktailMachine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joshua/QtProjects/CocktailMachine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o -MF CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o.d -o CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o -c /home/joshua/QtProjects/CocktailMachine/mainwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o -MF CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o.d -o CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o -c /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/mainwindow.cpp
 
 CMakeFiles/CocktailMachine.dir/mainwindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CocktailMachine.dir/mainwindow.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joshua/QtProjects/CocktailMachine/mainwindow.cpp > CMakeFiles/CocktailMachine.dir/mainwindow.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/mainwindow.cpp > CMakeFiles/CocktailMachine.dir/mainwindow.cpp.i
 
 CMakeFiles/CocktailMachine.dir/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CocktailMachine.dir/mainwindow.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joshua/QtProjects/CocktailMachine/mainwindow.cpp -o CMakeFiles/CocktailMachine.dir/mainwindow.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/mainwindow.cpp -o CMakeFiles/CocktailMachine.dir/mainwindow.cpp.s
 
 # Object files for target CocktailMachine
 CocktailMachine_OBJECTS = \
@@ -130,7 +130,7 @@ CocktailMachine: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4
 CocktailMachine: /usr/lib/x86_64-linux-gnu/libGLX.so
 CocktailMachine: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 CocktailMachine: CMakeFiles/CocktailMachine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/joshua/QtProjects/CocktailMachine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable CocktailMachine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable CocktailMachine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CocktailMachine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -142,6 +142,6 @@ CMakeFiles/CocktailMachine.dir/clean:
 .PHONY : CMakeFiles/CocktailMachine.dir/clean
 
 CMakeFiles/CocktailMachine.dir/depend:
-	cd /home/joshua/QtProjects/CocktailMachine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/joshua/QtProjects/CocktailMachine /home/joshua/QtProjects/CocktailMachine /home/joshua/QtProjects/CocktailMachine/build /home/joshua/QtProjects/CocktailMachine/build /home/joshua/QtProjects/CocktailMachine/build/CMakeFiles/CocktailMachine.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/CocktailMachine.dir/depend
 
