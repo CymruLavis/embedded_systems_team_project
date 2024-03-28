@@ -23,7 +23,7 @@ int main() {
         DRV8825 mymotor;
         // Perform vertical movement between limits
         bool clockwise = true;
-        mymotor.motor_go(clockwise, 30);
+        mymotor.motor_go(clockwise, 2000);
     } catch (const std::exception& e) {
         cerr << e.what() << '\n';
     }

@@ -8,8 +8,8 @@ class DRV8825 {
 public:
     void motor_go(bool clockwise, double degrees) {
         // Pin assignments
-        int direction_pin = 22; // Direction pin
-        int step_pin = 23; // Step pin
+        int direction_pin = 20; // Direction pin
+        int step_pin = 26; // Step pin
         int FLT_pin = 16; // Fault detection pin
         int SLP_pin = 17; // Sleep mode pin
 
@@ -29,7 +29,7 @@ public:
         int steps = static_cast<int>(degrees / 1.8);
 
         // Hardcoded delay values
-        double stepdelay = 1; // Seconds between steps 0.002
+        double stepdelay = 0.001; // Seconds between steps 0.002
         this_thread::sleep_for(chrono::seconds(1));
         for (int i = 0; i < steps; ++i) {
             // Check for motor fault
@@ -39,9 +39,11 @@ public:
             //}
 
             // Perform a step
-            gpioWrite(step_pin, PI_HIGH);
+            gpioWrite(step_pin, 1);
+            std::cout << "HIGH...............\n";
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
-            gpioWrite(step_pin, PI_LOW);
+            gpioWrite(step_pin, 0);
+            std::cout << "LOW..............\n";
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
             
         }   
