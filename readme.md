@@ -48,6 +48,7 @@ Instagram: https://www.instagram.com/smartdrinking_2024/
 # How to build
 - description of the base and cad files
 ## BOM
+6x Optic despensers: (Optic Despensers)[https://www.ascotwholesale.co.uk/25ml-black-solo-measure?gad_source=1&gclid=Cj0KCQiA2KitBhCIARIsAPPMEhI-lrBpNzira6xwn5WM-c0KxcxK5rm4lakar9NHSMJ1Z-R5aHvze0YaAg49EALw_wcB]
 ## Wiring Diagram
 ## Required Libraries
 
