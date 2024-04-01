@@ -18,17 +18,23 @@ Instagram: https://www.instagram.com/smartdrinking_2024/
 ## Mechanical Design
 <p align="center">
   <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/9f9864b9-6a9f-4e1d-8966-a4f2ba2529d1" width="300" height="500" />
-</p>  
+</p>
+
+
 - description of physical foot print
 - materials used
 - assembly
 
+## GUI
+- description of the screens and their purposes
+
+
 ## Software Design
 - OOP class structure
 - real time interupts
-
-## GUI
-- description of the screens and their purposes
+- operational threads
+- how the code operates in their threads
+- flow of where the program execution is sent to
 
 # Real Time Components
 discuss the real time requirement of the sub system, how our system meets that requirement, concequence of not meeting the requirement
@@ -44,6 +50,8 @@ discuss the real time requirement of the sub system, how our system meets that r
 
 # How to build
 - description of the base and cad files
+
+
 ## BOM
 2x Nema 17 Stepper Motors: [Stepper Motors](https://www.omc-stepperonline.com/e-series-nema-17-bipolar-42ncm-59-49oz-in-1-5a-42x42x38mm-4-wires-w-1m-cable-connector-17he15-1504s)  
 2x Motor Drivers: [Motor Drivers](https://www.amazon.co.uk/DRV8825-Stepper-Suitable-8-2V-45V-Printer/dp/B0CCRXGKLV/ref=asc_df_B0CCRXGKLV/?tag=googshopuk-21&linkCode=df0&hvadid=676281988980&hvpos=&hvnetw=g&hvrand=9779484524365892202&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9046941&hvtargid=pla-2199438568706&psc=1&mcid=84474ad0e18b36dd88e4615ffa743992&gad_source=1)  
