@@ -59,7 +59,7 @@ Trust Bearings: [Thrust Bearings](https://www.amazon.co.uk/sourcingmap-Single-Di
 <p align="center">
   <img src="https://github.com/CymruLavis/embedded_systems_team_project/blob/DARA_MOTOR/CAD/schmatic/schematic_v1.pdf" width="300" height="500" />
 </p>
-## Required Libraries
+## Required Libraries  
 pigpio library is installed  
 $sudo apt install pigpio 
 
