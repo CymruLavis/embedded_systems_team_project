@@ -1,19 +1,3 @@
-Note to developers: after connecting this repo to your local machine any additional 
-class files that need to be used in execution need to be added to the CMakeLists.txt file. That is done by adding 
-src/<filename>.cpp to the add_exacutable chain
-
-ensure  
-
-install 
-
-install 
-
-
-to run the program make sure you are in the build directory then run the following to first compile the project the run the executable  
- 
-  
-
-
 # SMART DRINKER COCKTAIL MACHINE PROJECT  
 <p align="center">
   <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/ada58828-ce8b-49c5-b7a1-eae68de5f26a" width="500" height="500" />
@@ -29,13 +13,34 @@ Instagram: https://www.instagram.com/smartdrinking_2024/
 # Introduction
 - project overview
 - what problem are we solving
-# Mechanical Design
+
+# Design
+## Mechanical Design
 <p align="center">
   <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/9f9864b9-6a9f-4e1d-8966-a4f2ba2529d1" width="300" height="500" />
-</p>
+</p>  
+- description of physical foot print
+- materials used
+- assembly
+
+## Software Design
+- OOP class structure
+- real time interupts
+
+## GUI
+- description of the screens and their purposes
+
 # Real Time Components
+discuss the real time requirement of the sub system, how our system meets that requirement, concequence of not meeting the requirement
+- limit switches controlling the limits of the riser motor
+- light gate controlling the position of the carousel
+- Saftey switch
 
 # Testing/Results
+- unit tests
+- what was tested
+- problems we ran into
+- how did we over come them
 
 # How to build
 - description of the base and cad files
