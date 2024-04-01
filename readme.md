@@ -32,6 +32,7 @@ Ethan Lavis
 Daraigh O'Toole Eglington  
 Joshua Varghese  
 Roykeane Syangu  
+Instagram: https://www.instagram.com/smartdrinking_2024/
 
 # Introduction
 - project overview
@@ -46,9 +47,10 @@ Roykeane Syangu
 
 # How to build
 - description of the base and cad files
-- BOM
-- Wiring Diagram
-- Required Libraries
+## BOM
+## Wiring Diagram
+## Required Libraries
+
 
 
 # References
