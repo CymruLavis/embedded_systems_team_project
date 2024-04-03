@@ -51,7 +51,6 @@ void MainWindow::CT2()
     ui->page->close();
 
     SetPBarValue();
-
 };
 
 void MainWindow::CT3()
@@ -59,8 +58,6 @@ void MainWindow::CT3()
     QObject::connect(ui->pushButton_6, SIGNAL(clicked()), this, SLOT(CT1()));
     ui->stackedWidget->setCurrentWidget(ui->page_3);
     ui->page->close();
-
-    SetPBarValue();
 
 };
 
