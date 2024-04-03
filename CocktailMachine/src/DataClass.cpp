@@ -242,3 +242,43 @@ int Data::append_CSV(string pose_value, string ingredient_value)
 
     return 0;
 }
+int Data::updateVolume(string bottle_position){
+	ifstream file("ingredient_position_fill.csv");
+    ofstream tempFile("temp.csv");
+    string line;
+
+	while (getline(file, line)) {
+        istringstream iss(line);
+        string pos, alcohol, amount;
+        getline(iss, pos, ',');
+        getline(iss, alcohol, ',');
+        getline(iss, amount, ',');
+        
+        if (pos == bottle_position) {
+            double currentAmount = stod(amount);
+            double drinkPercent = (25.0 / 750.0) * 100.0;
+            double newVolume = currentAmount - drinkPercent;
+            if (newVolume < 0) {
+                newVolume = 0; // Ensure the volume doesn't become negative
+            }
+            tempFile << pos << "," << alcohol << "," << newVolume << endl;
+            cout << "Volume updated for position " << pos << endl;
+        } else {
+            tempFile << line << endl;
+        }
+    }
+    file.close();
+    tempFile.close();
+
+	// Remove the original file and rename the temp file
+    remove("ingredient_position_fill.csv");
+    rename("temp.csv", "ingredient_position_fill.csv");
+
+	return 0;
+
+}
+
+
+
+
+

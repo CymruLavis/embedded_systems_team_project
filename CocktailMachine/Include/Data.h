@@ -45,6 +45,7 @@ public:
 
 	vector<string> split_line(const string& line, char delimiter);
 	int append_CSV(string pose_value, string ingredient_value);
+	int updateVolume(string bottle_position );
 
 };
 
