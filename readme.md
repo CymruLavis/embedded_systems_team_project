@@ -17,8 +17,9 @@ Instagram: https://www.instagram.com/smartdrinking_2024/
 # Design
 ## Mechanical Design
 <p align="center">
-  <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/9f9864b9-6a9f-4e1d-8966-a4f2ba2529d1" width="300" height="500" />
+  <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/8fb6be22-de2b-4759-af3b-0c6318214bfe" width="400" height="500" />
 </p>
+![0001]()
 
 
 - description of physical foot print
