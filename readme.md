@@ -17,7 +17,7 @@ Instagram: https://www.instagram.com/smartdrinking_2024/
 # Design
 ## Mechanical Design
 <p align="center">
-  <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/8fb6be22-de2b-4759-af3b-0c6318214bfe" width="400" height="500" />
+  <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/8fb6be22-de2b-4759-af3b-0c6318214bfe" width="600" height="500" />
 </p>
 ![0001]()
 
