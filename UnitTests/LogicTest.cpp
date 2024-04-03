@@ -24,8 +24,8 @@ LimitSwitch* upper_switch = new LimitSwitch(22); //
 LimitSwitch* lower_switch = new LimitSwitch(27); //
 LimitSwitch* calibration_switch = new LimitSwitch(22); //
 
-Motor* carousel_motor = new Motor(0, 19,3,2,1.8); //int dir, int step, int sleep, int fault
-Motor* riser_motor = new Motor(20,18,21,16,1.8);
+Motor* carousel_motor = new Motor(8,7,1,25, 2.25);  //GPIO 8, 7,1, 25 Physical pins 24,26,28,22
+Motor* riser_motor = new Motor(18,23,24,15,2.7);    //GPIO 18,23,24,15 Physical pins 12,16,18,10
 
 atomic<bool> system_running(true);
 atomic<bool> program_running(true);

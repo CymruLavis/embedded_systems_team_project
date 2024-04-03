@@ -167,4 +167,11 @@ CMakeFiles/cocktail_machine.dir/src/MotorClass.cpp.o: \
  /usr/include/arm-linux-gnueabihf/bits/getopt_posix.h \
  /usr/include/arm-linux-gnueabihf/bits/getopt_core.h \
  /usr/include/arm-linux-gnueabihf/bits/unistd_ext.h \
- /usr/include/linux/close_range.h
+ /usr/include/linux/close_range.h /usr/include/c++/12/thread \
+ /usr/include/c++/12/bits/std_thread.h /usr/include/c++/12/tuple \
+ /usr/include/c++/12/bits/uses_allocator.h \
+ /usr/include/c++/12/bits/unique_ptr.h \
+ /usr/include/c++/12/bits/this_thread_sleep.h \
+ /usr/include/c++/12/bits/chrono.h /usr/include/c++/12/ratio \
+ /usr/include/c++/12/limits /usr/include/c++/12/ctime \
+ /usr/include/c++/12/bits/parse_numbers.h

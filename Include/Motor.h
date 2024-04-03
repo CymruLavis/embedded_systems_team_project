@@ -48,8 +48,8 @@ public:
 
     vector<int> getStepQueue(vector<int> positionQueue);    
     void VERT_MOVE(LimitSwitch* upper_switch, LimitSwitch* lower_switch);
-    void Motor::motor_go(bool clockwise, double degrees);
-    void Motor::MAIN_MOTOR_RESET(LimitSwitch* calibration_switch);
+    void motor_go(bool clockwise, double degrees);
+    void MAIN_MOTOR_RESET(LimitSwitch* calibration_switch);
 
     // Pin out
     int direction_pin;  //1 = clockwise; 0 = counter clockwise
