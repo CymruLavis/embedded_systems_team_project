@@ -30,6 +30,7 @@ public slots:
     void CT2();
     void CT3();
     void CT4();
+    void CT5();
     QStringList ConvertList(vector<string> list);
 };
 #endif // MAINWINDOW_H

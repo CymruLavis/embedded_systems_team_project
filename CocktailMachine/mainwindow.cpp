@@ -13,10 +13,17 @@ MainWindow::MainWindow(QWidget *parent)
 
     QObject::connect(ui->pushButton_2, SIGNAL(clicked()), this, SLOT(CT2()));
     QObject::connect(ui->pushButton_3, SIGNAL(clicked()), this, SLOT(CT3()));
+    QObject::connect(ui->pushButton_5, SIGNAL(clicked()), this, SLOT(CT5()));
 
     QStringList Drinks = ConvertList(data->getWholeDrinkList());
     ui->comboBox->addItems(Drinks);
     connect(ui->comboBox, SIGNAL(currentTextChanged(const QString&)), this, SLOT(CT4()));
+
+    QStringList Positions = {"Position 1", "Position 2", "Position 3", "Position 4", "Position 5", "Position 6"};
+    ui->comboBox_2->addItems(Positions);
+
+    QStringList Ingredients = ConvertList(data->getIngredients());
+    ui->comboBox_3->addItems(Ingredients);
     
 
 }
@@ -60,6 +67,14 @@ void MainWindow::CT4()
         ui->textBrowser->setText(QString::fromStdString(data->getDrinkDescription(ui->comboBox->currentText().toStdString())));
     }
 
+}
+
+void MainWindow::CT5()
+{
+    connect(ui->pushButton_5, SIGNAL(clicked()), this, NULL);
+    string pose = (ui->comboBox_2->currentText()).toStdString();
+    string ing = (ui->comboBox_3->currentText()).toStdString();
+    data->append_CSV(pose, ing);
 }
 
 QStringList MainWindow::ConvertList(vector<string> list)

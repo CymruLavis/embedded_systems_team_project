@@ -66,7 +66,7 @@ int DataBaseExecutable(){
 	vector<string> ing = myData->ingredient_indexes.ingredients;
 	vector<string> idx = myData->ingredient_indexes.indexes;
 
-	vector<string> system_ingredients = {"Vodka","Gin", "Cointreau", "Cranberry Juice", "Mezcal","Lime Juice"};
+	vector<string> system_ingredients = {"Vodka", "Gin", "Cointreau", "Cranberry Juice", "Mezcal", "Lime Juice"};
 	setIngredientPositions(myData, sys, &system_ingredients);
 
 	printSys(*sys);

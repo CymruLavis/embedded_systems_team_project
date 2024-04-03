@@ -179,3 +179,62 @@ int Data::ingredientToIndex(string drink) {
     }
     return -1;
 }
+
+vector<string> Data::split_line(string line, char delimiter = ',')
+{
+    vector<string> result;
+    stringstream ss(line);
+    string token;
+
+    while (getline(ss, token, delimiter))
+    {
+        result.push_back(token);
+    }
+
+    return result;
+}
+
+int Data::append_CSV(string pose_value, string ingredient_value)
+{
+	string csv_filename = "/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/Data/ingredient_position_fill.csv";
+    string temp_filename = "temp.csv"; 
+    string target_value = "Position 3";
+    string fill_value = "100";
+
+    ifstream input_file(csv_filename);
+    ofstream output_file(temp_filename); // Temporary file
+
+    // ... (Error handling for opening files)
+
+    string line;
+    while (getline(input_file, line)) {
+        vector<string> fields = split_line(line);
+
+        if (fields.size() >= 3 && fields[0] == pose_value)
+        {
+            fields[1] = ingredient_value; 
+            fields[2] = fill_value;
+
+            // Reconstruct the CSV line:
+            output_file << fields[0];
+            for (size_t i = 1; i < fields.size(); ++i)
+            {
+                output_file << "," << fields[i]; 
+            }
+            output_file << "\n"; 
+        } 
+        else 
+        {
+            output_file << line << "\n"; // Unmodified lines
+        }
+    }
+
+    input_file.close();
+    output_file.close();
+
+    // Overwrite the original file
+    remove(csv_filename.c_str()); 
+    rename(temp_filename.c_str(), csv_filename.c_str());
+
+    return 0;
+}
