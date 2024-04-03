@@ -3,6 +3,7 @@
 #include "Include/Data.h"
 #include <vector>
 #include <algorithm>
+#include <QAbstractItemView>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -25,6 +26,8 @@ MainWindow::MainWindow(QWidget *parent)
     QStringList Ingredients = ConvertList(data->getIngredients());
     ui->comboBox_3->addItems(Ingredients);
     
+    ui->comboBox->view()->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+    ui->comboBox_3->view()->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
 
 }
 
