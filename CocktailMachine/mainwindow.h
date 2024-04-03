@@ -20,7 +20,6 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     Data* data = new Data();
-    
 
 private:
     Ui::MainWindow *ui;
@@ -32,5 +31,6 @@ public slots:
     void CT4();
     void CT5();
     QStringList ConvertList(vector<string> list);
+    void SetPBarValue();
 };
 #endif // MAINWINDOW_H

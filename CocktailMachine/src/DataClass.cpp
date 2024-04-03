@@ -21,11 +21,13 @@ Data::Data(){
 	this->ingredient_indexes.df = getData(getIndexFilePath());
 	this->ingredient_indexes.ingredients = this->ingredient_indexes.getCol(this->ingredient_indexes.df,0);
 	this->ingredient_indexes.indexes = this->ingredient_indexes.getCol(this->ingredient_indexes.df,1);
+	this->fill_data = getData(getPoseFilePath());
 }
 
 // returns the location of the menu csv
 string Data::getFilePath() {return R"(/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/Data/cocktail_table.csv)";}
 string Data::getIndexFilePath() { return R"(/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/Data/index_table.csv)";}
+string Data::getPoseFilePath() { return R"(/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/Data/ingredient_position_fill.csv)";}
 
 // returns a 2D matix of all data from the given csv
 vector<vector<string>> Data::getData(string filePath) {
@@ -196,7 +198,7 @@ vector<string> Data::split_line(const string& line, char delimiter = ',')
 
 int Data::append_CSV(string pose_value, string ingredient_value)
 {
-	string csv_filename = "/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/Data/ingredient_position_fill.csv";
+	string csv_filename = getPoseFilePath();
     string temp_filename = "temp.csv"; 
     string target_value = "Position 3";
     string fill_value = "100";
@@ -235,6 +237,8 @@ int Data::append_CSV(string pose_value, string ingredient_value)
     // Overwrite the original file
     remove(csv_filename.c_str()); 
     rename(temp_filename.c_str(), csv_filename.c_str());
+
+	this->fill_data = getData(getPoseFilePath());
 
     return 0;
 }

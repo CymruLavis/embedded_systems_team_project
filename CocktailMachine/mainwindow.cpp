@@ -49,6 +49,9 @@ void MainWindow::CT2()
     QObject::connect(ui->pushButton_4, SIGNAL(clicked()), this, SLOT(CT1()));
     ui->stackedWidget->setCurrentWidget(ui->page_2);
     ui->page->close();
+
+    SetPBarValue();
+
 };
 
 void MainWindow::CT3()
@@ -56,6 +59,9 @@ void MainWindow::CT3()
     QObject::connect(ui->pushButton_6, SIGNAL(clicked()), this, SLOT(CT1()));
     ui->stackedWidget->setCurrentWidget(ui->page_3);
     ui->page->close();
+
+    SetPBarValue();
+
 };
 
 void MainWindow::CT4()
@@ -89,3 +95,12 @@ QStringList MainWindow::ConvertList(vector<string> list)
     return qList;
 };
 
+void MainWindow::SetPBarValue()
+{
+    ui->progressBar->setValue(stoi(data->fill_data[1][2]));
+    ui->progressBar_2->setValue(stoi(data->fill_data[2][2]));
+    ui->progressBar_3->setValue(stoi(data->fill_data[3][2]));
+    ui->progressBar_4->setValue(stoi(data->fill_data[4][2]));
+    ui->progressBar_5->setValue(stoi(data->fill_data[5][2]));
+    ui->progressBar_6->setValue(stoi(data->fill_data[6][2]));
+}

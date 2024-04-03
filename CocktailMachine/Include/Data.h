@@ -19,12 +19,14 @@ public:
 	string data_file_path;
 	string indexes_file_path;
 	IngredientIndexes ingredient_indexes;
+	vector<vector<string>> fill_data;
 	// SystemConfig sys;
 	
 	Data();
 	
 	string getFilePath();
 	string getIndexFilePath();
+	string getPoseFilePath();
 	
 	vector<vector<string>> getData(string filePath);
 	
