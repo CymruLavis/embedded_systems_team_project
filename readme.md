@@ -17,8 +17,9 @@ Instagram: https://www.instagram.com/smartdrinking_2024/
 # Design
 ## Mechanical Design
 <p align="center">
-  <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/9f9864b9-6a9f-4e1d-8966-a4f2ba2529d1" width="300" height="500" />
+  <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/8fb6be22-de2b-4759-af3b-0c6318214bfe" width="600" height="500" />
 </p>
+![0001]()
 
 
 - description of physical foot print
@@ -70,7 +71,7 @@ Trust Bearings: [Thrust Bearings](https://www.amazon.co.uk/sourcingmap-Single-Di
 
 ## Wiring Diagram
 <p align="center">
-  <img src="https://github.com/CymruLavis/embedded_systems_team_project/blob/DARA_MOTOR/CAD/schmatic/schematic_v1.pdf" width="300" height="500" />
+  <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/0bf09030-975e-4d3b-912b-8164f7dd585b" width="300" height="500" />
 </p>
 ## Required Libraries  
 pigpio library is installed  
