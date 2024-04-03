@@ -8,10 +8,10 @@ class DRV8825 {
 public:
     void motor_go(bool clockwise, double degrees) {
         // Pin assignments
-        int direction_pin = 20; // Direction pin
-        int step_pin = 26; // Step pin
-        int FLT_pin = 16; // Fault detection pin
-        int SLP_pin = 17; // Sleep mode pin
+        int direction_pin = 8; // Direction pin
+        int step_pin = 7; // Step pin
+        int FLT_pin = 25; // Fault detection pin
+        int SLP_pin = 1; // Sleep mode pin
 
         // Initialize GPIO pins
         gpioSetMode(direction_pin, PI_OUTPUT);
@@ -26,10 +26,12 @@ public:
         gpioWrite(SLP_pin, PI_HIGH);
 
         // Calculate steps from degrees (1.8 degrees per step)
-        int steps = static_cast<int>(degrees / 1.8);
+        float ratio = 30/20;
+        float input = degrees * ratio;
+        int steps = static_cast<int>(input / 1.8);
 
         // Hardcoded delay values
-        double stepdelay = 0.001; // Seconds between steps 0.002
+        double stepdelay = 0.005; // Seconds between steps 0.002
         this_thread::sleep_for(chrono::seconds(1));
         for (int i = 0; i < steps; ++i) {
             // Check for motor fault
@@ -53,11 +55,11 @@ public:
     }
     void MAIN_MOTOR_RESET() {
         // Pin assignments
-        int direction_pin = 20; // Direction pin
-        int step_pin = 21; // Step pin
-        int FLT_pin = 16; // Fault detection pin
-        int SLP_pin = 17; // Sleep mode pin
-        int AXIS_ZERO_pin = 18; // Zero position detection pin
+        int direction_pin = 8; // Direction pin
+        int step_pin = 7; // Step pin
+        int FLT_pin = 15; // Fault detection pin
+        int SLP_pin = 24; // Sleep mode pin
+        int AXIS_ZERO_pin = 26; // Zero position detection pin
 
         // Initialize GPIO pins
         gpioSetMode(direction_pin, PI_OUTPUT);
@@ -67,49 +69,55 @@ public:
         gpioSetMode(AXIS_ZERO_pin, PI_INPUT);
 
         // Set motor direction to reset direction
-        gpioWrite(direction_pin, PI_HIGH);
+        gpioWrite(direction_pin, 1);
 
         // Wake up the motor driver
-        gpioWrite(SLP_pin, PI_HIGH);
+        gpioWrite(SLP_pin, 1);
 
         // Assuming we do not know the exact steps needed to reset, use a large number
         // The loop will break once the zero position is detected
-        int steps = 10000; // Arbitrary large number
+
+        int steps = 500; // Arbitrary large number
 
         // Hardcoded delay values
         double stepdelay = 0.005; // Seconds between steps
 
         for (int i = 0; i < steps; ++i) {
             // Check for motor fault
-            if (gpioRead(FLT_pin) == PI_LOW) {
-                gpioWrite(SLP_pin, PI_LOW); // Put the motor driver in sleep mode
-                throw std::runtime_error("MOTOR FAULT");
-            }
+            //if (gpioRead(FLT_pin) == PI_LOW) {
+            //    gpioWrite(SLP_pin, PI_LOW); // Put the motor driver in sleep mode
+            //    throw std::runtime_error("MOTOR FAULT");
+            //}
 
             // Check for zero position
-            if (gpioRead(AXIS_ZERO_pin) == PI_HIGH) {
+            if (gpioRead(AXIS_ZERO_pin) == 1) {
                 std::cout << "System zero'd\n";
                 break; // Exit loop if zero position is detected
             }
 
             // Perform a step
-            gpioWrite(step_pin, PI_HIGH);
+            gpioWrite(step_pin, 1);
+            std::cout << "HIGH...\n";
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
-            gpioWrite(step_pin, PI_LOW);
+            gpioWrite(step_pin, 0);
+            std::cout << "LOW...\n";
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
-        }
+            std::cout << gpioRead(AXIS_ZERO_pin);
+            }
 
         // Cleanup and put the motor driver in sleep mode
-        gpioWrite(SLP_pin, PI_LOW);
+        gpioWrite(SLP_pin, 0);
+        std::cout << "SYSTEM SET TO SLEEP\n";
     }
+
     void VERT_MOVE() {
         // Pin assignments
-        int step_pin = 21; // Step pin
-        int direction_pin = 20; // Direction pin for moving up/down
+        int step_pin = 23; // Step pin
+        int direction_pin = 18; // Direction pin for moving up/down
         int bottom_limit_pin = 19; // Bottom limit detection pin
         int top_limit_pin = 20; // Top limit detection pin
-        int FLT_pin = 16; // Fault detection pin
-        int SLP_pin = 17; // Sleep mode pin
+        int FLT_pin = 15; // Fault detection pin
+        int SLP_pin = 24; // Sleep mode pin
 
         // Initialize GPIO pins
         gpioSetMode(step_pin, PI_OUTPUT);

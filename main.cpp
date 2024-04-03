@@ -1,3 +1,5 @@
+
+
 #include <pigpio.h>
 #include <iostream>
 #include "Include/Data.h"
@@ -23,16 +25,15 @@ int main() {
         DRV8825 mymotor;
         // Perform vertical movement between limits
         bool clockwise = true;
-        mymotor.motor_go(clockwise, 2000);
+        mymotor.motor_go(clockwise, 450);
+        cout << "-----\n";
+        mymotor.MAIN_MOTOR_RESET();
     } catch (const std::exception& e) {
         cerr << e.what() << '\n';
     }
 	gpioTerminate();
-    std::cout << "TEST END\n";
+    cout << "TEST END\n";
 
     return 0;
 }
-
-
-
 
