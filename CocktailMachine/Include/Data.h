@@ -41,7 +41,7 @@ public:
 	string indexToIngredient(int ingredient_idx);
 	int ingredientToIndex(string ingredient);
 
-	vector<string> split_line(string line, char delimiter);
+	vector<string> split_line(const string& line, char delimiter);
 	int append_CSV(string pose_value, string ingredient_value);
 
 };

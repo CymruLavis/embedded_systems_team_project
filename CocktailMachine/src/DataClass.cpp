@@ -180,7 +180,7 @@ int Data::ingredientToIndex(string drink) {
     return -1;
 }
 
-vector<string> Data::split_line(string line, char delimiter = ',')
+vector<string> Data::split_line(const string& line, char delimiter = ',')
 {
     vector<string> result;
     stringstream ss(line);
