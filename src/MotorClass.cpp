@@ -89,8 +89,8 @@ void Motor::initializePins(int dir, int step, int sleep, int fault){
     gpioSetMode(step, PI_OUTPUT);
     gpioSetMode(sleep, PI_OUTPUT);
     gpioSetMode(fault, PI_OUTPUT);
-
 }
+
 void Motor::step(){
     gpioWrite(this->getStepPin(), 1);
     usleep(1000);
@@ -159,7 +159,7 @@ void Motor::VERT_MOVE(LimitSwitch* upper_switch, LimitSwitch* lower_switch) {
         gpioWrite(this->getDirPin(), PI_HIGH);
 
         int up_steps = 300; // Define the number of steps to move up
-        double stepdelay = 0.005; // Seconds between steps
+        double stepdelay = 0.005/16; // Seconds between steps
 
         // Move up until hitting the top limit or completing the steps
         // for (int i = 0; i < up_steps; ++i) {
@@ -223,7 +223,7 @@ void Motor::motor_go(bool clockwise, double steps) {
         // int steps = static_cast<int>(degrees / 1.8);
 
         // Hardcoded delay values
-        double stepdelay = 0.005; // Seconds between steps 0.002
+        double stepdelay = 0.005/16; // Seconds between steps 0.002
         // this_thread::sleep_for(chrono::seconds(1));
         for (int i = 0; i < steps; ++i) {
             // Check for motor fault
@@ -258,7 +258,7 @@ void Motor::MAIN_MOTOR_RESET(LimitSwitch* calibration_switch) {
     // The loop will break once the zero position is detected
 
     // Hardcoded delay values
-    double stepdelay = 0.005; // Seconds between steps
+    double stepdelay = 0.005/16; // Seconds between steps
 
     while(gpioRead(calibration_switch->getPin()) == PI_LOW){
             // Check for motor fault

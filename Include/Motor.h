@@ -39,7 +39,6 @@ public:
 	void setMotorCharacteristics(double step_angle);
     bool decideDirection(int steps);
     void changeDirection();
-
     void step();
 
     int getDistanceBetweenPositions(int currentPos, int desiredPos);
