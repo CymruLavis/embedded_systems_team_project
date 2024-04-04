@@ -8,10 +8,15 @@ class DRV8825 {
 public:
     void motor_go(bool clockwise, double degrees) {
         // Pin assignments
-        int direction_pin = 8; // Direction pin
-        int step_pin = 7; // Step pin
+        //int direction_pin = 8; // Direction pin
+        //int step_pin = 7; // Step pin
         int FLT_pin = 25; // Fault detection pin
-        int SLP_pin = 1; // Sleep mode pin
+        //int SLP_pin = 1; // Sleep mode pin
+
+        // vertical pins
+        int direction_pin = 26; // Direction pin for moving up/down
+        int step_pin = 19; // Step pin
+        int SLP_pin = 13; // Sleep mode pin
 
         // Initialize GPIO pins
         gpioSetMode(direction_pin, PI_OUTPUT);
@@ -31,7 +36,7 @@ public:
         int steps = static_cast<int>(input / 1.8);
 
         // Hardcoded delay values
-        double stepdelay = 0.005; // Seconds between steps 0.002
+        double stepdelay = 0.1; // Seconds between steps 0.002
         this_thread::sleep_for(chrono::seconds(1));
         for (int i = 0; i < steps; ++i) {
             // Check for motor fault
@@ -57,8 +62,8 @@ public:
         // Pin assignments
         int direction_pin = 8; // Direction pin
         int step_pin = 7; // Step pin
-        int FLT_pin = 15; // Fault detection pin
-        int SLP_pin = 24; // Sleep mode pin
+        int FLT_pin = 25; // Fault detection pin
+        int SLP_pin = 1; // Sleep mode pin
         int AXIS_ZERO_pin = 26; // Zero position detection pin
 
         // Initialize GPIO pins
@@ -116,7 +121,7 @@ public:
         int direction_pin = 18; // Direction pin for moving up/down
         int bottom_limit_pin = 19; // Bottom limit detection pin
         int top_limit_pin = 20; // Top limit detection pin
-        int FLT_pin = 15; // Fault detection pin
+        int FLT_pin = 14; // Fault detection pin
         int SLP_pin = 24; // Sleep mode pin
 
         // Initialize GPIO pins
@@ -133,8 +138,8 @@ public:
         // Set motor direction to up (assuming high means up)
         gpioWrite(direction_pin, PI_HIGH);
 
-        int up_steps = 300; // Define the number of steps to move up
-        double stepdelay = 0.002; // Seconds between steps
+        int up_steps = 100; // Define the number of steps to move up
+        double stepdelay = 0.005; // Seconds between steps
 
         // Move up until hitting the top limit or completing the steps
         for (int i = 0; i < up_steps; ++i) {
