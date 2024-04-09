@@ -2,6 +2,8 @@
 #include <iostream>
 #include <thread>
 #include <QApplication>
+#include <QSplashScreen>
+#include <QTimer>
 
 #include "Include/Data.h"
 #include "Include/SystemConfig.h"
@@ -45,8 +47,21 @@ void initializePins(){
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+	QPixmap pixmap("../splash.png");
+	pixmap = pixmap.scaled(480, 320, Qt::KeepAspectRatio);
+	QSplashScreen *splash = new QSplashScreen;
+	splash->setPixmap(pixmap);
+	splash->show();
+
+	//a.processEvents();
+
     MainWindow w;
 	w.setWindowState(Qt::WindowFullScreen);
-    w.show();
+
+	QTimer::singleShot(2500, splash, SLOT(close()));
+	QTimer::singleShot(2500, &w, SLOT(show()));
+
+    //w.show();
+	//splash.finish(&w);
     return a.exec();
 }

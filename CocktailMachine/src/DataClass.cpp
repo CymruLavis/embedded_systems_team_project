@@ -25,9 +25,9 @@ Data::Data(){
 }
 
 // returns the location of the menu csv
-string Data::getFilePath() {return R"(/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/Data/cocktail_table.csv)";}
-string Data::getIndexFilePath() { return R"(/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/Data/index_table.csv)";}
-string Data::getPoseFilePath() { return R"(/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/Data/ingredient_position_fill.csv)";}
+string Data::getFilePath() {return R"(../Data/cocktail_table.csv)";}
+string Data::getIndexFilePath() { return R"(../Data/index_table.csv)";}
+string Data::getPoseFilePath() { return R"(../Data/ingredient_position_fill.csv)";}
 
 // returns a 2D matix of all data from the given csv
 vector<vector<string>> Data::getData(string filePath) {
@@ -242,6 +242,7 @@ int Data::append_CSV(string pose_value, string ingredient_value)
 
     return 0;
 }
+
 int Data::updateVolume(string bottle_position){
 	ifstream file("ingredient_position_fill.csv");
     ofstream tempFile("temp.csv");
@@ -273,6 +274,8 @@ int Data::updateVolume(string bottle_position){
 	// Remove the original file and rename the temp file
     remove("ingredient_position_fill.csv");
     rename("temp.csv", "ingredient_position_fill.csv");
+
+	this->fill_data = getData(getPoseFilePath());
 
 	return 0;
 
