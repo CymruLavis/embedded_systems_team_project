@@ -150,7 +150,7 @@ vector<int> Motor::getStepQueue(vector<int> positionQueue){
 }
 
 
-void Motor::VERT_MOVE(LimitSwitch* upper_switch, LimitSwitch* lower_switch) {
+void Motor::VERT_MOVE(const int &upper_switch, const int &lower_switch) {
 
         // Wake up the motor driver
         gpioWrite(this->getSleepPin(), PI_HIGH);
@@ -158,59 +158,122 @@ void Motor::VERT_MOVE(LimitSwitch* upper_switch, LimitSwitch* lower_switch) {
         // Set motor direction to up (assuming high means up)
         gpioWrite(this->getDirPin(), PI_HIGH);
 
-        int up_steps = 300; // Define the number of steps to move up
-        double stepdelay = 0.005/16; // Seconds between steps
+        gpioSetMode(upper_switch, PI_INPUT);
+        gpioSetMode(lower_switch, PI_INPUT);
 
-        // Move up until hitting the top limit or completing the steps
-        // for (int i = 0; i < up_steps; ++i) {
-        while(upper_switch->getPin() == PI_LOW){
-            
-            if (gpioRead(upper_switch->getPin()) == PI_HIGH) {
-                std::cout << "HIT THE TOP LIMIT\n";
-                break; // Exit loop if top limit is reached
+        int up_steps = 300; // Define the number of steps to move up
+        double stepdelay = 0.004; // Seconds between steps
+
+        for (int i = 0; i < up_steps; ++i) {
+            // Check for motor fault
+            //if (gpioRead(FLT_pin) == PI_LOW) {
+            //    gpioWrite(SLP_pin, PI_LOW); // Put the motor driver in sleep mode
+            //    throw std::runtime_error("MOTOR FAULT");
+            //}
+
+            // Perform a step
+
+            if (gpioRead(upper_switch) == PI_HIGH){
+                throw std::runtime_error("VERT UPPER LIMIT REACHED");
+                //THIS IS WHERE WE WOULD SET THE ENABLE PIN FOR EMERGENCY STOP BUT ITS NOT CONNECTED
+                gpioWrite(this->getSleepPin(), PI_LOW);
             }
-            // if (gpioRead(FLT_pin) == PI_LOW) {
-            //     gpioWrite(SLP_pin, PI_LOW); // Put the motor driver in sleep mode
-            //     throw std::runtime_error("MOTOR FAULT");
-            // }
+
+            if (gpioRead(lower_switch) == PI_HIGH){
+                throw std::runtime_error("VERT LOWER LIMIT REACHED");
+                //THIS IS WHERE WE WOULD SET THE ENABLE PIN FOR EMERGENCY STOP BUT ITS NOT CONNECTED
+                gpioWrite(this->getSleepPin(), PI_LOW);
+            }
+            gpioWrite(this->getStepPin(), PI_HIGH);
+
+            std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
+            gpioWrite(this->getStepPin(), PI_LOW);
+
+            std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
+            
+        }
+        gpioWrite(this->getDirPin(), PI_LOW);
+
+        for (int i = 0; i < up_steps; ++i) {
+            // Check for motor fault
+            //if (gpioRead(FLT_pin) == PI_LOW) {
+            //    gpioWrite(SLP_pin, PI_LOW); // Put the motor driver in sleep mode
+            //    throw std::runtime_error("MOTOR FAULT");
+            //}
+
+            // Perform a step
+
+            if (gpioRead(upper_switch) == PI_HIGH){
+                throw std::runtime_error("VERT UPPER LIMIT REACHED");
+                //THIS IS WHERE WE WOULD SET THE ENABLE PIN FOR EMERGENCY STOP BUT ITS NOT CONNECTED
+                gpioWrite(this->getSleepPin(), PI_LOW);
+            }
+
+            if (gpioRead(lower_switch) == PI_HIGH){
+                throw std::runtime_error("VERT LOWER LIMIT REACHED");
+                //THIS IS WHERE WE WOULD SET THE ENABLE PIN FOR EMERGENCY STOP BUT ITS NOT CONNECTED
+                gpioWrite(this->getSleepPin(), PI_LOW);
+            }
+            gpioWrite(this->getStepPin(), PI_HIGH);
+
+            std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
+            gpioWrite(this->getStepPin(), PI_LOW);
+
+            std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
+            
+        }
+
+        /*
+        while(gpioRead(upper_switch) == PI_LOW){
+            std::cout << gpioRead(upper_switch);
+            std::cout << "\n";
+
             gpioWrite(step_pin, PI_HIGH);
+
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
             gpioWrite(step_pin, PI_LOW);
+
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
         }
 
-        // Change direction to down (assuming low means down)
-        this->changeDirection();
+        gpioWrite(this->getDirPin(), PI_LOW);
 
         // Move down until hitting the bottom limit
         // for (int i = 0; i < up_steps; ++i) {
-        while(lower_switch->getPin() == PI_LOW){
-            if (gpioRead(lower_switch->getPin()) == PI_HIGH) {
-                std::cout << "HIT THE BOTTOM LIMIT\n";
-                break; // Exit loop if bottom limit is reached
-            }
-            // if (gpioRead(FLT_pin) == PI_LOW) {
-            //     gpioWrite(SLP_pin, PI_LOW); // Put the motor driver in sleep mode
-            //     throw std::runtime_error("MOTOR FAULT");
-            // }
+        std::cout << "BEGINNING DOWN MOVE\n";
+
+        while(gpioRead(lower_switch) == PI_LOW){
+            std::cout << gpioRead(lower_switch);
+            std::cout << "\n";
+
             gpioWrite(step_pin, PI_HIGH);
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
+
             gpioWrite(step_pin, PI_LOW);
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
-        }
 
-        this->changeDirection();
-        for(int i = 0; i < 2; i ++){
-            this->step();
         }
+        std::cout << "calibration complete resetting\n";
+
+        gpioWrite(this->getDirPin(), PI_HIGH);
+
+        for(int i = 0; i < 5; i ++){
+            gpioWrite(step_pin, PI_HIGH);
+            std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
+
+            gpioWrite(step_pin, PI_LOW);
+            std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
+
+        }
+        */
         // Cleanup and put the motor driver in sleep mode
         gpioWrite(this->getSleepPin(), PI_LOW);
         cout <<"DONE" <<endl;
 }
 
 
-void Motor::motor_go(bool clockwise, double steps) {
-        // Pin assignments
+void Motor::motor_go(bool clockwise, double steps, const int &LIGHTGATE) {
+        gpioSetMode(LIGHTGATE, PI_INPUT);
 
         // Set motor direction
         gpioWrite(this->getSleepPin(), PI_HIGH);
@@ -223,7 +286,7 @@ void Motor::motor_go(bool clockwise, double steps) {
         // int steps = static_cast<int>(degrees / 1.8);
 
         // Hardcoded delay values
-        double stepdelay = 0.005/16; // Seconds between steps 0.002
+        double stepdelay = 0.005; // Seconds between steps 0.002
         // this_thread::sleep_for(chrono::seconds(1));
         for (int i = 0; i < steps; ++i) {
             // Check for motor fault
@@ -241,16 +304,32 @@ void Motor::motor_go(bool clockwise, double steps) {
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
             
         }   
+        if (gpioRead(LIGHTGATE) == PI_HIGH) {
+            std::cout << "NOT ALIGNED\n";
+            gpioWrite(this->getDirPin(), PI_LOW);
+
+            double stepdelay = 0.009; // Seconds between steps
+        while(gpioRead(LIGHTGATE) == PI_HIGH){
+            gpioWrite(step_pin, PI_HIGH);
+            std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
+            gpioWrite(step_pin, PI_LOW);
+            std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
+        }
+    }
+    std::cout << "\n SYSTEM ALIGNED \n";
 
         // Cleanup and put the motor driver in sleep mode
         gpioWrite(this->getSleepPin(), PI_LOW);
     }
 
-void Motor::MAIN_MOTOR_RESET(LimitSwitch* calibration_switch) {
+void Motor::MAIN_MOTOR_RESET(const int &calibration_switch, const int &LIGHTGATE) {
+    gpioSetMode(calibration_switch, PI_INPUT);
+    gpioSetMode(LIGHTGATE, PI_INPUT);
+
+
 
     // Set motor direction to reset direction
     gpioWrite(this->getDirPin(), PI_HIGH);
-
     // Wake up the motor driver
     gpioWrite(this->getSleepPin(), PI_HIGH);
 
@@ -258,9 +337,9 @@ void Motor::MAIN_MOTOR_RESET(LimitSwitch* calibration_switch) {
     // The loop will break once the zero position is detected
 
     // Hardcoded delay values
-    double stepdelay = 0.005/16; // Seconds between steps
+    double stepdelay = 0.005; // Seconds between steps
 
-    while(gpioRead(calibration_switch->getPin()) == PI_LOW){
+    while(gpioRead(calibration_switch) == PI_LOW){
             // Check for motor fault
         // if (gpioRead(FLT_pin) == PI_LOW) {
         //     gpioWrite(SLP_pin, PI_LOW); // Put the motor driver in sleep mode
@@ -272,6 +351,22 @@ void Motor::MAIN_MOTOR_RESET(LimitSwitch* calibration_switch) {
         gpioWrite(step_pin, PI_LOW);
         std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
     }
+
+
+    if (gpioRead(LIGHTGATE) == PI_HIGH) {
+        std::cout << "NOT ALIGNED\n";
+        gpioWrite(this->getDirPin(), PI_LOW);
+
+        double stepdelay = 0.009; // Seconds between steps
+        while(gpioRead(LIGHTGATE) == PI_HIGH){
+            gpioWrite(step_pin, PI_HIGH);
+            std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
+            gpioWrite(step_pin, PI_LOW);
+            std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
+        }
+    }
+    std::cout << "\n SYSTEM ALIGNED \n";
+
 
     // Cleanup and put the motor driver in sleep mode
     gpioWrite(this->getSleepPin(), PI_LOW);

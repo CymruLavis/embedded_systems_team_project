@@ -1,7 +1,7 @@
 CMakeFiles/cocktail_machine.dir/src/LimitSwitchClass.cpp.o: \
- /home/admin/Desktop/cocktail_machine/src/LimitSwitchClass.cpp \
+ /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/LimitSwitchClass.cpp \
  /usr/include/stdc-predef.h \
- /home/admin/Desktop/cocktail_machine/src/../Include/LimitSwitch.h \
+ /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/../Include/LimitSwitch.h \
  /usr/include/c++/12/iostream \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/c++config.h \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/os_defines.h \
@@ -133,8 +133,8 @@ CMakeFiles/cocktail_machine.dir/src/LimitSwitchClass.cpp.o: \
  /usr/include/arm-linux-gnueabihf/bits/stdio_lim.h \
  /usr/include/c++/12/cerrno /usr/include/errno.h \
  /usr/include/arm-linux-gnueabihf/bits/errno.h /usr/include/linux/errno.h \
- /usr/include/arm-linux-gnueabihf/asm/errno.h \
- /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/lib/linux/uapi/arm/asm/errno.h /usr/include/asm-generic/errno.h \
+ /usr/include/asm-generic/errno-base.h \
  /usr/include/arm-linux-gnueabihf/bits/types/error_t.h \
  /usr/include/c++/12/bits/charconv.h \
  /usr/include/c++/12/bits/basic_string.tcc \
@@ -153,7 +153,7 @@ CMakeFiles/cocktail_machine.dir/src/LimitSwitchClass.cpp.o: \
  /usr/include/c++/12/bits/locale_facets.tcc \
  /usr/include/c++/12/bits/basic_ios.tcc \
  /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
- /usr/include/c++/12/bits/istream.tcc /usr/local/include/pigpio.h \
+ /usr/include/c++/12/bits/istream.tcc /usr/include/pigpio.h \
  /usr/include/c++/12/vector /usr/include/c++/12/bits/stl_uninitialized.h \
  /usr/include/c++/12/bits/stl_vector.h \
  /usr/include/c++/12/bits/stl_bvector.h \

@@ -17,27 +17,37 @@
 #include "../Include/LimitSwitch.h"
 
 using namespace std;
+// As a way to clean up our GPIO assigment. We declare all our GPIO 
 
 
-LimitSwitch* PIR_sensor = new LimitSwitch(26); //physical pin 37
-LimitSwitch* upper_switch = new LimitSwitch(22); //
-LimitSwitch* lower_switch = new LimitSwitch(27); //
-LimitSwitch* calibration_switch = new LimitSwitch(22); //
+int GPIO_LIMIT_SWITCH_TOP = 22;
+int GPIO_LIMIT_SWITCH_BOTTOM =17;
 
-Motor* carousel_motor = new Motor(8,7,1,25, 2.25/16);  //GPIO 8, 7,1, 25 Physical pins 24,26,28,22
-Motor* riser_motor = new Motor(18,23,24,15,2.7/16);    //GPIO 18,23,24,15 Physical pins 12,16,18,10
+int GPIO_ZERO_SWITCH = 11;
+int GPIO_LIGHTGATE = 10; 
+
+LimitSwitch* PIR_sensor = new LimitSwitch(16); //physical pin 37
+//LimitSwitch* upper_switch = new LimitSwitch(5); //TOP
+//LimitSwitch* lower_switch = new LimitSwitch(0); //BOTTOM
+//LimitSwitch* calibration_switch = new LimitSwitch(11); //
+                                                    // DIRECTION, STEP, SLEEP, FAULT 
+Motor* carousel_motor = new Motor(8,7,1,25, 2.25);  //GPIO 8, 7,1, 25 Physical pins 24,26,28,22
+
+                                                    // DIRECTION STEP SLEEP FAULT
+                                                    // OG GPIO 18,23,24,15 Physical pins 12,16,18,10
+Motor* riser_motor = new Motor(26,19,13,6,2.7);    //GPIO 18,23,24,15 Physical pins 12,16,18,10
 
 atomic<bool> system_running(true);
 atomic<bool> program_running(true);
 
 void initializePins(){
 	//PIR Sensor
-	gpioSetMode(PIR_sensor->getPin(), PI_INPUT);
+	//gpioSetMode(PIR_sensor->getPin(), PI_INPUT);
 
 	//Limit switches
-	gpioSetMode(upper_switch->getPin(), PI_INPUT);
-	gpioSetMode(lower_switch->getPin(), PI_INPUT);
-	gpioSetMode(calibration_switch->getPin(), PI_INPUT);
+	//gpioSetMode(upper_switch->getPin(), PI_INPUT);
+	//gpioSetMode(lower_switch->getPin(), PI_INPUT);
+	//gpioSetMode(calibration_switch->getPin(), PI_INPUT);
 
 	//Light Gate
 
@@ -63,22 +73,23 @@ void safteyCallback(int gpio, int level, uint32_t tick){
     }
 }
 void makeDrinkThread(vector<int>& step_queue){
-    while(program_running){
-        while(system_running){
             // call set to pos 0
-            carousel_motor->MAIN_MOTOR_RESET(calibration_switch);
-            for(auto& step:step_queue){
-                carousel_motor->motor_go(carousel_motor->decideDirection(step), abs(step));
-                riser_motor->VERT_MOVE(upper_switch, lower_switch);                
-            }
-        }
-    }
-    
-
+            carousel_motor->MAIN_MOTOR_RESET(GPIO_ZERO_SWITCH, GPIO_LIGHTGATE);
+            riser_motor->VERT_MOVE(GPIO_LIMIT_SWITCH_TOP, GPIO_LIMIT_SWITCH_BOTTOM);
+            carousel_motor->motor_go(carousel_motor->decideDirection(1), abs(180), GPIO_LIGHTGATE);
+            //for(auto& step:step_queue){
+            //    carousel_motor->motor_go(carousel_motor->decideDirection(step), abs(step));
+            //    std::cout << "MOTOR go complete\n";
+            //    riser_motor->VERT_MOVE(upper_switch, lower_switch);                
+            //}
+            //std::cout << "LOOP COMPLETE\n";
 }
+
 int LogicTestExecutable(){
     vector<vector<int>> queues = DataBaseExecutable();
+
     vector<int> step_queue = carousel_motor->getStepQueue(queues[1]);
+
 	int current_position = 0;
 
     if (gpioInitialise() < 0) {
@@ -88,7 +99,9 @@ int LogicTestExecutable(){
     // start PIR thread
     //start motor thread
     
-    gpioSetAlertFunc(upper_switch->getPin(), safteyCallback);
+    gpioSetAlertFunc(PIR_sensor->getPin(), safteyCallback);
+
+    // instantiates a thread, calls makedrink
     thread myThread(makeDrinkThread, ref(step_queue));
     
     cin.get();

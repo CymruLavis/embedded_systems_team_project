@@ -46,9 +46,9 @@ public:
     int getStepsToRotoate(double degreesToSpin);
 
     vector<int> getStepQueue(vector<int> positionQueue);    
-    void VERT_MOVE(LimitSwitch* upper_switch, LimitSwitch* lower_switch);
-    void motor_go(bool clockwise, double degrees);
-    void MAIN_MOTOR_RESET(LimitSwitch* calibration_switch);
+    void VERT_MOVE(const int &upper_switch, const int &lower_switch);
+    void motor_go(bool clockwise, double degree, const int &LIGHTGATE);
+    void MAIN_MOTOR_RESET(const int &calibration_switch, const int &LIGHTGATE);
 
     // Pin out
     int direction_pin;  //1 = clockwise; 0 = counter clockwise

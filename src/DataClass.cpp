@@ -24,8 +24,8 @@ Data::Data(){
 }
 
 // returns the location of the menu csv
-string Data::getFilePath() {return R"(/home/admin/Desktop/cocktail_machine/Data/cocktail_table.csv)";}
-string Data::getIndexFilePath() { return R"(/home/admin/Desktop/cocktail_machine/Data/index_table.csv)";}
+string Data::getFilePath() {return R"(/home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/Data/cocktail_table.csv)";}
+string Data::getIndexFilePath() { return R"(/home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/Data/index_table.csv)";}
 
 // returns a 2D matix of all data from the given csv
 vector<vector<string>> Data::getData(string filePath) {

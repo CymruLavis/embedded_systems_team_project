@@ -1,6 +1,6 @@
 CMakeFiles/cocktail_machine.dir/main.cpp.o: \
- /home/admin/Desktop/cocktail_machine/main.cpp /usr/include/stdc-predef.h \
- /usr/include/c++/12/iostream \
+ /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/main.cpp \
+ /usr/include/stdc-predef.h /usr/include/c++/12/iostream \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/c++config.h \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -131,8 +131,8 @@ CMakeFiles/cocktail_machine.dir/main.cpp.o: \
  /usr/include/arm-linux-gnueabihf/bits/stdio_lim.h \
  /usr/include/c++/12/cerrno /usr/include/errno.h \
  /usr/include/arm-linux-gnueabihf/bits/errno.h /usr/include/linux/errno.h \
- /usr/include/arm-linux-gnueabihf/asm/errno.h \
- /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/lib/linux/uapi/arm/asm/errno.h /usr/include/asm-generic/errno.h \
+ /usr/include/asm-generic/errno-base.h \
  /usr/include/arm-linux-gnueabihf/bits/types/error_t.h \
  /usr/include/c++/12/bits/charconv.h \
  /usr/include/c++/12/bits/basic_string.tcc \
@@ -159,14 +159,14 @@ CMakeFiles/cocktail_machine.dir/main.cpp.o: \
  /usr/include/c++/12/bits/chrono.h /usr/include/c++/12/ratio \
  /usr/include/c++/12/limits /usr/include/c++/12/ctime \
  /usr/include/c++/12/bits/parse_numbers.h \
- /home/admin/Desktop/cocktail_machine/Include/Data.h \
- /home/admin/Desktop/cocktail_machine/Include/Indexes.h \
+ /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/Include/Data.h \
+ /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/Include/Indexes.h \
  /usr/include/c++/12/vector /usr/include/c++/12/bits/stl_uninitialized.h \
  /usr/include/c++/12/bits/stl_vector.h \
  /usr/include/c++/12/bits/stl_bvector.h \
  /usr/include/c++/12/bits/vector.tcc \
- /home/admin/Desktop/cocktail_machine/Include/SystemConfig.h \
- /home/admin/Desktop/cocktail_machine/Include/Ingredient.h \
+ /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/Include/SystemConfig.h \
+ /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/Include/Ingredient.h \
  /usr/include/c++/12/array /usr/include/c++/12/compare \
  /usr/include/c++/12/fstream /usr/include/c++/12/bits/codecvt.h \
  /usr/include/arm-linux-gnueabihf/c++/12/bits/basic_file.h \
@@ -188,9 +188,9 @@ CMakeFiles/cocktail_machine.dir/main.cpp.o: \
  /usr/include/c++/12/bits/node_handle.h \
  /usr/include/c++/12/bits/unordered_set.h \
  /usr/include/c++/12/bits/erase_if.h \
- /home/admin/Desktop/cocktail_machine/Include/SystemConfig.h \
- /home/admin/Desktop/cocktail_machine/Include/Motor.h \
- /home/admin/Desktop/cocktail_machine/Include/LimitSwitch.h \
- /usr/local/include/pigpio.h \
- /home/admin/Desktop/cocktail_machine/Include/LimitSwitch.h \
- /home/admin/Desktop/cocktail_machine/UnitTests/LogicTest.h
+ /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/Include/SystemConfig.h \
+ /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/Include/Motor.h \
+ /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/Include/LimitSwitch.h \
+ /usr/include/pigpio.h \
+ /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/Include/LimitSwitch.h \
+ /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/UnitTests/LogicTest.h
