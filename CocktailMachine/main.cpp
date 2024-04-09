@@ -47,7 +47,7 @@ void initializePins(){
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-	QPixmap pixmap("/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/splash.png");
+	QPixmap pixmap("../splash.png");
 	pixmap = pixmap.scaled(480, 320, Qt::KeepAspectRatio);
 	QSplashScreen *splash = new QSplashScreen;
 	splash->setPixmap(pixmap);
