@@ -162,7 +162,7 @@ void Motor::VERT_MOVE(const int &upper_switch, const int &lower_switch) {
         gpioSetMode(lower_switch, PI_INPUT);
 
         int up_steps = 300; // Define the number of steps to move up
-        double stepdelay = 0.004; // Seconds between steps
+        double stepdelay = 0.001; // Seconds between steps
 
         for (int i = 0; i < up_steps; ++i) {
             // Check for motor fault
@@ -286,7 +286,7 @@ void Motor::motor_go(bool clockwise, double steps, const int &LIGHTGATE) {
         // int steps = static_cast<int>(degrees / 1.8);
 
         // Hardcoded delay values
-        double stepdelay = 0.005; // Seconds between steps 0.002
+        double stepdelay = 0.001; // Seconds between steps 0.002
         // this_thread::sleep_for(chrono::seconds(1));
         for (int i = 0; i < steps; ++i) {
             // Check for motor fault
@@ -337,7 +337,7 @@ void Motor::MAIN_MOTOR_RESET(const int &calibration_switch, const int &LIGHTGATE
     // The loop will break once the zero position is detected
 
     // Hardcoded delay values
-    double stepdelay = 0.005; // Seconds between steps
+    double stepdelay = 0.001; // Seconds between steps
 
     while(gpioRead(calibration_switch) == PI_LOW){
             // Check for motor fault
