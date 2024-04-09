@@ -242,6 +242,7 @@ int Data::append_CSV(string pose_value, string ingredient_value)
 
     return 0;
 }
+
 int Data::updateVolume(string bottle_position){
 	ifstream file("ingredient_position_fill.csv");
     ofstream tempFile("temp.csv");
@@ -273,6 +274,8 @@ int Data::updateVolume(string bottle_position){
 	// Remove the original file and rename the temp file
     remove("ingredient_position_fill.csv");
     rename("temp.csv", "ingredient_position_fill.csv");
+
+	this->fill_data = getData(getPoseFilePath());
 
 	return 0;
 

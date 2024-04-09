@@ -2,6 +2,8 @@
 #include <iostream>
 #include <thread>
 #include <QApplication>
+#include <QSplashScreen>
+#include <QPixmap>
 
 #include "Include/Data.h"
 #include "Include/SystemConfig.h"
@@ -45,8 +47,13 @@ void initializePins(){
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+	QPixmap pixmap("/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/splash.png");
+	QSplashScreen splash(pixmap);
+	splash.show();
+	a.processEvents();
     MainWindow w;
-	w.setWindowState(Qt::WindowFullScreen);
+	//w.setWindowState(Qt::WindowFullScreen);
     w.show();
+	splash.finish(&w);
     return a.exec();
 }
