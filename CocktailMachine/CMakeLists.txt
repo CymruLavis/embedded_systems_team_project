@@ -22,10 +22,9 @@ set(PROJECT_SOURCES
         mainwindow.ui
         src/DataClass.cpp 
         src/IngredientIndexClass.cpp 
-        src/IngredientClass.cpp
-        src/SystemConfig.cpp
         src/MotorClass.cpp
         src/LimitSwitchClass.cpp
+        UnitTests/DataBaseUnitTest.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

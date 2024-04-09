@@ -2,7 +2,6 @@
 #define DATA_H
 
 #include "Indexes.h"
-#include "SystemConfig.h"
 
 #include <iostream>
 #include <fstream>
@@ -34,11 +33,11 @@ public:
 	
 	string getDrinkDescription(string drink);
 	
-	vector<int> getRecipe(string drink, SystemConfig sys);
-	
-	vector<string> getActiveDrinkList(vector<string> ingredients);
-	bool isDrinkMakable(vector<string> recipie, vector<string> ingredients);
-	
+	vector<int> getRecipe(string drink);
+	int getPosition(int ing_idx);
+	vector<string> getActiveDrinkList();
+	bool isDrinkMakable(vector<string> recipie);
+	vector<string> getColumn(vector<vector<string>> data, int colIdx);
 	vector<string> getWholeDrinkList();
 	string indexToIngredient(int ingredient_idx);
 	int ingredientToIndex(string ingredient);
