@@ -3,7 +3,7 @@
 #include <thread>
 #include <QApplication>
 #include <QSplashScreen>
-#include <QPixmap>
+#include <QTimer>
 
 #include "Include/Data.h"
 #include "Include/SystemConfig.h"
@@ -48,12 +48,20 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 	QPixmap pixmap("/home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/splash.png");
-	QSplashScreen splash(pixmap);
-	splash.show();
-	a.processEvents();
+	pixmap = pixmap.scaled(480, 320, Qt::KeepAspectRatio);
+	QSplashScreen *splash = new QSplashScreen;
+	splash->setPixmap(pixmap);
+	splash->show();
+
+	//a.processEvents();
+
     MainWindow w;
+
+	QTimer::singleShot(2500, splash, SLOT(close()));
+	QTimer::singleShot(2500, &w, SLOT(show()));
+
 	//w.setWindowState(Qt::WindowFullScreen);
-    w.show();
-	splash.finish(&w);
+    //w.show();
+	//splash.finish(&w);
     return a.exec();
 }
