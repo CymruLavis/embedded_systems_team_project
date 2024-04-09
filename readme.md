@@ -74,19 +74,23 @@ Trust Bearings: [Thrust Bearings](https://www.amazon.co.uk/sourcingmap-Single-Di
   <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/0bf09030-975e-4d3b-912b-8164f7dd585b" width="300" height="500" />
 </p>
 ## Required Libraries  
-pigpio library is installed  
+Install pigpio library  
 $sudo apt install pigpio 
 
-diver for the LCD touch display  
+Install cmake  
+$sudo apt install cmake
+
+Install the diver for the LCD touch display  
 $git clone https://github.com/osoyoo/LCD-show.git  
 $cd LCD-show/  
 $chmod +x lcd35b-show  
 $./lcd35b-show  
 
-cmake
-$sudo apt install cmake
+Install Qt   
+$sudo apt install qtcreator qtbase5-dev qt5-qmake cmake  
 
-build an 
+
+build project  
 $cmake ..
 $make  
 $./cocktail_machine 
