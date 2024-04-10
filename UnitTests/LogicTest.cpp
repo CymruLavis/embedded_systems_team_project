@@ -73,6 +73,7 @@ void safteyCallback(int gpio, int level, uint32_t tick){
     }
 }
 void makeDrinkThread(vector<int>& step_queue){
+            /* 
             std::cout << "\n MAKING A DRINK! ----------- \n";
             bool clockwise=true;
             carousel_motor->MAIN_MOTOR_RESET(GPIO_ZERO_SWITCH, GPIO_LIGHTGATE);
@@ -87,24 +88,29 @@ void makeDrinkThread(vector<int>& step_queue){
                 std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(2000)));   
             }
             carousel_motor->MAIN_MOTOR_RESET(GPIO_ZERO_SWITCH, GPIO_LIGHTGATE);
-            //for(auto& step:step_queue){
-            //    carousel_motor->motor_go(carousel_motor->decideDirection(step), abs(step));
-            //    std::cout << "MOTOR go complete\n";
-            //    riser_motor->VERT_MOVE(upper_switch, lower_switch);                
-            //}
-            //std::cout << "LOOP COMPLETE\n";
+            */
+
+            for(auto& step:step_queue){
+                bool clockwise=true;
+                carousel_motor->motor_go(clockwise, abs(step), GPIO_LIGHTGATE);
+                std::cout << "MOTOR go complete\n";
+                riser_motor->VERT_MOVE(GPIO_LIMIT_SWITCH_TOP, GPIO_LIMIT_SWITCH_BOTTOM);                
+            }
+            std::cout << "LOOP COMPLETE\n";
 }
 
+
 int LogicTestExecutable(){
-    vector<vector<int>> queues = DataBaseExecutable();
+    vector<int> queues = DataBaseExecutable();
 
 
-    vector<int> step_queue = carousel_motor->getStepQueue(queues[1]);
+    //vector<int> step_queue = carousel_motor->getStepQueue(queues[1]);
 
-    for(auto& step:step_queue){
+    for(auto& step:queues){
         std::cout << step;
         std::cout<<"\n";
     }
+    std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(2000)));
     
 	int current_position = 0;
 
@@ -118,7 +124,7 @@ int LogicTestExecutable(){
     gpioSetAlertFunc(PIR_sensor->getPin(), safteyCallback);
 
     // instantiates a thread, calls makedrink
-    thread myThread(makeDrinkThread, ref(step_queue));
+    thread myThread(makeDrinkThread, ref(queues));
     
     cin.get();
     program_running = false;

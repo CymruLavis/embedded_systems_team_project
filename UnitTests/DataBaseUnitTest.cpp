@@ -56,7 +56,7 @@ void printSys(SystemConfig sys){
 	}
 }
 
-vector<vector<int>> DataBaseExecutable(){
+vector<int> DataBaseExecutable(){
     Data* myData = new Data();
 	SystemConfig* sys = new SystemConfig();
 	Motor* myMotor = new Motor(1,2,3,4, 1.8);
@@ -75,13 +75,5 @@ vector<vector<int>> DataBaseExecutable(){
 	vector<int> drink_queue = myData->getRecipe(desired_drink, *sys);
 
 	vector<int> step_queue = myMotor->getStepQueue(drink_queue);
-
-	vector<vector<int>> queues;
-	queues.push_back(step_queue);
-	queues.push_back(drink_queue);
-
-	// printListOfInts(drink_queue);
-	// printListOfInts(step_queue);
-	return queues;
-
+	return step_queue;
 }

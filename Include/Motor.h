@@ -47,7 +47,7 @@ public:
 
     vector<int> getStepQueue(vector<int> positionQueue);    
     void VERT_MOVE(const int &upper_switch, const int &lower_switch);
-    void motor_go(bool clockwise, double degree, const int &LIGHTGATE);
+    void motor_go(bool clockwise, int steps, const int &LIGHTGATE);
     void MAIN_MOTOR_RESET(const int &calibration_switch, const int &LIGHTGATE);
 
     // Pin out

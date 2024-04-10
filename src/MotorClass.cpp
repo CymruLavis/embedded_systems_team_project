@@ -138,11 +138,16 @@ int Motor::getStepsToRotoate(double degreesToSpin){
 vector<int> Motor::getStepQueue(vector<int> positionQueue){
     vector<int> step_queue;
     int currentPos = 0;
+    double step_per_degree = 1.8; 
+    double microstepping = 8; // 1/8 so *8
+    double gear_ratio = 1.5; // 30/20
+
+
     for(int i = 0; i < positionQueue.size(); i++){
-        int dist = Motor::getDistanceBetweenPositions(currentPos, positionQueue[i]);
-        double deg_to_rototae = Motor::getDegreesToSpin(dist);
-        int steps = Motor::getStepsToRotoate(deg_to_rototae);
-        step_queue.push_back(steps);
+        int dist_unit = Motor::getDistanceBetweenPositions(currentPos, positionQueue[i]);
+        int degrees = dist_unit * 60;
+        int no_steps = (((degrees/step_per_degree)*microstepping)*gear_ratio);
+        step_queue.push_back(no_steps);
         currentPos = positionQueue[i];
     }
 
@@ -155,20 +160,26 @@ void Motor::VERT_MOVE(const int &upper_switch, const int &lower_switch) {
         // Wake up the motor driver
         gpioWrite(this->getSleepPin(), PI_HIGH);
 
-        // Set motor direction to up (assuming high means up)
-        gpioWrite(this->getDirPin(), PI_HIGH);
-
         gpioSetMode(upper_switch, PI_INPUT);
         gpioSetMode(lower_switch, PI_INPUT);
 
         //1.8 degrees per step meaning 200 steps in a circle.
         // currently on 1/16 step size 3200 per full circle
 
-        int up_steps = 14500; // Define the number of steps to move up
+        int up_steps = (1000*8); // Define the number of steps to move up
         double stepdelay = 0.001; // Seconds between steps
 
-        // gear ratio doesnt really matter here as 
+        //checking we are at zero
+        gpioWrite(this->getDirPin(), PI_LOW);
+        while(gpioRead(lower_switch) == PI_LOW){
+            gpioWrite(step_pin, PI_HIGH);
+            std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
+            gpioWrite(step_pin, PI_LOW);
+            std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
+            }
 
+        // GOING UP
+        gpioWrite(this->getDirPin(), PI_HIGH);
         for (int i = 0; i < up_steps; ++i) {
             // Check for motor fault
             //if (gpioRead(FLT_pin) == PI_LOW) {
@@ -183,51 +194,28 @@ void Motor::VERT_MOVE(const int &upper_switch, const int &lower_switch) {
                 //THIS IS WHERE WE WOULD SET THE ENABLE PIN FOR EMERGENCY STOP BUT ITS NOT CONNECTED
                 gpioWrite(this->getSleepPin(), PI_LOW);
             }
-
-            if (gpioRead(lower_switch) == PI_HIGH){
-                throw std::runtime_error("VERT LOWER LIMIT REACHED");
-                //THIS IS WHERE WE WOULD SET THE ENABLE PIN FOR EMERGENCY STOP BUT ITS NOT CONNECTED
-                gpioWrite(this->getSleepPin(), PI_LOW);
-            }
             gpioWrite(this->getStepPin(), PI_HIGH);
-
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
             gpioWrite(this->getStepPin(), PI_LOW);
-
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
             
         }
         std::cout << "\n WAITING FOR FILL!! ----------- \n";
         std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(2500)));
 
+        //GOING DOWN
         gpioWrite(this->getDirPin(), PI_LOW);
-
-        for (int i = 0; i < up_steps; ++i) {
+        while(gpioRead(lower_switch) == PI_LOW){
             // Check for motor fault
             //if (gpioRead(FLT_pin) == PI_LOW) {
             //    gpioWrite(SLP_pin, PI_LOW); // Put the motor driver in sleep mode
             //    throw std::runtime_error("MOTOR FAULT");
             //}
-
-            // Perform a step
-
-            if (gpioRead(upper_switch) == PI_HIGH){
-                gpioWrite(this->getSleepPin(), PI_LOW);
-                throw std::runtime_error("VERT UPPER LIMIT REACHED");
-                //THIS IS WHERE WE WOULD SET THE ENABLE PIN FOR EMERGENCY STOP BUT ITS NOT CONNECTED
-            }
-
-            if (gpioRead(lower_switch) == PI_HIGH){
-                gpioWrite(this->getSleepPin(), PI_LOW);
-                throw std::runtime_error("VERT LOWER LIMIT REACHED");
-                //THIS IS WHERE WE WOULD SET THE ENABLE PIN FOR EMERGENCY STOP BUT ITS NOT CONNECTED
-            }
-            gpioWrite(this->getStepPin(), PI_HIGH);
+            gpioWrite(step_pin, PI_HIGH);
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
-            
-            gpioWrite(this->getStepPin(), PI_LOW);
+            gpioWrite(step_pin, PI_LOW);
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
-        }
+            }
 
         /*
         while(gpioRead(upper_switch) == PI_LOW){
@@ -278,27 +266,22 @@ void Motor::VERT_MOVE(const int &upper_switch, const int &lower_switch) {
 }
 
 
-void Motor::motor_go(bool clockwise, double degrees, const int &LIGHTGATE) {
+void Motor::motor_go(bool clockwise, int steps, const int &LIGHTGATE) {
         /* So first we setup the GPIO pins, enable the lightgate input and 
         set the sleep pin and and direction.*/
 
         gpioSetMode(LIGHTGATE, PI_INPUT);
         gpioWrite(this->getSleepPin(), PI_HIGH);
 
-        if (clockwise == true) {
-            gpioWrite(this->getDirPin(),PI_HIGH);
-        } else {
-            gpioWrite(this->getDirPin(),PI_LOW);
-        }
-        //gpioWrite(this->getDirPin(), clockwise ? PI_HIGH : PI_LOW);
+        gpioWrite(this->getDirPin(), clockwise ? PI_HIGH : PI_LOW);
 
         // we need a memory as sometimes it over or under shoots so 
         //we need a way to control the direction with memory.
         std::vector<int> GAPS;
-
+        /*
         // Calculate steps from degrees (1.8 degrees per step)
         float step_per_degree = 1.8;
-        float microstepping = (16);
+        float microstepping = (8);
         float gear_ratio = (1.5);
 
         std::cout << "\n degrees:   ";
@@ -309,7 +292,7 @@ void Motor::motor_go(bool clockwise, double degrees, const int &LIGHTGATE) {
         int steps = no_steps;
         std::cout << "\n step ";
         std::cout << no_steps;
-
+        */
         double stepdelay = 0.001; 
 
         for (int i = 0; i < steps; ++i) {
@@ -334,7 +317,7 @@ void Motor::motor_go(bool clockwise, double degrees, const int &LIGHTGATE) {
             //gpioWrite(this->getDirPin(), PI_LOW);
 
             // Check the last 10 values in GAPS for any gap passed
-            int checkRange = std::min(30, static_cast<int>(GAPS.size()));
+            int checkRange = std::min(5, static_cast<int>(GAPS.size()));
             for (int i = 0; i < checkRange; ++i) {
                 if (GAPS[GAPS.size() - 1 - i] == 0) {
                     std::cout << "we passed a gap, flipping direction!\n";
