@@ -164,7 +164,7 @@ void Motor::VERT_MOVE(const int &upper_switch, const int &lower_switch) {
         //1.8 degrees per step meaning 200 steps in a circle.
         // currently on 1/16 step size 3200 per full circle
 
-        int up_steps = 5000; // Define the number of steps to move up
+        int up_steps = 14500; // Define the number of steps to move up
         double stepdelay = 0.001; // Seconds between steps
 
         // gear ratio doesnt really matter here as 
@@ -197,6 +197,9 @@ void Motor::VERT_MOVE(const int &upper_switch, const int &lower_switch) {
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
             
         }
+        std::cout << "\n WAITING FOR FILL!! ----------- \n";
+        std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(2500)));
+
         gpioWrite(this->getDirPin(), PI_LOW);
 
         for (int i = 0; i < up_steps; ++i) {
@@ -281,7 +284,17 @@ void Motor::motor_go(bool clockwise, double degrees, const int &LIGHTGATE) {
 
         gpioSetMode(LIGHTGATE, PI_INPUT);
         gpioWrite(this->getSleepPin(), PI_HIGH);
-        gpioWrite(this->getDirPin(), clockwise ? PI_HIGH : PI_LOW);
+
+        if (clockwise == true) {
+            gpioWrite(this->getDirPin(),PI_HIGH);
+        } else {
+            gpioWrite(this->getDirPin(),PI_LOW);
+        }
+        //gpioWrite(this->getDirPin(), clockwise ? PI_HIGH : PI_LOW);
+
+        // we need a memory as sometimes it over or under shoots so 
+        //we need a way to control the direction with memory.
+        std::vector<int> GAPS;
 
         // Calculate steps from degrees (1.8 degrees per step)
         float step_per_degree = 1.8;
@@ -291,25 +304,14 @@ void Motor::motor_go(bool clockwise, double degrees, const int &LIGHTGATE) {
         std::cout << "\n degrees:   ";
         std::cout << degrees;
 
-        float no_steps = (degrees/step_per_degree);
-        std::cout << "\n no_steps ";
+        float no_steps = (((degrees/step_per_degree)*microstepping)*gear_ratio);
+
+        int steps = no_steps;
+        std::cout << "\n step ";
         std::cout << no_steps;
 
-        float micro_steps = (no_steps*microstepping);
-        std::cout << "\n micro_steps ";
-        std::cout << micro_steps;
+        double stepdelay = 0.001; 
 
-        float step = (micro_steps*gear_ratio);
-
-        int steps = step;
-        std::cout << "\n step ";
-        std::cout << step;
-        //std::cout << steps;
-
-
-        // Hardcoded delay values
-        double stepdelay = 0.001; // Seconds between steps 0.002
-        // this_thread::sleep_for(chrono::seconds(1));
         for (int i = 0; i < steps; ++i) {
             // Check for motor fault
             //if (gpioRead(FLT_pin) == PI_LOW) {
@@ -323,20 +325,33 @@ void Motor::motor_go(bool clockwise, double degrees, const int &LIGHTGATE) {
             gpioWrite(this->getStepPin(), PI_LOW);
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
             
+            //keeps a memory of the lightgate
+            GAPS.push_back(gpioRead(LIGHTGATE));
+            std::cout << gpioRead(LIGHTGATE);
         }   
         if (gpioRead(LIGHTGATE) == PI_HIGH) {
             std::cout << "\n NOT ALIGNED TO POSITION \n";
-            gpioWrite(this->getDirPin(), PI_LOW);
+            //gpioWrite(this->getDirPin(), PI_LOW);
+
+            // Check the last 10 values in GAPS for any gap passed
+            int checkRange = std::min(30, static_cast<int>(GAPS.size()));
+            for (int i = 0; i < checkRange; ++i) {
+                if (GAPS[GAPS.size() - 1 - i] == 0) {
+                    std::cout << "we passed a gap, flipping direction!\n";
+                    gpioWrite(this->getDirPin(), clockwise ? PI_LOW : PI_HIGH);
+                    break; // Exit the loop after finding the first gap
+                }
+            }
 
             double stepdelay = 0.009; // Seconds between steps
-        while(gpioRead(LIGHTGATE) == PI_HIGH){
-            gpioWrite(step_pin, PI_HIGH);
-            std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
-            gpioWrite(step_pin, PI_LOW);
-            std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
-        }
 
-    }
+            while(gpioRead(LIGHTGATE) == PI_HIGH){
+                gpioWrite(step_pin, PI_HIGH);
+                std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
+                gpioWrite(step_pin, PI_LOW);
+                std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
+                }
+        }
     std::cout << "\n SYSTEM IN POSITION \n";
 
     gpioWrite(this->getSleepPin(), PI_LOW);
@@ -344,6 +359,11 @@ void Motor::motor_go(bool clockwise, double degrees, const int &LIGHTGATE) {
 
 void Motor::MAIN_MOTOR_RESET(const int &calibration_switch, const int &LIGHTGATE) {
     std::cout << "\n ZEROING \n";
+
+    // we need a memory as sometimes it over or under shoots so 
+    //we need a way to control the direction with memory.
+    std::vector<int> GAPS;
+
     gpioSetMode(calibration_switch, PI_INPUT);
     gpioSetMode(LIGHTGATE, PI_INPUT);
 
@@ -371,10 +391,25 @@ void Motor::MAIN_MOTOR_RESET(const int &calibration_switch, const int &LIGHTGATE
         std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
         gpioWrite(step_pin, PI_LOW);
         std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
+
+        //keeps a memory of the lightgate
+        GAPS.push_back(gpioRead(LIGHTGATE));
+        std::cout << gpioRead(LIGHTGATE);
     }
 
     if (gpioRead(LIGHTGATE) == PI_HIGH) {
         std::cout << "NOT ALIGNED\n";
+
+        // Check the last 10 values in GAPS for any gap passed
+        int checkRange = std::min(30, static_cast<int>(GAPS.size()));
+        for (int i = 0; i < checkRange; ++i) {
+            if (GAPS[GAPS.size() - 1 - i] == 0) {
+                std::cout << "we passed a gap, flipping direction!\n";
+                gpioWrite(this->getDirPin(), clockwise ? PI_LOW : PI_HIGH);
+                break; // Exit the loop after finding the first gap
+            }
+        }
+
         while(gpioRead(LIGHTGATE) == PI_HIGH){
             gpioWrite(step_pin, PI_HIGH);
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
