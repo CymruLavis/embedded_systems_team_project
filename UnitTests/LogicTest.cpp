@@ -75,8 +75,16 @@ void safteyCallback(int gpio, int level, uint32_t tick){
 void makeDrinkThread(vector<int>& step_queue){
             // call set to pos 0
             carousel_motor->MAIN_MOTOR_RESET(GPIO_ZERO_SWITCH, GPIO_LIGHTGATE);
+
+            carousel_motor->motor_go(carousel_motor->decideDirection(1), abs(60), GPIO_LIGHTGATE);
             riser_motor->VERT_MOVE(GPIO_LIMIT_SWITCH_TOP, GPIO_LIMIT_SWITCH_BOTTOM);
-            carousel_motor->motor_go(carousel_motor->decideDirection(1), abs(180), GPIO_LIGHTGATE);
+
+            carousel_motor->motor_go(carousel_motor->decideDirection(1), abs(60), GPIO_LIGHTGATE);
+            riser_motor->VERT_MOVE(GPIO_LIMIT_SWITCH_TOP, GPIO_LIMIT_SWITCH_BOTTOM);
+
+            carousel_motor->motor_go(carousel_motor->decideDirection(1), abs(60), GPIO_LIGHTGATE);
+            riser_motor->VERT_MOVE(GPIO_LIMIT_SWITCH_TOP, GPIO_LIMIT_SWITCH_BOTTOM);
+
             //for(auto& step:step_queue){
             //    carousel_motor->motor_go(carousel_motor->decideDirection(step), abs(step));
             //    std::cout << "MOTOR go complete\n";
@@ -88,8 +96,14 @@ void makeDrinkThread(vector<int>& step_queue){
 int LogicTestExecutable(){
     vector<vector<int>> queues = DataBaseExecutable();
 
+
     vector<int> step_queue = carousel_motor->getStepQueue(queues[1]);
 
+    for(auto& step:step_queue){
+        std::cout << step;
+        std::cout<<"\n";
+    }
+    
 	int current_position = 0;
 
     if (gpioInitialise() < 0) {
