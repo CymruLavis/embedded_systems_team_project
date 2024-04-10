@@ -274,11 +274,17 @@ int Data::append_CSV(string pose_value, string ingredient_value)
 }
 
 int Data::updateVolume(string bottle_position){
-	ifstream file("ingredient_position_fill.csv");
-    ofstream tempFile("temp.csv");
+
+	string csv_filename = getPoseFilePath();
+    string temp_filename = "temp.csv"; 
+
+    ifstream input_file(csv_filename);
+    ofstream output_file(temp_filename);
     string line;
 
-	while (getline(file, line)) {
+	bottle_position = "Position " + bottle_position; 
+
+	while (getline(input_file, line)) {
         istringstream iss(line);
         string pos, alcohol, amount;
         getline(iss, pos, ',');
@@ -292,18 +298,18 @@ int Data::updateVolume(string bottle_position){
             if (newVolume < 0) {
                 newVolume = 0; // Ensure the volume doesn't become negative
             }
-            tempFile << pos << "," << alcohol << "," << newVolume << endl;
-            cout << "Volume updated for position " << pos << endl;
+            output_file << pos << "," << alcohol << "," << newVolume << endl;
+            //cout << "Volume updated for position " << pos << endl;
         } else {
-            tempFile << line << endl;
+            output_file << line << endl;
         }
     }
-    file.close();
-    tempFile.close();
+    input_file.close();
+    output_file.close();
 
 	// Remove the original file and rename the temp file
-    remove("ingredient_position_fill.csv");
-    rename("temp.csv", "ingredient_position_fill.csv");
+    remove(csv_filename.c_str()); 
+    rename(temp_filename.c_str(), csv_filename.c_str());
 
 	this->fill_data = getData(getPoseFilePath());
 

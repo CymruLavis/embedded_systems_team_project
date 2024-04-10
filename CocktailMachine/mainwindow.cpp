@@ -15,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
     QObject::connect(ui->pushButton_2, SIGNAL(clicked()), this, SLOT(CT2()));
     QObject::connect(ui->pushButton_3, SIGNAL(clicked()), this, SLOT(CT3()));
     QObject::connect(ui->pushButton_5, SIGNAL(clicked()), this, SLOT(CT5()));
+    QObject::connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(CT6()));
 
     ui->comboBox->addItems(ConvertList(data->getActiveDrinkList()));
     connect(ui->comboBox, SIGNAL(currentTextChanged(const QString&)), this, SLOT(CT4()));
@@ -81,6 +82,14 @@ void MainWindow::CT5()
     string pose = (ui->comboBox_2->currentText()).toStdString();
     string ing = (ui->comboBox_3->currentText()).toStdString();
     data->append_CSV(pose, ing);
+}
+
+void MainWindow::CT6()
+{
+
+    connect(ui->pushButton, SIGNAL(clicked()), this, NULL);
+    data->updateVolume("6");
+
 }
 
 QStringList MainWindow::ConvertList(vector<string> list)
