@@ -16,15 +16,12 @@ MainWindow::MainWindow(QWidget *parent)
     QObject::connect(ui->pushButton_3, SIGNAL(clicked()), this, SLOT(CT3()));
     QObject::connect(ui->pushButton_5, SIGNAL(clicked()), this, SLOT(CT5()));
 
-    QStringList Drinks = ConvertList(data->getWholeDrinkList());
-    ui->comboBox->addItems(Drinks);
+    ui->comboBox->addItems(ConvertList(data->getActiveDrinkList()));
     connect(ui->comboBox, SIGNAL(currentTextChanged(const QString&)), this, SLOT(CT4()));
 
-    QStringList Positions = {"Position 1", "Position 2", "Position 3", "Position 4", "Position 5", "Position 6"};
-    ui->comboBox_2->addItems(Positions);
+    ui->comboBox_2->addItems({"Position 1", "Position 2", "Position 3", "Position 4", "Position 5", "Position 6"});
 
-    QStringList Ingredients = ConvertList(data->getIngredients());
-    ui->comboBox_3->addItems(Ingredients);
+    ui->comboBox_3->addItems(ConvertList(data->getIngredients()));
     
     ui->comboBox->view()->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
     ui->comboBox_3->view()->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
@@ -42,6 +39,9 @@ void MainWindow::CT1()
     ui->stackedWidget->setCurrentWidget(ui->page);
     ui->page_2->close();
     ui->page_3->close();
+    ui->comboBox->clear();
+    ui->comboBox->addItem("");
+    ui->comboBox->addItems(ConvertList(data->getActiveDrinkList()));
 };
 
 void MainWindow::CT2()
@@ -94,10 +94,10 @@ QStringList MainWindow::ConvertList(vector<string> list)
 
 void MainWindow::SetPBarValue()
 {
-    ui->progressBar->setValue(stoi(data->fill_data[1][2]));
-    ui->progressBar_2->setValue(stoi(data->fill_data[2][2]));
-    ui->progressBar_3->setValue(stoi(data->fill_data[3][2]));
-    ui->progressBar_4->setValue(stoi(data->fill_data[4][2]));
-    ui->progressBar_5->setValue(stoi(data->fill_data[5][2]));
-    ui->progressBar_6->setValue(stoi(data->fill_data[6][2]));
+    ui->progressBar->setValue(stoi(data->fill_data[0][2]));
+    ui->progressBar_2->setValue(stoi(data->fill_data[1][2]));
+    ui->progressBar_3->setValue(stoi(data->fill_data[2][2]));
+    ui->progressBar_4->setValue(stoi(data->fill_data[3][2]));
+    ui->progressBar_5->setValue(stoi(data->fill_data[4][2]));
+    ui->progressBar_6->setValue(stoi(data->fill_data[5][2]));
 }

@@ -88,7 +88,7 @@ string Data::getDrinkDescription(string drink) {
 
 }
 
-vector<int> Data::getRecipe(string drink, SystemConfig sys) {
+vector<int> Data::getRecipe(string drink) {
 	vector<string> drink_row;
 	vector<int> ings;
 	vector<int> quantity;
@@ -114,7 +114,7 @@ vector<int> Data::getRecipe(string drink, SystemConfig sys) {
 	// allData.push_back(quantity);
 	vector<int> positionQueue;
 	for(int i = 0; i < ings.size(); i++){
-		int pos = sys.getPosition(ings[i]);
+		int pos = this->getPosition(ings[i]);
 		for(int j = 0; j < quantity[i]; j++){
 			positionQueue.push_back(pos);
 		}
@@ -125,13 +125,33 @@ vector<int> Data::getRecipe(string drink, SystemConfig sys) {
 
 	return positionQueue;
 }
+int Data::getPosition(int ing_idx){
+	vector<int> ingredients;
+	for (const vector<string>& row : this->fill_data) {
+        if (row.size() >= 2) { // Ensure the row has at least two elements
+            try {
+                int value = stoi(row[1]); // Parse the second element as an integer
+                ingredients.push_back(value);
+            } catch (const std::invalid_argument& e) {
+                // Handle the case where conversion to integer fails
+                // For example, you could skip this row or log an error
+            }
+        }
+    }
 
+	for(int i = 0; i < ingredients.size(); i++){
+        if (ingredients[i] == ing_idx){
+            return i;
+        }
+    }
+	return 0;
+}
 // returns of list of the drinks that can be made with the loaded ingredients
-vector<string> Data::getActiveDrinkList(vector<string> ingredients) {
+vector<string> Data::getActiveDrinkList() {
 	vector<string> drinkList;
 	for (const auto& row : this->df_menu) {
 		string drink =row[0];
-		bool flag = isDrinkMakable(row, ingredients);
+		bool flag = isDrinkMakable(row);
 		if (flag) {
 			drinkList.push_back(row[0]);
 		}
@@ -141,7 +161,8 @@ vector<string> Data::getActiveDrinkList(vector<string> ingredients) {
 	return drinkList;
 }
 // used by getActiveDrinkList to check if a drink from our menu is able to be made from the loaded ingredients
-bool Data::isDrinkMakable(vector<string> recipie, vector<string> ingredients) {
+bool Data::isDrinkMakable(vector<string> recipie) {
+	vector<string> ingredients = this->getColumn(this->fill_data, 1);
 	for (size_t i = 1; i < recipie.size() - 2; i += 2) {
 		if (recipie[i] == "4") {
 			break;
@@ -156,6 +177,14 @@ bool Data::isDrinkMakable(vector<string> recipie, vector<string> ingredients) {
 	}
 
 	return true;
+}
+
+vector<string> Data::getColumn(vector<vector<string>> data, int colIdx) {
+    vector<string> col;
+    for (const auto& row : data) {
+		col.push_back(row[colIdx]);
+    }
+    return col;
 }
 
 //returns a list of all drinks in the menu --> used by getDrinkDescription
@@ -181,6 +210,7 @@ int Data::ingredientToIndex(string drink) {
     }
     return -1;
 }
+
 
 vector<string> Data::split_line(const string& line, char delimiter = ',')
 {
@@ -214,7 +244,7 @@ int Data::append_CSV(string pose_value, string ingredient_value)
 
         if (fields.size() >= 3 && fields[0] == pose_value)
         {
-            fields[1] = ingredient_value; 
+            fields[1] = to_string(this->ingredientToIndex(ingredient_value)); 
             fields[2] = fill_value;
 
             // Reconstruct the CSV line:

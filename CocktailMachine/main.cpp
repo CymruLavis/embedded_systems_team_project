@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
 	//a.processEvents();
 
     MainWindow w;
-	w.setWindowState(Qt::WindowFullScreen);
+	//w.setWindowState(Qt::WindowFullScreen);
 
 	QTimer::singleShot(2500, splash, SLOT(close()));
 	QTimer::singleShot(2500, &w, SLOT(show()));
@@ -64,4 +64,5 @@ int main(int argc, char *argv[])
     //w.show();
 	//splash.finish(&w);
     return a.exec();
+
 }
