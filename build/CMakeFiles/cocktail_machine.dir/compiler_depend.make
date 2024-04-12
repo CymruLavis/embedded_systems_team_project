@@ -2400,7 +2400,15 @@ CMakeFiles/cocktail_machine.dir/src/MotorClass.cpp.o: /home/DARA/Desktop/EMBED_P
   /usr/include/c++/12/ratio \
   /usr/include/c++/12/limits \
   /usr/include/c++/12/ctime \
-  /usr/include/c++/12/bits/parse_numbers.h
+  /usr/include/c++/12/bits/parse_numbers.h \
+  /usr/include/c++/12/algorithm \
+  /usr/include/c++/12/bits/stl_algo.h \
+  /usr/include/c++/12/bits/algorithmfwd.h \
+  /usr/include/c++/12/bits/stl_heap.h \
+  /usr/include/c++/12/bits/stl_tempbuf.h \
+  /usr/include/c++/12/bits/uniform_int_dist.h \
+  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/12/pstl/execution_defs.h
 
 CMakeFiles/cocktail_machine.dir/src/SystemConfig.cpp.o: /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/SystemConfig.cpp \
   /usr/include/stdc-predef.h \

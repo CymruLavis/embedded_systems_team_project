@@ -45,7 +45,8 @@ public:
     double getDegreesToSpin(int distanceBetweenPositions);
     int getStepsToRotoate(double degreesToSpin);
 
-    vector<int> getStepQueue(vector<int> positionQueue);    
+    vector<int> getStepQueue(vector<int> positionQueue);
+    vector<double> calculateTimeIntervals(double acceleration, double maxRate, double timeStep);    
     void VERT_MOVE(const int &upper_switch, const int &lower_switch);
     void motor_go(bool clockwise, int steps, const int &LIGHTGATE);
     void MAIN_MOTOR_RESET(const int &calibration_switch, const int &LIGHTGATE);
