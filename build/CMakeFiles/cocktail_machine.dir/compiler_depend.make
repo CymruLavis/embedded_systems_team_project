@@ -1392,7 +1392,6 @@ CMakeFiles/cocktail_machine.dir/main.cpp.o: /home/DARA/Desktop/EMBED_PROJ/embedd
   /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/Include/Motor.h \
   /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/Include/LimitSwitch.h \
   /usr/include/pigpio.h \
-  /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/Include/LimitSwitch.h \
   /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/UnitTests/LogicTest.h
 
 CMakeFiles/cocktail_machine.dir/src/DataClass.cpp.o: /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/src/DataClass.cpp \
@@ -2378,7 +2377,6 @@ CMakeFiles/cocktail_machine.dir/src/MotorClass.cpp.o: /home/DARA/Desktop/EMBED_P
   /usr/include/c++/12/bits/stl_vector.h \
   /usr/include/c++/12/bits/stl_bvector.h \
   /usr/include/c++/12/bits/vector.tcc \
-  /home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/Include/LimitSwitch.h \
   /usr/include/pigpio.h \
   /usr/include/pigpiod_if2.h \
   /usr/include/pigpio.h \
