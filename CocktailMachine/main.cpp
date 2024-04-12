@@ -52,7 +52,7 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     
-	 QApplication a(argc, argv);
+	QApplication a(argc, argv);
 	QPixmap pixmap("../splash.png");
 	pixmap = pixmap.scaled(480, 320, Qt::KeepAspectRatio);
 	QSplashScreen *splash = new QSplashScreen;

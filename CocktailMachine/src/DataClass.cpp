@@ -1,6 +1,7 @@
 #include "../Include/Data.h"
 #include "../Include/Indexes.h"
 
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -21,10 +22,6 @@ Data::Data(){
 	this->ingredient_indexes.indexes = this->ingredient_indexes.getCol(this->ingredient_indexes.df,1);
 	this->fill_data = getData(getPoseFilePath());
 }
-
-// /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/Data/cocktail_table.csv
-// /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/Data/cocktail_table.csv
-// /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/Data/cocktail_table.csv
 
 // returns the location of the menu csv
 string Data::getFilePath() {return R"(../Data/cocktail_table.csv)";}
@@ -247,7 +244,6 @@ int Data::append_CSV(string pose_value, string ingredient_value)
         if (fields.size() >= 3 && fields[0] == pose_value)
         {
             fields[1] = to_string(this->ingredientToIndex(ingredient_value)); 
-
             fields[2] = fill_value;
 
             // Reconstruct the CSV line:
@@ -319,8 +315,3 @@ int Data::updateVolume(string bottle_position){
 	return 0;
 
 }
-
-
-
-
-
