@@ -470,6 +470,6 @@ void Motor::MAIN_MOTOR_RESET(const int &calibration_switch, const int &LIGHTGATE
     }
     
     std::cout << "\n SYSTEM zeroed \n";
-    this_thread::sleep_for(std::chrono::seconds(static_cast<int>(300)));
+    this_thread::sleep_for(std::chrono::seconds(static_cast<int>(3000)));
     gpioWrite(this->getSleepPin(), PI_LOW);
 }

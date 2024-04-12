@@ -73,7 +73,7 @@ void safteyCallback(int gpio, int level, uint32_t tick){
     }
 }
 void makeDrinkThread(vector<int>& step_queue){
-    
+            /*
             std::cout << "\n MAKING A DRINK! ----------- \n";
             carousel_motor->MAIN_MOTOR_RESET(GPIO_ZERO_SWITCH, GPIO_LIGHTGATE);
 
@@ -83,21 +83,25 @@ void makeDrinkThread(vector<int>& step_queue){
                 std::cout << "MOTOR go complete\n";
                 riser_motor->VERT_MOVE(GPIO_LIMIT_SWITCH_TOP, GPIO_LIMIT_SWITCH_BOTTOM);                
             }
-            std::cout << "LOOP COMPLETE\n"; 
+            std::cout << "LOOP COMPLETE\n"; */
 
-            /*
+            
             bool clockwise=true;
             //carousel_motor->MAIN_MOTOR_RESET(GPIO_ZERO_SWITCH, GPIO_LIGHTGATE);
             //riser_motor->VERT_MOVE(GPIO_LIMIT_SWITCH_TOP, GPIO_LIMIT_SWITCH_BOTTOM);
-            for (int i = 0; i < 1; ++i) {
+            for (int i = 0; i < 6; ++i) {
                 carousel_motor->motor_go(clockwise, abs(200), GPIO_LIGHTGATE);
-                std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(2000)));   
+                std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(500)));
+                riser_motor->VERT_MOVE(GPIO_LIMIT_SWITCH_TOP, GPIO_LIMIT_SWITCH_BOTTOM);   
             }
+            /*
             clockwise=false;
             for (int i = 0; i < 3; ++i) {
                 carousel_motor->motor_go(clockwise, abs(400), GPIO_LIGHTGATE);
                 std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(2000)));   
             }*/
+
+
 }
 
 
