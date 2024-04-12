@@ -2,7 +2,6 @@
 #define DATA_H
 
 #include "Indexes.h"
-#include "SystemConfig.h"
 
 #include <iostream>
 #include <fstream>

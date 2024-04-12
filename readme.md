@@ -11,15 +11,17 @@ Roykeane Syangu
 Instagram: https://www.instagram.com/smartdrinking_2024/
 
 # Introduction
+
 - project overview
 - what problem are we solving
 
 # Design
 ## Mechanical Design
 <p align="center">
-  <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/8fb6be22-de2b-4759-af3b-0c6318214bfe" width="600" height="500" />
+  <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/21d57064-cbaa-4a1a-bdc2-5a37108a5809" width="600" height="500" />
 </p>
-![0001]()
+
+
 
 
 - description of physical foot print
@@ -74,7 +76,7 @@ Trust Bearings: [Thrust Bearings](https://www.amazon.co.uk/sourcingmap-Single-Di
   <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/0bf09030-975e-4d3b-912b-8164f7dd585b" width="300" height="500" />
 </p>
 ## Required Libraries  
-Install pigpio library  
+pigpio library:  
 $sudo apt install pigpio 
 
 Install cmake  
@@ -90,10 +92,15 @@ Install Qt
 $sudo apt install qtcreator qtbase5-dev qt5-qmake cmake  
 
 
-build project  
+Make and run the project
+$cd build
+
 $cmake ..
 $make  
 $./cocktail_machine 
+
 # References
+[PIGPIO Library Documentation](https://abyz.me.uk/rpi/pigpio/)
+
 - links to documentation
 

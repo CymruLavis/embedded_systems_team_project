@@ -1,7 +1,5 @@
 #include "../Include/Data.h"
 #include "../Include/Indexes.h"
-#include "../Include/Ingredient.h"
-#include "../Include/SystemConfig.h"
 
 #include <iostream>
 #include <fstream>
@@ -24,10 +22,14 @@ Data::Data(){
 	this->fill_data = getData(getPoseFilePath());
 }
 
+// /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/Data/cocktail_table.csv
+// /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/Data/cocktail_table.csv
+// /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/Data/cocktail_table.csv
+
 // returns the location of the menu csv
 string Data::getFilePath() {return R"(../Data/cocktail_table.csv)";}
 string Data::getIndexFilePath() { return R"(../Data/index_table.csv)";}
-string Data::getPoseFilePath() { return R"(../Data/ingredient_position_fill.csv)";}
+string Data::getPoseFilePath() { return R"(../Data/ingredient_position_fill.csv)";
 
 // returns a 2D matix of all data from the given csv
 vector<vector<string>> Data::getData(string filePath) {
@@ -245,6 +247,7 @@ int Data::append_CSV(string pose_value, string ingredient_value)
         if (fields.size() >= 3 && fields[0] == pose_value)
         {
             fields[1] = to_string(this->ingredientToIndex(ingredient_value)); 
+
             fields[2] = fill_value;
 
             // Reconstruct the CSV line:
