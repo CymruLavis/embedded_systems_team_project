@@ -7,6 +7,7 @@
 #include <vector>
 #include <thread>
 #include <algorithm>
+#include <cmath>
 
 using namespace std;
 Motor::Motor(int dir, int step, int sleep, int fault, double step_size){
@@ -139,7 +140,7 @@ vector<int> Motor::getStepQueue(vector<int> positionQueue){
     vector<int> step_queue;
     int currentPos = 0;
     double step_per_degree = 1.8; 
-    double microstepping = 8; // 1/8 so *8
+    double microstepping = 4; // 1/8 so *8
     double gear_ratio = 1.5; // 30/20
 
 
@@ -158,61 +159,34 @@ vector<int> Motor::getStepQueue(vector<int> positionQueue){
 }
 
 
-vector<double> Motor::calculateTimeIntervals(double acceleration, double maxRate, double timeStep) {
-    vector<double> intervals;
-    double currentTime = 0.0;
-    double currentRate = 0.0;
-    
-    // Continue until we reach or exceed the maximum rate
-    while (currentRate < maxRate) {
-        currentRate = acceleration * currentTime;
-        if (currentRate > maxRate) {
-            currentRate = maxRate;
-        }
-        
-        // Avoid division by zero
-        double interval = (currentRate > 0) ? 1.0 / currentRate : std::numeric_limits<double>::infinity();
-        intervals.push_back(interval);
-        
-        // Increment time by the time step
-        currentTime += timeStep;
+vector<double> Motor::calculateTimeIntervals(int steps, double t_end) {
+    vector<double> delays;
+    double t_start = 0.01;   // 1/30
+    double decrement = 0.0005; // Decrement per step in seconds - this is our acceleration.
+
+    for (double time = t_start; time >= t_end; time -= decrement) {
+        delays.push_back(time);
     }
 
-    // Once max rate is achieved, push back constant intervals for a few more steps to show steady state
-    double finalInterval = 1.0 / maxRate;
-    for (int i = 0; i < 1; ++i) {
-        intervals.push_back(finalInterval);
-    }
-
-    for (double interval : intervals) {
-        std::cout << interval << " seconds\n";
-    }
-    for (auto it = intervals.begin(); it != intervals.end();) {
-        if (*it > 0.25) {
-            it = intervals.erase(it);
-        } else {
-            ++it;
-        }
-    }
-
-        // Print the first value
-    if (!intervals.empty()) {
-        cout << "\n First value: " << intervals.front() << endl;
-        cout << "Second value: " << intervals[1] << endl;
-        cout << "Last value: " << intervals.back() << endl;
-        cout << "Size of vector: " << intervals.size() << endl;
+    if (!delays.empty()) {
+        cout << "\n TOTAL STEPS IN MOVE: " << steps << endl;
+        cout << "\n First value: " << delays.front() << endl;
+        cout << "Second value: " << delays[1] << endl;
+        cout << "Last value: " << delays.back() << endl;
+        cout << "Size of vector: " << delays.size() << endl;
 
     } else {
         cout << "Vector is empty!" << endl;
     }
-
-    std::this_thread::sleep_for(std::chrono::seconds(static_cast<int>(15)));
-    return intervals;
+    if (steps < (delays.size()*2)){
+        cout << "ACCELERATION RAMP takes longer than total move, executing triangular motion profile.  "<< endl;
+    }
+    return delays;
 }
 
 
 void Motor::VERT_MOVE(const int &upper_switch, const int &lower_switch) {
-
+        cout << "\n STARTING VERTICAL MOVEMENT \n";
         // Wake up the motor driver
         gpioWrite(this->getSleepPin(), PI_HIGH);
 
@@ -222,10 +196,10 @@ void Motor::VERT_MOVE(const int &upper_switch, const int &lower_switch) {
         //1.8 degrees per step meaning 200 steps in a circle.
         // currently on 1/16 step size 3200 per full circle
 
-        int up_steps = (1000*8); // Define the number of steps to move up
-        double stepdelay = 0.005; // Seconds between steps
+        int up_steps = 3100; // Define the number of steps to move up
+        double stepdelay = 0.0025; // Seconds between steps
 
-        //checking we are at zero
+        //checking we are at zero otherwise zeros actuator.
         gpioWrite(this->getDirPin(), PI_LOW);
         while(gpioRead(lower_switch) == PI_LOW){
             gpioWrite(step_pin, PI_HIGH);
@@ -254,9 +228,9 @@ void Motor::VERT_MOVE(const int &upper_switch, const int &lower_switch) {
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
             gpioWrite(this->getStepPin(), PI_LOW);
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay * 1000)));
-            
         }
-        std::cout << "\n WAITING FOR FILL!! ----------- \n";
+
+        cout << "\n WAITING FOR FILL!! ----------- \n";
         std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(2500)));
 
         //GOING DOWN
@@ -323,6 +297,7 @@ void Motor::VERT_MOVE(const int &upper_switch, const int &lower_switch) {
 
 
 void Motor::motor_go(bool clockwise, int steps, const int &LIGHTGATE) {
+        cout << "\n EXECUTING POSITION MOVEMENT \n";
         /* So first we setup the GPIO pins, enable the lightgate input and 
         set the sleep pin and and direction.*/
         gpioSetMode(LIGHTGATE, PI_INPUT);
@@ -330,41 +305,26 @@ void Motor::motor_go(bool clockwise, int steps, const int &LIGHTGATE) {
 
         gpioWrite(this->getDirPin(), clockwise ? PI_HIGH : PI_LOW);
 
-        vector<double> intervals = calculateTimeIntervals(100, 300, 0.005);
+        double stepdelay = 0.0025;
+        
 
+        cout << "CALCULATING RAMP " << endl;
+        vector<double> ACCEL = calculateTimeIntervals(steps, stepdelay);
         // we need a memory as sometimes it over or under shoots so 
         //we need a way to control the direction with memory.
         std::vector<int> GAPS;
-        std::vector<double> ACCEL;
         std::vector<double> DECEL;
 
-        double stepdelay = 0.005;
-        double accel_delay = stepdelay;
-
-        int accel_steps = 10;
-        
-        steps = steps - 2*accel_steps;
-        
-        for (int i = 0; i < accel_steps; i++) {
-            DECEL.push_back(accel_delay);
-            accel_delay *= 2; // linear increase
-        }
+        steps = steps - 2*ACCEL.size();
     
         // Create a reversed vector
-        ACCEL = DECEL;
-        std::reverse(ACCEL.begin(), ACCEL.end()); 
-
-        std::cout << "\n testing \n";
-
-        for (size_t i = 0; i < ACCEL.size(); ++i) {
-            std::cout << "Element at index " << i << ": " << ACCEL[i] << std::endl;
-        }
-
+        DECEL = ACCEL;
+        std::reverse(DECEL.begin(), DECEL.end()); 
         
         std::cout << "\n ACCELERATING \n";
         for (size_t i = 0; i < ACCEL.size(); ++i) {
             double delay_val = (ACCEL[i]);    
-            std::cout << "Element at index " << i << ": " << delay_val << std::endl;
+            std::cout << "ACCEL Element at index " << i << ": " << delay_val << std::endl;
 
             gpioWrite(getStepPin(), true); // Assuming PI_HIGH is represented as true
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(delay_val*1000)));
@@ -382,10 +342,11 @@ void Motor::motor_go(bool clockwise, int steps, const int &LIGHTGATE) {
 
             // Perform a step
             gpioWrite(this->getStepPin(), PI_HIGH);
+            
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay*1000)));
             gpioWrite(this->getStepPin(), PI_LOW);
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(stepdelay*1000)));
-            
+            cout << "\n CONSTANT " << endl;
             //keeps a memory of the lightgate
             GAPS.push_back(gpioRead(LIGHTGATE));
             std::cout << gpioRead(LIGHTGATE);
@@ -396,7 +357,7 @@ void Motor::motor_go(bool clockwise, int steps, const int &LIGHTGATE) {
 
         for (size_t i = 0; i < DECEL.size(); ++i) {
             double delay_val = (DECEL[i]);    
-            std::cout << "Element at index " << i << ": " << delay_val << std::endl;
+            std::cout << "DECEL Element at index " << i << ": " << delay_val << std::endl;
 
             gpioWrite(getStepPin(), true); // Assuming PI_HIGH is represented as true
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(delay_val*1000)));
@@ -409,7 +370,7 @@ void Motor::motor_go(bool clockwise, int steps, const int &LIGHTGATE) {
 
         if (gpioRead(LIGHTGATE) == PI_HIGH) {
             std::cout << "\n NOT ALIGNED TO POSITION \n";
-            stepdelay = 0.005;
+            stepdelay = 0.004;
 
             int checkRange = std::min(5, static_cast<int>(GAPS.size()));
             for (int i = 0; i < checkRange; ++i) {
@@ -435,7 +396,7 @@ void Motor::motor_go(bool clockwise, int steps, const int &LIGHTGATE) {
     }
 
 void Motor::MAIN_MOTOR_RESET(const int &calibration_switch, const int &LIGHTGATE) {
-    std::cout << "\n ZEROING \n";
+    cout << "\n ZEROING \n";
 
     // we need a memory as sometimes it over or under shoots so 
     //we need a way to control the direction with memory.
@@ -455,7 +416,20 @@ void Motor::MAIN_MOTOR_RESET(const int &calibration_switch, const int &LIGHTGATE
     // The loop will break once the zero position is detected
 
     // Hardcoded delay values
-    double stepdelay = 0.0025; // Seconds between steps
+    double stepdelay = 0.004; // Seconds between steps
+
+    vector<double> ACCEL = calculateTimeIntervals(1000, stepdelay);
+
+    std::cout << "\n ACCELERATING \n";
+    for (size_t i = 0; i < ACCEL.size(); ++i) {
+        double delay_val = (ACCEL[i]);    
+        std::cout << "ACCEL Element at index " << i << ": " << delay_val << std::endl;
+
+        gpioWrite(getStepPin(), true); // Assuming PI_HIGH is represented as true
+        std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(delay_val*1000)));
+        gpioWrite(getStepPin(), false); // Assuming PI_LOW is represented as false
+        std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(delay_val*1000)));
+    }
 
     while(gpioRead(calibration_switch) == PI_LOW){
             // Check for motor fault
@@ -496,8 +470,6 @@ void Motor::MAIN_MOTOR_RESET(const int &calibration_switch, const int &LIGHTGATE
     }
     
     std::cout << "\n SYSTEM zeroed \n";
-
-
-    // Cleanup and put the motor driver in sleep mode
+    this_thread::sleep_for(std::chrono::seconds(static_cast<int>(300)));
     gpioWrite(this->getSleepPin(), PI_LOW);
 }
