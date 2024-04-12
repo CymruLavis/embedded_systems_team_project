@@ -29,7 +29,7 @@ Data::Data(){
 // returns the location of the menu csv
 string Data::getFilePath() {return R"(../Data/cocktail_table.csv)";}
 string Data::getIndexFilePath() { return R"(../Data/index_table.csv)";}
-string Data::getPoseFilePath() { return R"(../Data/ingredient_position_fill.csv)";
+string Data::getPoseFilePath() { return R"(../Data/ingredient_position_fill.csv)";}
 
 // returns a 2D matix of all data from the given csv
 vector<vector<string>> Data::getData(string filePath) {
