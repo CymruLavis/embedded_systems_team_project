@@ -1,8 +1,0 @@
-/home/admin/Desktop/cocktail_machine/CocktailMachine/build/CMakeFiles/CocktailMachine.dir
-/home/admin/Desktop/cocktail_machine/CocktailMachine/build/CMakeFiles/edit_cache.dir
-/home/admin/Desktop/cocktail_machine/CocktailMachine/build/CMakeFiles/rebuild_cache.dir
-/home/admin/Desktop/cocktail_machine/CocktailMachine/build/CMakeFiles/list_install_components.dir
-/home/admin/Desktop/cocktail_machine/CocktailMachine/build/CMakeFiles/install.dir
-/home/admin/Desktop/cocktail_machine/CocktailMachine/build/CMakeFiles/install/local.dir
-/home/admin/Desktop/cocktail_machine/CocktailMachine/build/CMakeFiles/install/strip.dir
-/home/admin/Desktop/cocktail_machine/CocktailMachine/build/CMakeFiles/CocktailMachine_autogen.dir
