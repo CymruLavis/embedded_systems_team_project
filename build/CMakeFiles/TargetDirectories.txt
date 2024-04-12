@@ -1,3 +1,0 @@
-/home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/build/CMakeFiles/cocktail_machine.dir
-/home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/build/CMakeFiles/edit_cache.dir
-/home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/build/CMakeFiles/rebuild_cache.dir
