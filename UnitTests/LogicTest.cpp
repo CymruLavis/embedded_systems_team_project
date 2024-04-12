@@ -85,14 +85,14 @@ void makeDrinkThread(vector<int>& step_queue){
             }
             std::cout << "LOOP COMPLETE\n"; */
 
-            
+            carousel_motor->MAIN_MOTOR_RESET(GPIO_ZERO_SWITCH, GPIO_LIGHTGATE);
             bool clockwise=true;
             //carousel_motor->MAIN_MOTOR_RESET(GPIO_ZERO_SWITCH, GPIO_LIGHTGATE);
             //riser_motor->VERT_MOVE(GPIO_LIMIT_SWITCH_TOP, GPIO_LIMIT_SWITCH_BOTTOM);
-            for (int i = 0; i < 6; ++i) {
+            for (int i = 0; i < 7; ++i) {
                 carousel_motor->motor_go(clockwise, abs(200), GPIO_LIGHTGATE);
                 std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(500)));
-                riser_motor->VERT_MOVE(GPIO_LIMIT_SWITCH_TOP, GPIO_LIMIT_SWITCH_BOTTOM);   
+                //riser_motor->VERT_MOVE(GPIO_LIMIT_SWITCH_TOP, GPIO_LIMIT_SWITCH_BOTTOM);   
             }
             /*
             clockwise=false;

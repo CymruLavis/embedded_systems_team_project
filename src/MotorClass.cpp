@@ -162,7 +162,7 @@ vector<int> Motor::getStepQueue(vector<int> positionQueue){
 vector<double> Motor::calculateTimeIntervals(int steps, double t_end) {
     vector<double> delays;
     double t_start = 0.01;   // 1/30
-    double decrement = 0.0005; // Decrement per step in seconds - this is our acceleration.
+    double decrement = 0.0006; // Decrement per step in seconds - this is our acceleration.
 
     for (double time = t_start; time >= t_end; time -= decrement) {
         delays.push_back(time);
@@ -451,8 +451,8 @@ void Motor::MAIN_MOTOR_RESET(const int &calibration_switch, const int &LIGHTGATE
     if (gpioRead(LIGHTGATE) == PI_HIGH) {
         std::cout << "NOT ALIGNED\n";
 
-        // Check the last 10 values in GAPS for any gap passed
-        int checkRange = std::min(30, static_cast<int>(GAPS.size()));
+        // Check the last values in GAPS for any gap passed
+        int checkRange = std::min(40, static_cast<int>(GAPS.size()));
         for (int i = 0; i < checkRange; ++i) {
             if (GAPS[GAPS.size() - 1 - i] == 0) {
                 std::cout << "we passed a gap, flipping direction!\n";
@@ -470,6 +470,6 @@ void Motor::MAIN_MOTOR_RESET(const int &calibration_switch, const int &LIGHTGATE
     }
     
     std::cout << "\n SYSTEM zeroed \n";
-    this_thread::sleep_for(std::chrono::seconds(static_cast<int>(3000)));
     gpioWrite(this->getSleepPin(), PI_LOW);
+    std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(1000)));
 }
