@@ -5,6 +5,8 @@
 #include <QApplication>
 #include <pigpio.h>
 #include <vector>
+#include <QSplashScreen>
+#include <QTimer>
 
 #include "Include/Data.h"
 // #include "Include/SystemConfig.h"
@@ -50,13 +52,22 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     
-	DataBaseExecutable();
+	 QApplication a(argc, argv);
+	QPixmap pixmap("../splash.png");
+	pixmap = pixmap.scaled(480, 320, Qt::KeepAspectRatio);
+	QSplashScreen *splash = new QSplashScreen;
+	splash->setPixmap(pixmap);
+	splash->show();
 
-	return 0;
-	
-	// QApplication a(argc, argv);
-    // MainWindow w;
-	// w.setWindowState(Qt::WindowFullScreen);
-    // w.show();
-    // return a.exec();
+	//a.processEvents();
+
+    MainWindow w;
+	//w.setWindowState(Qt::WindowFullScreen);
+
+	QTimer::singleShot(2500, splash, SLOT(close()));
+	QTimer::singleShot(2500, &w, SLOT(show()));
+
+    //w.show();
+	//splash.finish(&w);
+    return a.exec();
 }

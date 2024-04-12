@@ -30,6 +30,7 @@ public slots:
     void CT3();
     void CT4();
     void CT5();
+    void CT6();
     QStringList ConvertList(vector<string> list);
     void SetPBarValue();
 };

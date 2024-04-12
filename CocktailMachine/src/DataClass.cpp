@@ -27,9 +27,9 @@ Data::Data(){
 // /home/joshua/Documents/GitHub/embedded_systems_team_project/CocktailMachine/Data/cocktail_table.csv
 
 // returns the location of the menu csv
-string Data::getFilePath() {return R"(/home/admin/Desktop/cocktail_machine/CocktailMachine/Data/cocktail_table.csv)";}
-string Data::getIndexFilePath() { return R"(/home/admin/Desktop/cocktail_machine/CocktailMachine/Data/index_table.csv)";}
-string Data::getPoseFilePath() { return R"(/home/admin/Desktop/cocktail_machine/CocktailMachine/Data/ingredient_position_fill.csv)";}
+string Data::getFilePath() {return R"(../Data/cocktail_table.csv)";}
+string Data::getIndexFilePath() { return R"(../Data/index_table.csv)";}
+string Data::getPoseFilePath() { return R"(../Data/ingredient_position_fill.csv)";
 
 // returns a 2D matix of all data from the given csv
 vector<vector<string>> Data::getData(string filePath) {
@@ -213,6 +213,7 @@ int Data::ingredientToIndex(string drink) {
     return -1;
 }
 
+
 vector<string> Data::split_line(const string& line, char delimiter = ',')
 {
     vector<string> result;
@@ -245,7 +246,8 @@ int Data::append_CSV(string pose_value, string ingredient_value)
 
         if (fields.size() >= 3 && fields[0] == pose_value)
         {
-            fields[1] = this->ingredientToIndex(ingredient_value); 
+            fields[1] = to_string(this->ingredientToIndex(ingredient_value)); 
+
             fields[2] = fill_value;
 
             // Reconstruct the CSV line:
@@ -273,12 +275,19 @@ int Data::append_CSV(string pose_value, string ingredient_value)
 
     return 0;
 }
+
 int Data::updateVolume(string bottle_position){
-	ifstream file("ingredient_position_fill.csv");
-    ofstream tempFile("temp.csv");
+
+	string csv_filename = getPoseFilePath();
+    string temp_filename = "temp.csv"; 
+
+    ifstream input_file(csv_filename);
+    ofstream output_file(temp_filename);
     string line;
 
-	while (getline(file, line)) {
+	bottle_position = "Position " + bottle_position; 
+
+	while (getline(input_file, line)) {
         istringstream iss(line);
         string pos, alcohol, amount;
         getline(iss, pos, ',');
@@ -292,18 +301,20 @@ int Data::updateVolume(string bottle_position){
             if (newVolume < 0) {
                 newVolume = 0; // Ensure the volume doesn't become negative
             }
-            tempFile << pos << "," << alcohol << "," << newVolume << endl;
-            cout << "Volume updated for position " << pos << endl;
+            output_file << pos << "," << alcohol << "," << newVolume << endl;
+            //cout << "Volume updated for position " << pos << endl;
         } else {
-            tempFile << line << endl;
+            output_file << line << endl;
         }
     }
-    file.close();
-    tempFile.close();
+    input_file.close();
+    output_file.close();
 
 	// Remove the original file and rename the temp file
-    remove("ingredient_position_fill.csv");
-    rename("temp.csv", "ingredient_position_fill.csv");
+    remove(csv_filename.c_str()); 
+    rename(temp_filename.c_str(), csv_filename.c_str());
+
+	this->fill_data = getData(getPoseFilePath());
 
 	return 0;
 
