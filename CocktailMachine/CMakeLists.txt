@@ -24,7 +24,8 @@ set(PROJECT_SOURCES
         src/IngredientIndexClass.cpp 
         src/MotorClass.cpp
         src/LimitSwitchClass.cpp
-        UnitTests/DataBaseUnitTest.cpp
+        UnitTests/LimitSwitchUnitTest.cpp
+        UnitTests/LimSwitchWithMotorUnitTest.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

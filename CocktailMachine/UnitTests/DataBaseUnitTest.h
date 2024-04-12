@@ -6,7 +6,6 @@
 #include <vector>
 
 #include "../Include/Data.h"
-#include "../Include/SystemConfig.h"
 #include "../Include/Motor.h"
 #include "../Include/LimitSwitch.h"
 
