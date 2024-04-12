@@ -11,25 +11,52 @@ Roykeane Syangu
 Instagram: https://www.instagram.com/smartdrinking_2024/
 
 # Introduction
+- what is it
+- why 
+The objective of this project is to design and create an event driven, real time, cocktail machine that can successfully make the user a wide selection of drinks. 
+
 
 - project overview
 - what problem are we solving
 
+The problem: ​
+Not everyone is a trained bar tender​
+Don't have the time to make drinks​
+Don't have the recipes memorized​
+The solution:​
+Automated drink machine​
+Streamlines the drink making process​
+Organizes the ingredients​
+User friendly interface​
+Real Time Aspects:​
+Could add multiple triggers for the real time complexity (voice and UI)​
+The limit switches must stop the motor from spinning quickly so the correct bottle is over top of the glass​
+Computer vision to stop the motor that is lifting the glass when it reaches the top limit of the dispenser​
+
+Real Time Requirements:​
+Drink making process must be started within 1 second of the drink being ordered and finished faster than a human bartender could make the drink​
+Interrupt from the limit switches should stop the rotation of the carousel immediately so the dispenser doesn't miss the glass(applicable for carousel design only)​
+CV interrupt must be immediate to avoid damaging the components by going past their mechanical limits (squishing the glass, breaking motor or gear box, over opening dispenser or pushing bottle of its holder)​
+Real Time Data Acquisition:​
+Keeping track of how many drinks have been made so it knows how full a bottle is and displays to the UI​
+Notification if there's not enough ingredient to make the drink​
+
+Table/desktop UI --> will have various screens like the drink order, carousel configuration, ingredient selector, real time volume tracker​
+
 # Design
 ## Mechanical Design
 <p align="center">
-  <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/21d57064-cbaa-4a1a-bdc2-5a37108a5809" width="600" height="500" />
+  <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/21d57064-cbaa-4a1a-bdc2-5a37108a5809" width="400" height="500" />
 </p>
-
-
-
 
 - description of physical foot print
 - materials used
 - assembly
 
 ## GUI
-- description of the screens and their purposes
+### Make Drink Screen
+### System Configuration Screen
+### System Status Screen
 
 
 ## Software Design
