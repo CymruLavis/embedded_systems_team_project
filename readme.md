@@ -11,8 +11,16 @@ Roykeane Syangu
 Instagram: https://www.instagram.com/smartdrinking_2024/
 
 # Introduction
+Do you love to drink but hate the work it takes to make a great cocktail? Do you struggle to know what drinks you can make with the ingredients you have available? Do you not have a live in bartender? Well, look no further as this machine is the answer to all your problems. The smart drinker cocktail machine has a database that has access to a wide variety of drink recipies and can be easily modified to add your own recipies. With the 3D print files available in the CAD folder, a spare raspberry pi and the BOM for all the components, you can have your own cocktail machine up and running in an afternoon. 
+
+The development team behind this creation wanted to focus on creating an event driven system that could be easily scaled to the users needs
+
+
 - what is it
-- why 
+- why is it importatnt ie what problem has it solved
+- why is it worth your time to build this (you will have a robust cocktail machine)
+- what makes it unique (event driven programming which allows for smoother operation and class structure makes it easily scaleable)
+- 
 The objective of this project is to design and create an event driven, real time, cocktail machine that can successfully make the user a wide selection of drinks. 
 
 
@@ -31,77 +39,9 @@ User friendly interface​
 Real Time Aspects:​
 Could add multiple triggers for the real time complexity (voice and UI)​
 The limit switches must stop the motor from spinning quickly so the correct bottle is over top of the glass​
-Computer vision to stop the motor that is lifting the glass when it reaches the top limit of the dispenser​
-
-Real Time Requirements:​
-Drink making process must be started within 1 second of the drink being ordered and finished faster than a human bartender could make the drink​
-Interrupt from the limit switches should stop the rotation of the carousel immediately so the dispenser doesn't miss the glass(applicable for carousel design only)​
-CV interrupt must be immediate to avoid damaging the components by going past their mechanical limits (squishing the glass, breaking motor or gear box, over opening dispenser or pushing bottle of its holder)​
-Real Time Data Acquisition:​
-Keeping track of how many drinks have been made so it knows how full a bottle is and displays to the UI​
-Notification if there's not enough ingredient to make the drink​
-
-Table/desktop UI --> will have various screens like the drink order, carousel configuration, ingredient selector, real time volume tracker​
+Computer vision to stop the motor that is lifting the glass when it reaches the top limit of the dispenser​  
 
 # Design
-## Mechanical Design
-<p align="center">
-  <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/21d57064-cbaa-4a1a-bdc2-5a37108a5809" width="400" height="500" />
-</p>
-
-- description of physical foot print
-- materials used
-- assembly
-
-## GUI
-### Make Drink Screen
-### System Configuration Screen
-### System Status Screen
-
-
-## Software Design
-- OOP class structure
-- real time interupts
-- operational threads
-- how the code operates in their threads
-- flow of where the program execution is sent to
-
-# Real Time Components
-discuss the real time requirement of the sub system, how our system meets that requirement, concequence of not meeting the requirement
-- limit switches controlling the limits of the riser motor
-- light gate controlling the position of the carousel
-- Saftey switch
-
-# Testing/Results
-- unit tests
-- what was tested
-- problems we ran into
-- how did we over come them
-
-# How to build
-- description of the base and cad files
-
-
-## BOM
-2x Nema 17 Stepper Motors: [Stepper Motors](https://www.omc-stepperonline.com/e-series-nema-17-bipolar-42ncm-59-49oz-in-1-5a-42x42x38mm-4-wires-w-1m-cable-connector-17he15-1504s)  
-2x Motor Drivers: [Motor Drivers](https://www.amazon.co.uk/DRV8825-Stepper-Suitable-8-2V-45V-Printer/dp/B0CCRXGKLV/ref=asc_df_B0CCRXGKLV/?tag=googshopuk-21&linkCode=df0&hvadid=676281988980&hvpos=&hvnetw=g&hvrand=9779484524365892202&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9046941&hvtargid=pla-2199438568706&psc=1&mcid=84474ad0e18b36dd88e4615ffa743992&gad_source=1)  
-1x 3.5inch LCD Touch Screen: [Touch Screen](https://www.amazon.co.uk/OSOYOO-Monitor-Raspberry-480x320-Interface/dp/B085TC5YMR/ref=sr_1_2?crid=350DIB5BWBZKX&keywords=raspberry+pi+touch+screen&qid=1707564275&refinements=p_36%3A-2500&rnid=428432031&sprefix=raspberry+pi+touch+scre%2Caps%2C331&sr=8-2)  
-1x PIR Motion Sensor: [Motion Sensor](https://thepihut.com/products/pir-motion-sensor-module)  
-1x Light Gate Sensor: [Light Gate](https://uk.rs-online.com/web/p/photoelectric-sensors/8074251)  
-3x Limit Switches: [Limit Switch]()  
-
-6x Optic Despensers: [Optic Despensers](https://www.ascotwholesale.co.uk/25ml-black-solo-measure?gad_source=1&gclid=Cj0KCQiA2KitBhCIARIsAPPMEhI-lrBpNzira6xwn5WM-c0KxcxK5rm4lakar9NHSMJ1Z-R5aHvze0YaAg49EALw_wcB)  
-4x 700mmx12.7mm Square Tubing: [Square Tubing](https://www.metals4u.co.uk/materials/mild-steel/mild-steel-box-section/2371-p)  
-1x 700mmx8mm Round Tubing: [Round Tubing](https://www.metals4u.co.uk/materials/mild-steel/mild-steel-tube/tube/9135-p)  
-6x Velcro Straps: [Velcro](https://www.amazon.co.uk/VELCRO%C2%AE-Brand-ONE-WRAP%C2%AE-double-Strapping/dp/B0777LN5VP/ref=sr_1_28?keywords=velcro%2Bstraps&qid=1707687068&sr=8-28&th=1)  
-Ball Bearings: [Ball Bearings](https://www.amazon.co.uk/sourcingmap-Groove-Bearing-Double-Bearings/dp/B07FDYTJS5/ref=sr_1_9?crid=3U5Z2J0HP3Q6U&keywords=pack%2Broller%2Bbearing%2B8mm%2BID&qid=1707647883&sprefix=pack%2Broller%2Bbearing%2B8mm%2Bid%2Caps%2C95&sr=8-9&th=1)  
-Trust Bearings: [Thrust Bearings](https://www.amazon.co.uk/sourcingmap-Single-Direction-Thrust-Bearings/dp/B07G8QDQVM/ref=sr_1_6?crid=3UM1LOAX4JADQ&keywords=thrust+bearing&qid=1707732710&sprefix=thrust+bearing+%2Caps%2C288&sr=8-6)  
-
-
-## Wiring Diagram
-<p align="center">
-  <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/0bf09030-975e-4d3b-912b-8164f7dd585b" width="300" height="500" />
-</p>
 ## Required Libraries  
 pigpio library:  
 $sudo apt install pigpio 
@@ -124,7 +64,66 @@ $cd build
 
 $cmake ..
 $make  
-$./cocktail_machine 
+$./CocktailMachine 
+
+## Wiring Diagram
+<p align="center">
+  <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/0bf09030-975e-4d3b-912b-8164f7dd585b" width="500" height="400" />
+</p>
+
+## Mechanical Design
+<p align="center">
+  <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/21d57064-cbaa-4a1a-bdc2-5a37108a5809" width="400" height="500" />
+</p>
+
+- description of physical foot print 400x400x750mm footprint
+- materials used (MDF, PLA, steel tubing)
+- assembly (follow the assembly file in CAD directory)
+
+## GUI
+### Make Drink Screen
+### System Configuration Screen
+### System Status Screen
+
+
+## Software Design
+### Class Structure
+- OOP class structure
+- real time interupts
+- operational threads
+- how the code operates in their threads
+- flow of where the program execution is sent to
+- 
+### Real Time Components
+The real time components for this machine come from the input snesors that control the motors as well as saftey sensors to ensure nobody would be injured during operation by reaching into the machines workspace. All sensors must respond instantaneously as they ensure the machines accuracy, keep the machine from damageing itself, and keep users from being injured. For the saftey sensors a PIR motion sensor as well as a emergency stop button were used with the purpose of if someone were to enter the area that had parts moving, the machine would stop immediately to avoid injury.
+
+For the callibration sensor, a limit switch is used to zero the position of the carousel. This will guarantee that the carousel will reach the correct position and dispense the appropriate ingredient into the glass. Limit switches are also used for the riser platform that will dispense the ingredients. An upper and lower switch are installed to keep the riser motor from passing physical limits that could damage the cup or the rest of the machine.  
+
+All of these components work together in an event driven manner using interupts and callbacks to allow for precise readings of the GPIO pins. They're operations have also been broken up into threads which allow the different functions of the machine to operate in parallel in order not to block their operation. While the system waits for a user to input a drink order these threads sleep to conserve system and computational power. 
+
+# Testing/Results
+Each section of the system was tested individually to understand how the components worked on their own before incorporating them into the main operation. Each of these tests can be found in the UnitTests directory. By using the unit tests, small scale operations of threads and callbacks were able to be focused on thus making the final implementation of everything go alot smoother. This also reduced the amount of debugging that had to be completed once all the components were merged together. 
+
+- unit tests
+- what was tested
+- problems we ran into
+- how did we over come them
+
+## BOM
+2x Nema 17 Stepper Motors: [Stepper Motors](https://www.omc-stepperonline.com/e-series-nema-17-bipolar-42ncm-59-49oz-in-1-5a-42x42x38mm-4-wires-w-1m-cable-connector-17he15-1504s)  
+2x Motor Drivers: [Motor Drivers](https://www.amazon.co.uk/DRV8825-Stepper-Suitable-8-2V-45V-Printer/dp/B0CCRXGKLV/ref=asc_df_B0CCRXGKLV/?tag=googshopuk-21&linkCode=df0&hvadid=676281988980&hvpos=&hvnetw=g&hvrand=9779484524365892202&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9046941&hvtargid=pla-2199438568706&psc=1&mcid=84474ad0e18b36dd88e4615ffa743992&gad_source=1)  
+1x 3.5inch LCD Touch Screen: [Touch Screen](https://www.amazon.co.uk/OSOYOO-Monitor-Raspberry-480x320-Interface/dp/B085TC5YMR/ref=sr_1_2?crid=350DIB5BWBZKX&keywords=raspberry+pi+touch+screen&qid=1707564275&refinements=p_36%3A-2500&rnid=428432031&sprefix=raspberry+pi+touch+scre%2Caps%2C331&sr=8-2)  
+1x PIR Motion Sensor: [Motion Sensor](https://thepihut.com/products/pir-motion-sensor-module)  
+1x Light Gate Sensor: [Light Gate](https://uk.rs-online.com/web/p/photoelectric-sensors/8074251)  
+3x Limit Switches: [Limit Switch]()  
+
+6x Optic Despensers: [Optic Despensers](https://www.ascotwholesale.co.uk/25ml-black-solo-measure?gad_source=1&gclid=Cj0KCQiA2KitBhCIARIsAPPMEhI-lrBpNzira6xwn5WM-c0KxcxK5rm4lakar9NHSMJ1Z-R5aHvze0YaAg49EALw_wcB)  
+4x 700mmx12.7mm Square Tubing: [Square Tubing](https://www.metals4u.co.uk/materials/mild-steel/mild-steel-box-section/2371-p)  
+1x 700mmx8mm Round Tubing: [Round Tubing](https://www.metals4u.co.uk/materials/mild-steel/mild-steel-tube/tube/9135-p)  
+6x Velcro Straps: [Velcro](https://www.amazon.co.uk/VELCRO%C2%AE-Brand-ONE-WRAP%C2%AE-double-Strapping/dp/B0777LN5VP/ref=sr_1_28?keywords=velcro%2Bstraps&qid=1707687068&sr=8-28&th=1)  
+Ball Bearings: [Ball Bearings](https://www.amazon.co.uk/sourcingmap-Groove-Bearing-Double-Bearings/dp/B07FDYTJS5/ref=sr_1_9?crid=3U5Z2J0HP3Q6U&keywords=pack%2Broller%2Bbearing%2B8mm%2BID&qid=1707647883&sprefix=pack%2Broller%2Bbearing%2B8mm%2Bid%2Caps%2C95&sr=8-9&th=1)  
+Trust Bearings: [Thrust Bearings](https://www.amazon.co.uk/sourcingmap-Single-Direction-Thrust-Bearings/dp/B07G8QDQVM/ref=sr_1_6?crid=3UM1LOAX4JADQ&keywords=thrust+bearing&qid=1707732710&sprefix=thrust+bearing+%2Caps%2C288&sr=8-6)  
+
 
 # References
 [PIGPIO Library Documentation](https://abyz.me.uk/rpi/pigpio/)
