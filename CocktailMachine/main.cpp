@@ -73,8 +73,8 @@ int main()
 
 	gpioInitialise();
    	gpioSetMode(PIN, PI_INPUT); 
-   	gpioSetPullUpDown(PIN, PI_PUD_DOWN); 
-   	gpioSetISRFunc(PIN, RISING_EDGE, 0, inter->displayInterrupt);
+   	//gpioSetPullUpDown(PIN, PI_PUD_DOWN); 
+   	gpioSetISRFunc(PIN, FALLING_EDGE, 0, inter->displayInterrupt);
 	int i = 0;
    	while(1){
 		time_sleep(1);
