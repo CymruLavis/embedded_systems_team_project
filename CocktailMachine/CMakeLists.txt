@@ -25,6 +25,7 @@ set(PROJECT_SOURCES
         src/MotorClass.cpp
         src/LimitSwitchClass.cpp
         src/Interrupt.cpp
+        UnitTests/MotorButtonUnitTest.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

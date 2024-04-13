@@ -51,17 +51,17 @@ using namespace std;
 
 // }
 
-int main()
+int main(int argc, char *argv[])
 {
     //int argc, char *argv[]
-	// QApplication a(argc, argv);
+	QApplication a(argc, argv);
 	// QPixmap pixmap("../splash.png");
 	// pixmap = pixmap.scaled(480, 320, Qt::KeepAspectRatio);
 	// QSplashScreen *splash = new QSplashScreen;
 	// splash->setPixmap(pixmap);
 	// splash->show();
 
-    // MainWindow w;
+    MainWindow* w = new MainWindow();
 	// w.setWindowState(Qt::WindowFullScreen);
 
 	// QTimer::singleShot(2500, splash, SLOT(close()));
@@ -69,20 +69,20 @@ int main()
 
     // return a.exec();
 
-	Interrupt* inter = new Interrupt();
+	// Interrupt* inter = new Interrupt();
 
-	gpioInitialise();
-   	gpioSetMode(PIN, PI_INPUT); 
-   	//gpioSetPullUpDown(PIN, PI_PUD_DOWN); 
-   	gpioSetISRFunc(PIN, FALLING_EDGE, 0, inter->displayInterrupt);
-	int i = 0;
-   	while(1){
-		time_sleep(1);
-		cout << "\n hell0     " << i;
-		i = i+1;
-		cout << "\t"<< gpioRead(PIN) << endl;
-   	} 
-
+	// gpioInitialise();
+   	// gpioSetMode(PIN, PI_INPUT); 
+   	// //gpioSetPullUpDown(PIN, PI_PUD_DOWN); 
+   	// gpioSetISRFunc(PIN, FALLING_EDGE, 0, inter->displayInterrupt);
+	// int i = 0;
+   	// while(1){
+	// 	time_sleep(1);
+	// 	cout << "\n hell0     " << i;
+	// 	i = i+1;
+	// 	cout << "\t"<< gpioRead(PIN) << endl;
+   	// } 
+	w->CT6();
 	return 0;
 
 }

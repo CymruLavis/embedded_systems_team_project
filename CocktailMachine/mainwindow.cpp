@@ -5,6 +5,8 @@
 #include <algorithm>
 #include <QAbstractItemView>
 
+#include "UnitTests/MotorButtonUnitTest.h"
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -87,8 +89,10 @@ void MainWindow::CT5()
 void MainWindow::CT6()
 {
 
-    connect(ui->pushButton, SIGNAL(clicked()), this, NULL);
-    data->updateVolume("6");
+    //connect(ui->pushButton, SIGNAL(clicked()), this, NULL);
+    //data->updateVolume("6");
+    MotorButtonUnitTest* mbut = new MotorButtonUnitTest();
+    mbut->LogicTestExecutable("Cosmopolitan");
 
 }
 
