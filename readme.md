@@ -76,9 +76,7 @@ $./CocktailMachine
   <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/21d57064-cbaa-4a1a-bdc2-5a37108a5809" width="400" height="500" />
 </p>
 
-- description of physical foot print 400x400x750mm footprint
-- materials used (MDF, PLA, steel tubing)
-- assembly (follow the assembly file in CAD directory)
+The total foot print of this system is a 400mmx400mmx750mm structure made up by a majority of 3D printed compents. These prints accounted for the brackets that held the components in place, the motor gears, the corner brackets and the plates that encased the electronics. The main skeleton was atattched to 4x steel square tube uprights and the main carousel of the system was mounted to a steel round tube. The footing for the system is a thick piece of MDF that provided a wide stable base and was easy to attatch fasteners to. The assembly of this structure is easy to complete by following the assembly file in the CAD directory. 3M brass inserts are hot set into the PLA components to recieve all the fastener hardware. 
 
 ## GUI
 ### Make Drink Screen
@@ -104,10 +102,7 @@ All of these components work together in an event driven manner using interupts 
 # Testing/Results
 Each section of the system was tested individually to understand how the components worked on their own before incorporating them into the main operation. Each of these tests can be found in the UnitTests directory. By using the unit tests, small scale operations of threads and callbacks were able to be focused on thus making the final implementation of everything go alot smoother. This also reduced the amount of debugging that had to be completed once all the components were merged together. 
 
-- unit tests
-- what was tested
-- problems we ran into
-- how did we over come them
+The main unit tests included tests on the database, individual motors, integrating motors with input sensors, running the make drink logic with the motors and associated limit switches. These tests and even more tests of a smaller scale were completed to ensure proper functioning of the machine through every step of the process. Some issues that the team came across during the testing was the use of threads that were inadvertently blocking the main thread which went against the main goal of the project. These were overcome by (HOW DID WE OVER COME THIS) utilizing callback functions that were local in the main function rather then in a different class that was found to be the culprit of the main thread blocking.
 
 ## BOM
 2x Nema 17 Stepper Motors: [Stepper Motors](https://www.omc-stepperonline.com/e-series-nema-17-bipolar-42ncm-59-49oz-in-1-5a-42x42x38mm-4-wires-w-1m-cable-connector-17he15-1504s)  
