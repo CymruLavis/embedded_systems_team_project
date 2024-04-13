@@ -7,13 +7,15 @@
 #include <vector>
 #include <QSplashScreen>
 #include <QTimer>
+#include <stdio.h>
 
 #include "Include/Data.h"
 // #include "Include/SystemConfig.h"
 #include "Include/Motor.h"
 #include "Include/LimitSwitch.h"
+#include "Include/Interrupt.h"
 
-
+#define PIN 21
 // #include "UnitTests/LimitSwitchUnitTest.h"
 // #include "UnitTests/PIRUnitTest.h"
 //#include "UnitTests/DataBaseUnitTest.h"
@@ -49,25 +51,38 @@ using namespace std;
 
 // }
 
-int main(int argc, char *argv[])
+int main()
 {
-    
-	QApplication a(argc, argv);
-	QPixmap pixmap("../splash.png");
-	pixmap = pixmap.scaled(480, 320, Qt::KeepAspectRatio);
-	QSplashScreen *splash = new QSplashScreen;
-	splash->setPixmap(pixmap);
-	splash->show();
+    //int argc, char *argv[]
+	// QApplication a(argc, argv);
+	// QPixmap pixmap("../splash.png");
+	// pixmap = pixmap.scaled(480, 320, Qt::KeepAspectRatio);
+	// QSplashScreen *splash = new QSplashScreen;
+	// splash->setPixmap(pixmap);
+	// splash->show();
 
-	//a.processEvents();
+    // MainWindow w;
+	// w.setWindowState(Qt::WindowFullScreen);
 
-    MainWindow w;
-	//w.setWindowState(Qt::WindowFullScreen);
+	// QTimer::singleShot(2500, splash, SLOT(close()));
+	// QTimer::singleShot(2500, &w, SLOT(show()));
 
-	QTimer::singleShot(2500, splash, SLOT(close()));
-	QTimer::singleShot(2500, &w, SLOT(show()));
+    // return a.exec();
 
-    //w.show();
-	//splash.finish(&w);
-    return a.exec();
+	Interrupt* inter = new Interrupt();
+
+	gpioInitialise();
+   	gpioSetMode(PIN, PI_INPUT); 
+   	gpioSetPullUpDown(PIN, PI_PUD_DOWN); 
+   	gpioSetISRFunc(PIN, RISING_EDGE, 0, inter->displayInterrupt);
+	int i = 0;
+   	while(1){
+		time_sleep(1);
+		cout << "\n hell0     " << i;
+		i = i+1;
+		cout << "\t"<< gpioRead(PIN) << endl;
+   	} 
+
+	return 0;
+
 }
