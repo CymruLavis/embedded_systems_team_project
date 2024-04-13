@@ -24,6 +24,8 @@ set(PROJECT_SOURCES
         src/IngredientIndexClass.cpp 
         src/MotorClass.cpp
         src/LimitSwitchClass.cpp
+        UnitTests/MotorFinalUnitTest.cpp
+        UnitTests/MotorFinalUnitTest.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

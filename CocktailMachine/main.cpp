@@ -1,18 +1,12 @@
-#include "mainwindow.h"
 #include <iostream>
 #include <thread>
 #include <typeinfo>
-#include <QApplication>
 #include <pigpio.h>
 #include <vector>
-#include <QSplashScreen>
-#include <QTimer>
-
 #include "Include/Data.h"
 // #include "Include/SystemConfig.h"
 #include "Include/Motor.h"
-#include "Include/LimitSwitch.h"
-
+#include "UnitTests/MotorFinalUnitTest.h"
 
 // #include "UnitTests/LimitSwitchUnitTest.h"
 // #include "UnitTests/PIRUnitTest.h"
@@ -49,9 +43,13 @@ using namespace std;
 
 // }
 
-int main(int argc, char *argv[])
+int main()
 {
-    
+    /*
+	// main arguments:
+	int argc, char *argv[]
+
+	//-------------------------
 	QApplication a(argc, argv);
 	QPixmap pixmap("../splash.png");
 	pixmap = pixmap.scaled(480, 320, Qt::KeepAspectRatio);
@@ -69,5 +67,9 @@ int main(int argc, char *argv[])
 
     //w.show();
 	//splash.finish(&w);
-    return a.exec();
+    return a.exec(); */
+
+	LogicTestExecutable();
+	
+	return 0;
 }

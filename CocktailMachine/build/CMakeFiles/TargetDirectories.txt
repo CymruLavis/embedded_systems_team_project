@@ -1,0 +1,8 @@
+/home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir
+/home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/edit_cache.dir
+/home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/rebuild_cache.dir
+/home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/list_install_components.dir
+/home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/install.dir
+/home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/install/local.dir
+/home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/install/strip.dir
+/home/DARA/Desktop/EMBED_PROJ/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine_autogen.dir
