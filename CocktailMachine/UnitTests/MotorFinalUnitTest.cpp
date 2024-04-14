@@ -13,15 +13,15 @@
 
 using namespace std;
 
-int GPIO_LIMIT_SWITCH_TOP = 22;
-int GPIO_LIMIT_SWITCH_BOTTOM =17;
+int GPIO_LIMIT_SWITCH_TOP = 19; // physical 35
+int GPIO_LIMIT_SWITCH_BOTTOM =26; // physical 37
 
-int GPIO_ZERO_SWITCH = 11;
-int GPIO_LIGHTGATE = 10; 
-
-LimitSwitch* PIR_sensor = new LimitSwitch(16); //physical pin 37
-Motor* carousel_motor = new Motor(8,7,1,25, 2.25);  //GPIO 8, 7,1, 25 Physical pins 24,26,28,22
-Motor* riser_motor = new Motor(26,19,13,6,2.7);    //GPIO 18,23,24,15 Physical pins 12,16,18,10
+int GPIO_ZERO_SWITCH = 23; // 16 
+int GPIO_LIGHTGATE = 1;  // 28
+int GPIO_PIR = 22; // 15
+//dir, step, sleep, fault, step_angle
+Motor* carousel_motor = new Motor(21,20,16,12, 2.25);  // Physical pins 40,38,36,32
+Motor* riser_motor = new Motor(13,6,5,0,2.7);    // Physical pins 33, 31,29,27
 
 atomic<bool> system_running(true);
 atomic<bool> program_running(true);
