@@ -17,22 +17,22 @@ int LimitSwitch::getPin(){
 void LimitSwitch::setPin(int p){
 	this->pin = p;
 }
-int LimitSwitch::getState(){
-	return this->state;
-}
-void LimitSwitch::setState(int s){
-	this->state = s;
-}
-void LimitSwitch::changeState(){
-	int currentState = this->getState();
-	if(currentState == 0){
-		this->setState(1);
-	}
-	else{
-		this->setState(0);
-	}
+// int LimitSwitch::getState(){
+// 	return this->state;
+// }
+// void LimitSwitch::setState(int s){
+// 	this->state = s;
+// }
+// void LimitSwitch::changeState(){
+// 	int currentState = this->getState();
+// 	if(currentState == 0){
+// 		this->setState(1);
+// 	}
+// 	else{
+// 		this->setState(0);
+// 	}
 	
-}
+// }
 bool LimitSwitch::intialize() {
     if (gpioInitialise()< 0){
         std::cout<<"unable to intialize to pigpio.\n";
@@ -60,10 +60,8 @@ bool LimitSwitch::isSwitchOn(int index) {
 
 bool LimitSwitch::pirSensorThread() {
     
-    // Read the current state of the PIR sensor
-	this->setState(gpioRead(this->getPin()));
 	// If motion is detected, print a message
-	if (this->getState() == PI_HIGH) {
+	if (gpioRead(this->getPin()) == PI_HIGH) {
 		return true;
 	}
 	else

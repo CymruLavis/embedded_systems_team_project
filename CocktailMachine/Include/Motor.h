@@ -21,14 +21,14 @@ public:
     void setFaultPin(int pin);
     int getFaultPin();
 
-    void setDirState(int val);
-    int getDirState();
-    void setStepState(int val);
-    int getStepState();
-    void setSleepState(int val);
-    int getSleepState();
-    void setFaultState(int val);
-    int getFaultState();
+    // void setDirState(int val);
+    // int getDirState();
+    // void setStepState(int val);
+    // int getStepState();
+    // void setSleepState(int val);
+    // int getSleepState();
+    // void setFaultState(int val);
+    // int getFaultState();
 
     void setStepPerRev(int val);
     int getStepPerRev();
@@ -37,9 +37,9 @@ public:
 
     void initializePins(int dir, int step, int sleep, int fault);
 	void setMotorCharacteristics(double step_angle);
-    bool decideDirection(int steps);
+    // bool decideDirection(int steps);
     void changeDirection();
-    void step();
+    // void step();
 
     int getDistanceBetweenPositions(int currentPos, int desiredPos);
     double getDegreesToSpin(int distanceBetweenPositions);
@@ -57,11 +57,11 @@ public:
     int sleep_pin;
     int fault_pin;
 
-    // pin states
-    int dir_state;
-    int step_state;
-    int sleep_state;
-    int fault_state;
+    // // pin states
+    // int dir_state;
+    // int step_state;
+    // int sleep_state;
+    // int fault_state;
 
     // Motor Characteristics
     int step_per_rev;

@@ -49,30 +49,30 @@ int Motor::getFaultPin(){
     return this->fault_pin;
 }
 
-void Motor::setDirState(int val){
-    this->dir_state = val;
-}
-int Motor::getDirState(){
-    return this->dir_state;
-}
-void Motor::setStepState(int val){
-    this->step_state = val;
-}
-int Motor::getStepState(){
-    return this->step_state;
-}
-void Motor::setSleepState(int val){
-    this->sleep_state = val;
-}
-int Motor::getSleepState(){
-    return this->sleep_state;
-}
-void Motor::setFaultState(int val){
-    this->fault_state=val;
-}
-int Motor::getFaultState(){
-    return this->fault_state;
-}
+// void Motor::setDirState(int val){
+//     this->dir_state = val;
+// }
+// int Motor::getDirState(){
+//     return this->dir_state;
+// }
+// void Motor::setStepState(int val){
+//     this->step_state = val;
+// }
+// int Motor::getStepState(){
+//     return this->step_state;
+// }
+// void Motor::setSleepState(int val){
+//     this->sleep_state = val;
+// }
+// int Motor::getSleepState(){
+//     return this->sleep_state;
+// }
+// void Motor::setFaultState(int val){
+//     this->fault_state=val;
+// }
+// int Motor::getFaultState(){
+//     return this->fault_state;
+// }
 void Motor::setStepPerRev(int val){
     this->step_per_rev = val;
 }
@@ -92,29 +92,29 @@ void Motor::initializePins(int dir, int step, int sleep, int fault){
     gpioSetMode(fault, PI_OUTPUT);
 }
 
-void Motor::step(){
-    gpioWrite(this->getStepPin(), 1);
-    usleep(1000);
-    gpioWrite(this->getStepPin(), 0);
-    usleep(1000);
-}
+// void Motor::step(){
+//     gpioWrite(this->getStepPin(), 1);
+//     usleep(1000);
+//     gpioWrite(this->getStepPin(), 0);
+//     usleep(1000);
+// }
 
 void Motor::changeDirection(){
-    if (this->getDirState() == 1){
+    if (gpioRead(this->getDirPin()) == PI_HIGH){
         this->setDirPin(0);
     }
-    else if(this->getDirState() == 0){
+    else if(gpioRead(this->getDirPin()) == PI_LOW){
         this->setDirPin(1);
     }
 }
-bool Motor::decideDirection(int steps){
-	if(steps>=0){
-        return true;
-    }
-    else{
-        return false;
-    }
-}
+// bool Motor::decideDirection(int steps){
+// 	if(steps>=0){
+//         return true;
+//     }
+//     else{
+//         return false;
+//     }
+// }
 
 int Motor::getDistanceBetweenPositions(int currentPos, int desiredPos){
 
@@ -209,7 +209,8 @@ void Motor::VERT_MOVE(const int &upper_switch, const int &lower_switch) {
             }
 
         // GOING UP
-        gpioWrite(this->getDirPin(), PI_HIGH);
+        this->changeDirection();
+        // gpioWrite(this->getDirPin(), PI_HIGH);
         for (int i = 0; i < up_steps; ++i) {
             // Check for motor fault
             //if (gpioRead(FLT_pin) == PI_LOW) {
@@ -234,7 +235,8 @@ void Motor::VERT_MOVE(const int &upper_switch, const int &lower_switch) {
         std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(2500)));
 
         //GOING DOWN
-        gpioWrite(this->getDirPin(), PI_LOW);
+        this->changeDirection();
+        // gpioWrite(this->getDirPin(), PI_LOW);
         while(gpioRead(lower_switch) == PI_LOW){
             // Check for motor fault
             //if (gpioRead(FLT_pin) == PI_LOW) {
