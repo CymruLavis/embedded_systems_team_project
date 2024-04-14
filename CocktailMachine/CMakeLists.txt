@@ -26,6 +26,7 @@ set(PROJECT_SOURCES
         src/SystemConfig.cpp
         src/MotorClass.cpp
         src/LimitSwitchClass.cpp
+        UnitTests/PIRUnitTest.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
