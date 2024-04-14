@@ -1,7 +1,7 @@
 # SMART DRINKER COCKTAIL MACHINE PROJECT  
 <p align="center">
-  <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/ada58828-ce8b-49c5-b7a1-eae68de5f26a" width="500" height="500" />
-</p>
+  <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/566dd54f-d8e1-4490-a0ec-afe6613f25f0" width="500" height="500" />
+
 
 # University of Glasgow team members:
 Ethan Lavis  
@@ -11,35 +11,7 @@ Roykeane Syangu
 Instagram: https://www.instagram.com/smartdrinking_2024/
 
 # Introduction
-Do you love to drink but hate the work it takes to make a great cocktail? Do you struggle to know what drinks you can make with the ingredients you have available? Do you not have a live in bartender? Well, look no further as this machine is the answer to all your problems. The smart drinker cocktail machine has a database that has access to a wide variety of drink recipies and can be easily modified to add your own recipies. With the 3D print files available in the CAD folder, a spare raspberry pi and the BOM for all the components, you can have your own cocktail machine up and running in an afternoon. 
-
-The development team behind this creation wanted to focus on creating an event driven system that could be easily scaled to the users needs
-
-
-- what is it
-- why is it importatnt ie what problem has it solved
-- why is it worth your time to build this (you will have a robust cocktail machine)
-- what makes it unique (event driven programming which allows for smoother operation and class structure makes it easily scaleable)
-- 
-The objective of this project is to design and create an event driven, real time, cocktail machine that can successfully make the user a wide selection of drinks. 
-
-
-- project overview
-- what problem are we solving
-
-The problem: ​
-Not everyone is a trained bar tender​
-Don't have the time to make drinks​
-Don't have the recipes memorized​
-The solution:​
-Automated drink machine​
-Streamlines the drink making process​
-Organizes the ingredients​
-User friendly interface​
-Real Time Aspects:​
-Could add multiple triggers for the real time complexity (voice and UI)​
-The limit switches must stop the motor from spinning quickly so the correct bottle is over top of the glass​
-Computer vision to stop the motor that is lifting the glass when it reaches the top limit of the dispenser​  
+Do you love to drink but hate the work it takes to make a great cocktail? Do you struggle to know what drinks you can make with the ingredients you have available? Do you not have a live in bartender? Well, look no further as this machine is the answer to all your problems. The smart drinker cocktail machine has a database that has access to a wide variety of drink recipies and can be easily modified to add your own. With the 3D print files available in the CAD folder, a spare raspberry pi and the BOM for all the components, you can have your own cocktail machine up and running in an afternoon. The Smart Drinker is a 6 incredient dispensing machine that creates your favourite drinks in a matter of seconds. No longer will you have to google what drinks can be made with the ingredients available as the database of recipies will do that for you. No longer will you have to search for the recipies as the machine automatically mixes the perfect cocktail at the simple push of a button. If you choose to clone this repo and follow the CAD assembly then you will be left with a useful home appliance that can expand with your tastes.  
 
 # Design
 ## Required Libraries  
@@ -59,10 +31,9 @@ Install Qt
 $sudo apt install qtcreator qtbase5-dev qt5-qmake cmake  
 
 
-Make and run the project
+Make and run the project  
 $cd build
-
-$cmake ..
+$cmake ..  
 $make  
 $./CocktailMachine 
 
@@ -79,13 +50,32 @@ $./CocktailMachine
 The total foot print of this system is a 400mmx400mmx750mm structure made up by a majority of 3D printed compents. These prints accounted for the brackets that held the components in place, the motor gears, the corner brackets and the plates that encased the electronics. The main skeleton was atattched to 4x steel square tube uprights and the main carousel of the system was mounted to a steel round tube. The footing for the system is a thick piece of MDF that provided a wide stable base and was easy to attatch fasteners to. The assembly of this structure is easy to complete by following the assembly file in the CAD directory. 3M brass inserts are hot set into the PLA components to recieve all the fastener hardware. 
 
 ## GUI
+The user interface constist of 3 different screes that the user can interact with the system through. There is the "Make Drink", "System Configuration", and "System Status" screens
 ### Make Drink Screen
-### System Configuration Screen
-### System Status Screen
+<p align="center">
+  <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/07f87260-f916-4c8b-807b-b34b2cacbbdf" width="400" height="300" />
+</p>
 
+The "Make Drink" screen is the main menu where users can choose and preview a drink before sending the commands that will make the drink to the machine.  
+
+### System Configuration Screen
+<p align="center">
+  <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/d16c2eff-97fd-41bb-a6cb-02d87350cc7a" width="400" height="300" />
+</p>
+
+The "System Configuration" screen is where users can alter the ingredients that are loaded in the machine and which position the ingredients are loaded to in the physical machine. Once the addition has been made and the refill button has been pressed, the list of available drinks will adapt in the "Make Drink" screen will automatically update. The fill level of the ingredient will also be updated in the "System Status" screen.
+
+### System Status Screen
+<p align="center">
+  <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/1727c2dc-8ba4-42b4-a686-aa1a54876669" width="400" height="300" />
+</p>
+This screen is where the user can view the fill levels of each ingredient that is loaded into the machine. With this information the system can confirm the drink has enough of each incredient to make the requested drink.
 
 ## Software Design
 ### Class Structure
+The objects of the program were broken down into individual classes which made for easy reuse of code for like objects. This also allowed for easy abstraction of data and maintainabilty of the code. The objects have been created for each of the physical components as well as the backend databse 
+
+
 - OOP class structure
 - real time interupts
 - operational threads
