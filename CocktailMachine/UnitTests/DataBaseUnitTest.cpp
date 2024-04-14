@@ -3,7 +3,6 @@
 #include <vector>
 
 #include "../Include/Data.h"
-#include "../Include/SystemConfig.h"
 #include "../Include/Motor.h"
 #include "../Include/LimitSwitch.h"
 #include "DataBaseUnitTest.h"
@@ -40,7 +39,7 @@ void setIngredientPositions(Data *myData, SystemConfig *sys, vector<string> cons
 	for(auto& ing: *ingredients){
 		int temp_ingredient_idx = myData->ingredientToIndex(ing);
 		sys->updatePosition(index, temp_ingredient_idx);
-		cout << index << "\t" << temp_ingredient_idx << "\t" << ing << endl;
+		// cout << index << "\t" << temp_ingredient_idx << "\t" << ing << endl;
 		index ++;
 	}
 
@@ -56,7 +55,7 @@ void printSys(SystemConfig sys){
 	}
 }
 
-int DataBaseExecutable(){
+vector<int> DataBaseExecutable(){
     Data* myData = new Data();
 	SystemConfig* sys = new SystemConfig();
 	Motor* myMotor = new Motor(1,2,3,4, 1.8);
@@ -66,17 +65,14 @@ int DataBaseExecutable(){
 	vector<string> ing = myData->ingredient_indexes.ingredients;
 	vector<string> idx = myData->ingredient_indexes.indexes;
 
-	vector<string> system_ingredients = {"Vodka", "Gin", "Cointreau", "Cranberry Juice", "Mezcal", "Lime Juice"};
+	vector<string> system_ingredients = {"Vodka","Gin", "Cointreau", "Cranberry Juice", "Mezcal","Lime Juice"};
 	setIngredientPositions(myData, sys, &system_ingredients);
 
-	printSys(*sys);
+	// printSys(*sys);
 
 	string desired_drink = "Cosmopolitan";
 	vector<int> drink_queue = myData->getRecipe(desired_drink, *sys);
 
 	vector<int> step_queue = myMotor->getStepQueue(drink_queue);
-
-	printListOfInts(drink_queue);
-	printListOfInts(step_queue);
-	return 0;
+	return step_queue;
 }

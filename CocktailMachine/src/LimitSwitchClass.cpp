@@ -58,17 +58,16 @@ bool LimitSwitch::isSwitchOn(int index) {
 
 }
 
-void LimitSwitch::pirSensorThread() {
+bool LimitSwitch::pirSensorThread() {
     
     // Read the current state of the PIR sensor
 	this->setState(gpioRead(this->getPin()));
 	// If motion is detected, print a message
-	// if (this->getState() == PI_HIGH) {
-	// 	// std::cout << "Motion detected!" << std::endl;
-
-	// }
-	cout << this->getState() << endl;
-	// cout << "Running" << endl;
+	if (this->getState() == PI_HIGH) {
+		return true;
+	}
+	else
+		return false;
 	time_sleep(0.05);
 
 }

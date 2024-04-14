@@ -6,7 +6,6 @@
 #include <vector>
 
 #include "../Include/Data.h"
-#include "../Include/SystemConfig.h"
 #include "../Include/Motor.h"
 #include "../Include/LimitSwitch.h"
 
@@ -16,7 +15,7 @@ void printListOfInts(vector<int> list);
 void printColum(vector<vector<string>> list);
 void setIngredientPositions(Data *myData, SystemConfig *sys, vector<string> const *ingredients);
 void printSys(SystemConfig sys);
-int DataBaseExecutable();
+vector<int> DataBaseExecutable();
 
 
 #endif

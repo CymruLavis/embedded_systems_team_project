@@ -23,7 +23,7 @@ public:
 	void changeState();
 	bool intialize();
 	bool isSwitchOn(int index);
-	void pirSensorThread();
+	bool pirSensorThread();
 
 
 };

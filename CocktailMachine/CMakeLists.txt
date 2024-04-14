@@ -22,8 +22,6 @@ set(PROJECT_SOURCES
         mainwindow.ui
         src/DataClass.cpp 
         src/IngredientIndexClass.cpp 
-        src/IngredientClass.cpp
-        src/SystemConfig.cpp
         src/MotorClass.cpp
         src/LimitSwitchClass.cpp
         UnitTests/PIRUnitTest.cpp
