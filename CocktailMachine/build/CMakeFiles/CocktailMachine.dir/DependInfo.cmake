@@ -1,23 +1,39 @@
-
-# Consider dependencies only in project.
-set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
-
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CocktailMachine_autogen/mocs_compilation.cpp" "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o"
+  "/home/DARA/embedded_systems_team_project/CocktailMachine/UnitTests/PIRUnitTest.cpp" "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir/UnitTests/PIRUnitTest.cpp.o"
+  "/home/DARA/embedded_systems_team_project/CocktailMachine/main.cpp" "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir/main.cpp.o"
+  "/home/DARA/embedded_systems_team_project/CocktailMachine/mainwindow.cpp" "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o"
+  "/home/DARA/embedded_systems_team_project/CocktailMachine/src/DataClass.cpp" "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir/src/DataClass.cpp.o"
+  "/home/DARA/embedded_systems_team_project/CocktailMachine/src/IngredientIndexClass.cpp" "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir/src/IngredientIndexClass.cpp.o"
+  "/home/DARA/embedded_systems_team_project/CocktailMachine/src/LimitSwitchClass.cpp" "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir/src/LimitSwitchClass.cpp.o"
+  "/home/DARA/embedded_systems_team_project/CocktailMachine/src/MakeDrink.cpp" "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir/src/MakeDrink.cpp.o"
+  "/home/DARA/embedded_systems_team_project/CocktailMachine/src/MotorClass.cpp" "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir/src/MotorClass.cpp.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "QT_CORE_LIB"
+  "QT_GUI_LIB"
+  "QT_NO_DEBUG"
+  "QT_WIDGETS_LIB"
   )
 
-# The set of dependency files which are needed:
-set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/admin/Desktop/cocktail_machine/CocktailMachine/build/CocktailMachine_autogen/mocs_compilation.cpp" "CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o.d"
-  "/home/admin/Desktop/cocktail_machine/CocktailMachine/UnitTests/PIRUnitTest.cpp" "CMakeFiles/CocktailMachine.dir/UnitTests/PIRUnitTest.cpp.o" "gcc" "CMakeFiles/CocktailMachine.dir/UnitTests/PIRUnitTest.cpp.o.d"
-  "/home/admin/Desktop/cocktail_machine/CocktailMachine/main.cpp" "CMakeFiles/CocktailMachine.dir/main.cpp.o" "gcc" "CMakeFiles/CocktailMachine.dir/main.cpp.o.d"
-  "/home/admin/Desktop/cocktail_machine/CocktailMachine/mainwindow.cpp" "CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o" "gcc" "CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o.d"
-  "/home/admin/Desktop/cocktail_machine/CocktailMachine/src/DataClass.cpp" "CMakeFiles/CocktailMachine.dir/src/DataClass.cpp.o" "gcc" "CMakeFiles/CocktailMachine.dir/src/DataClass.cpp.o.d"
-  "/home/admin/Desktop/cocktail_machine/CocktailMachine/src/IngredientClass.cpp" "CMakeFiles/CocktailMachine.dir/src/IngredientClass.cpp.o" "gcc" "CMakeFiles/CocktailMachine.dir/src/IngredientClass.cpp.o.d"
-  "/home/admin/Desktop/cocktail_machine/CocktailMachine/src/IngredientIndexClass.cpp" "CMakeFiles/CocktailMachine.dir/src/IngredientIndexClass.cpp.o" "gcc" "CMakeFiles/CocktailMachine.dir/src/IngredientIndexClass.cpp.o.d"
-  "/home/admin/Desktop/cocktail_machine/CocktailMachine/src/LimitSwitchClass.cpp" "CMakeFiles/CocktailMachine.dir/src/LimitSwitchClass.cpp.o" "gcc" "CMakeFiles/CocktailMachine.dir/src/LimitSwitchClass.cpp.o.d"
-  "/home/admin/Desktop/cocktail_machine/CocktailMachine/src/MotorClass.cpp" "CMakeFiles/CocktailMachine.dir/src/MotorClass.cpp.o" "gcc" "CMakeFiles/CocktailMachine.dir/src/MotorClass.cpp.o.d"
-  "/home/admin/Desktop/cocktail_machine/CocktailMachine/src/SystemConfig.cpp" "CMakeFiles/CocktailMachine.dir/src/SystemConfig.cpp.o" "gcc" "CMakeFiles/CocktailMachine.dir/src/SystemConfig.cpp.o.d"
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "CocktailMachine_autogen/include"
+  "../include"
+  "../src"
+  "/usr/include/arm-linux-gnueabihf/qt5"
+  "/usr/include/arm-linux-gnueabihf/qt5/QtWidgets"
+  "/usr/include/arm-linux-gnueabihf/qt5/QtGui"
+  "/usr/include/arm-linux-gnueabihf/qt5/QtCore"
+  "/usr/lib/arm-linux-gnueabihf/qt5/mkspecs/linux-g++"
   )
 
 # Targets to which this target links.

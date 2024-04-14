@@ -4,6 +4,7 @@
 #include <vector>
 #include <algorithm>
 #include <QAbstractItemView>
+#include "../Include/MakeDrink.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -88,7 +89,10 @@ void MainWindow::CT6()
 {
 
     connect(ui->pushButton, SIGNAL(clicked()), this, NULL);
-    data->updateVolume("6");
+    //data->updateVolume("6");
+    string drinkName = (ui->comboBox->currentText()).toStdString();
+    mk->Make_a_drink_thread(drinkName);
+
 
 }
 

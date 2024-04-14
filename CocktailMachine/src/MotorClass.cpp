@@ -8,6 +8,7 @@
 #include <thread>
 #include <algorithm>
 #include <cmath>
+#include "../Include/Data.h"
 
 using namespace std;
 Motor::Motor(int dir, int step, int sleep, int fault, double step_size){
@@ -49,6 +50,7 @@ int Motor::getFaultPin(){
     return this->fault_pin;
 }
 
+
 // void Motor::setDirState(int val){
 //     this->dir_state = val;
 // }
@@ -73,6 +75,8 @@ int Motor::getFaultPin(){
 // int Motor::getFaultState(){
 //     return this->fault_state;
 // }
+
+
 void Motor::setStepPerRev(int val){
     this->step_per_rev = val;
 }
