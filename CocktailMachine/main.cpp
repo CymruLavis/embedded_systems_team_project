@@ -53,21 +53,22 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
+	gpioInitialise();
     //int argc, char *argv[]
 	QApplication a(argc, argv);
-	// QPixmap pixmap("../splash.png");
-	// pixmap = pixmap.scaled(480, 320, Qt::KeepAspectRatio);
-	// QSplashScreen *splash = new QSplashScreen;
-	// splash->setPixmap(pixmap);
-	// splash->show();
+	QPixmap pixmap("../splash.png");
+	pixmap = pixmap.scaled(480, 320, Qt::KeepAspectRatio);
+	QSplashScreen *splash = new QSplashScreen;
+	splash->setPixmap(pixmap);
+	splash->show();
 
-    MainWindow* w = new MainWindow();
-	// w.setWindowState(Qt::WindowFullScreen);
+    MainWindow w = new MainWindow();
+	w.setWindowState(Qt::WindowFullScreen);
 
-	// QTimer::singleShot(2500, splash, SLOT(close()));
-	// QTimer::singleShot(2500, &w, SLOT(show()));
+	QTimer::singleShot(2500, splash, SLOT(close()));
+	QTimer::singleShot(2500, &w, SLOT(show()));
 
-    // return a.exec();
+    return a.exec();
 
 	// Interrupt* inter = new Interrupt();
 
@@ -82,7 +83,5 @@ int main(int argc, char *argv[])
 	// 	i = i+1;
 	// 	cout << "\t"<< gpioRead(PIN) << endl;
    	// } 
-	w->CT6();
-	return 0;
 
 }
