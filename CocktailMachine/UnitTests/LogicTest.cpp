@@ -20,11 +20,11 @@ using namespace std;
 // As a way to clean up our GPIO assigment. We declare all our GPIO 
 
 
-int GPIO_LIMIT_SWITCH_TOP = 22;
-int GPIO_LIMIT_SWITCH_BOTTOM =17;
+int GPIO_LIMIT_SWITCH_TOP = 19; // physical 35
+int GPIO_LIMIT_SWITCH_BOTTOM =26; // physical 37
 
-int GPIO_ZERO_SWITCH = 11;
-int GPIO_LIGHTGATE = 10; 
+int GPIO_ZERO_SWITCH = 23; // 16 
+int GPIO_LIGHTGATE = 1;  // 28
 
 LimitSwitch* PIR_sensor = new LimitSwitch(16); //physical pin 37
 //LimitSwitch* upper_switch = new LimitSwitch(5); //TOP
@@ -108,6 +108,7 @@ void makeDrinkThread(vector<int>& step_queue){
 
 
 int LogicTestExecutable(){
+    /*
     vector<int> queues = DataBaseExecutable();
 
 
@@ -135,6 +136,19 @@ int LogicTestExecutable(){
     cin.get();
     program_running = false;
     myThread.join();
+    */
+    if (gpioInitialise() < 0) {
+        std::cerr << "pigpio initialization failed." << std::endl;
+        return 1;
+    }
+    while(1){
+ 
+        cout << "Bottom Limit Switch: " << gpioRead(GPIO_LIMIT_SWITCH_BOTTOM) << endl;
+        cout << "Upper Limit Switch: " << gpioRead(GPIO_LIMIT_SWITCH_TOP) << endl;
+        cout << "Calibration Switch: " << gpioRead(GPIO_ZERO_SWITCH) << endl;
+        cout << "Light Gate:" << gpioRead(GPIO_LIGHTGATE) << endl;
+        std::this_thread::sleep_for(std::chrono::seconds(static_cast<int>(1)));
+
 
     gpioTerminate();
 

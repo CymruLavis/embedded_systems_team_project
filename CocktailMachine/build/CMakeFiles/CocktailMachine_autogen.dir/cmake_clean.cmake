@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/CocktailMachine_autogen"
-  "CocktailMachine_autogen/include/ui_mainwindow.h"
   "CocktailMachine_autogen/mocs_compilation.cpp"
 )
 

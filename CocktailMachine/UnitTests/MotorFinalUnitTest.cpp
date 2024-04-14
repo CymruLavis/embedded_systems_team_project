@@ -63,6 +63,7 @@ void makeDrinkThread(vector<int> queues){
 
 
 int LogicTestExecutable(){
+
     vector<int> queues = {0, 1, 2, 3, 4};
 
     if (gpioInitialise() < 0) {
@@ -79,7 +80,7 @@ int LogicTestExecutable(){
     gpioTerminate();
 
     // terminate saftey thread (PIR and saftey switch)
-    return 0;
+   return 0;
 }
 
 
@@ -91,3 +92,27 @@ int LogicTestExecutable(){
 
 // - threads must be joined back to their parent thread when they finish so utilize memory in the most effective way
 // - this whole process will happen for every itteration of the drink ingredient queue
+
+/*
+    if (gpioInitialise() < 0) {
+        std::cerr << "pigpio initialization failed." << std::endl;
+        return 1;
+    }
+
+    gpioSetMode(GPIO_LIMIT_SWITCH_BOTTOM, PI_INPUT);
+    gpioSetMode(GPIO_LIMIT_SWITCH_TOP, PI_INPUT);
+    gpioSetMode(GPIO_ZERO_SWITCH, PI_INPUT);
+    gpioSetMode(GPIO_LIGHTGATE, PI_INPUT);
+    int i = 0;
+    while(1){
+        cout << "Bottom Limit Switch: " << gpioRead(GPIO_LIMIT_SWITCH_BOTTOM) << endl;
+        cout << "Upper Limit Switch: " << gpioRead(GPIO_LIMIT_SWITCH_TOP) << endl;
+        cout << "Calibration Switch: " << gpioRead(GPIO_ZERO_SWITCH) << endl;
+        cout << "Light Gate:" << gpioRead(GPIO_LIGHTGATE) << endl;
+        cout << "\n ITERATION:: " << i << endl;
+        i = i+1;
+        std::this_thread::sleep_for(std::chrono::seconds(static_cast<int>(1)));
+
+    }
+
+*/
