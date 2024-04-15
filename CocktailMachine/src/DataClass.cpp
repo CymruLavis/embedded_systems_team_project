@@ -315,3 +315,34 @@ int Data::updateVolume(string bottle_position){
 	return 0;
 
 }
+
+
+bool Data::dataValidation(string drinkName) {
+    //  get the recipe for the drink
+    vector<int> recipe = getRecipe(drinkName);
+
+    // Check if each ingredient's fill level is enough for the recipe
+    for (int requiredIngredientIndex : recipe) {
+        bool ingredientFound = false;
+        int fillLevel = 0;
+
+        // Find the required ingredient in the  csv fill file and compare the quantity
+        for (const auto& row : this->fill_data) {
+            if (stoi(row[1]) == requiredIngredientIndex) {
+                ingredientFound = true;
+                fillLevel = stoi(row[2]);
+                break;
+            }
+        }
+
+        // If the fill level is less that ingredient return false
+        if ( fillLevel < ingredientFound) {
+            return false;
+        }
+    }
+
+    return true; 
+}
+
+
+
