@@ -1,3 +1,7 @@
+The following is the origtional work of the contributers for ENG5220 Real Time Embedded Programming at the Univeristy of Glasgow.  
+
+
+
 # SMART DRINKER COCKTAIL MACHINE PROJECT  
 <p align="center">
   <img src="https://github.com/CymruLavis/embedded_systems_team_project/assets/117460546/566dd54f-d8e1-4490-a0ec-afe6613f25f0" width="500" height="500" />
@@ -73,15 +77,11 @@ This screen is where the user can view the fill levels of each ingredient that i
 
 ## Software Design
 ### Class Structure
-The objects of the program were broken down into individual classes which made for easy reuse of code for like objects. This also allowed for easy abstraction of data and maintainabilty of the code. The objects have been created for each of the physical components as well as the backend databse 
+The objects of the program were broken down into individual classes which made for easy reuse of code for like objects. This also allowed for easy abstraction of data and maintainabilty of the code. The objects have been created for each of the physical motors as well as the backend databse.
 
+### Real Time Operations
+To allow for real time operation of the system, the program completes tasks in threads. This allows for functions to be completed in parallel and not block one another. Once the program is run the GUI, motor operations, and saftey switches are launched in separate threads from the main. The threads are put to sleep until they are needed to save on conputational resources and will be awoken with a callback function from an event.  
 
-- OOP class structure
-- real time interupts
-- operational threads
-- how the code operates in their threads
-- flow of where the program execution is sent to
-- 
 ### Real Time Components
 The real time components for this machine come from the input snesors that control the motors as well as saftey sensors to ensure nobody would be injured during operation by reaching into the machines workspace. All sensors must respond instantaneously as they ensure the machines accuracy, keep the machine from damageing itself, and keep users from being injured. For the saftey sensors a PIR motion sensor as well as a emergency stop button were used with the purpose of if someone were to enter the area that had parts moving, the machine would stop immediately to avoid injury.
 
@@ -111,7 +111,12 @@ Trust Bearings: [Thrust Bearings](https://www.amazon.co.uk/sourcingmap-Single-Di
 
 
 # References
-[PIGPIO Library Documentation](https://abyz.me.uk/rpi/pigpio/)
-
-- links to documentation
-
+[PIGPIO Library Documentation](https://abyz.me.uk/rpi/pigpio/)  
+[QT5 Documentation](https://doc.qt.io/qt-5/classes.html)  
+[Cmake Documentation](https://cmake.org/cmake/help/v2.8.0/cmake.html)  
+[Realtime Coding Material - Bernd Porr](https://github.com/berndporr/realtime_cpp_coding)  
+[Touch Screen Datasheet](https://osoyoo.com/2022/12/15/osoyoo-3-5-inch-spi-touch-display-for-rpi/)  
+[DRV8825 Motor Driver Datasheet](https://www.ti.com/lit/ds/symlink/drv8825.pdf)  
+[Lightgate Datasheet](https://omronfs.omron.com/en_US/ecb/products/pdf/en-ee_sx3009_p1_4009_p1.pdf)  
+[PIR Datasheet](https://www.mpja.com/download/31227sc.pdf)  
+[Stepper Motor Datasheet](https://www.omc-stepperonline.com/3-pcs-e-series-nema-17-bipolar-42ncm-59-49oz-in-1-5a-42x42x38mm-4-wires-w-1m-cable-connector-3-17he15-1504s)  
