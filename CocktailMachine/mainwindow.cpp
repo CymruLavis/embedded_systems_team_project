@@ -75,7 +75,7 @@ void MainWindow::CT4()
         ui->textBrowser->setText(QString::fromStdString(data->getDrinkDescription(ui->comboBox->currentText().toStdString())));
     }
 
-}
+};
 
 void MainWindow::CT5()
 {
@@ -84,7 +84,7 @@ void MainWindow::CT5()
     string ing = (ui->comboBox_3->currentText()).toStdString();
     data->append_CSV(pose, ing);
     
-}
+};
 
 void MainWindow::CT6()
 {
@@ -95,7 +95,7 @@ void MainWindow::CT6()
     Make_a_drink(drinkName);
     ui->page->repaint();
 
-}
+};
 
 QStringList MainWindow::ConvertList(vector<string> list)
 {
@@ -114,4 +114,4 @@ void MainWindow::SetPBarValue()
     ui->progressBar_4->setValue(stoi(data->fill_data[3][2]));
     ui->progressBar_5->setValue(stoi(data->fill_data[4][2]));
     ui->progressBar_6->setValue(stoi(data->fill_data[5][2]));
-}
+};
