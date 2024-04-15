@@ -54,6 +54,40 @@ vector
 string
 -
 
+/home/DARA/embedded_systems_team_project/CocktailMachine/build/CocktailMachine_autogen/EWIEGA46WW/moc_mainwindow.cpp
+memory
+-
+../../../mainwindow.h
+/home/DARA/embedded_systems_team_project/CocktailMachine/mainwindow.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/DARA/embedded_systems_team_project/CocktailMachine/build/CocktailMachine_autogen/mocs_compilation.cpp
+EWIEGA46WW/moc_mainwindow.cpp
+/home/DARA/embedded_systems_team_project/CocktailMachine/build/CocktailMachine_autogen/EWIEGA46WW/moc_mainwindow.cpp
+
+/home/DARA/embedded_systems_team_project/CocktailMachine/main.cpp
+mainwindow.h
+/home/DARA/embedded_systems_team_project/CocktailMachine/mainwindow.h
+iostream
+-
+thread
+-
+typeinfo
+-
+QApplication
+-
+pigpio.h
+-
+vector
+-
+QSplashScreen
+-
+QTimer
+-
+
 /home/DARA/embedded_systems_team_project/CocktailMachine/mainwindow.cpp
 mainwindow.h
 /home/DARA/embedded_systems_team_project/CocktailMachine/mainwindow.h
@@ -77,6 +111,10 @@ vector
 -
 Include/Data.h
 /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Data.h
+
+/usr/include/arm-linux-gnueabihf/qt5/QtCore/QTimer
+qtimer.h
+/usr/include/arm-linux-gnueabihf/qt5/QtCore/qtimer.h
 
 /usr/include/arm-linux-gnueabihf/qt5/QtCore/QVariant
 qvariant.h
@@ -132,6 +170,12 @@ QtCore/qatomic_bootstrap.h
 QtCore/qatomic_cxx11.h
 -
 QtCore/qatomic_msvc.h
+-
+
+/usr/include/arm-linux-gnueabihf/qt5/QtCore/qbasictimer.h
+QtCore/qglobal.h
+-
+QtCore/qnamespace.h
 -
 
 /usr/include/arm-linux-gnueabihf/qt5/QtCore/qbytearray.h
@@ -742,6 +786,16 @@ QtCore/qscopedpointer.h
 stdio.h
 -
 
+/usr/include/arm-linux-gnueabihf/qt5/QtCore/qtimer.h
+QtCore/qglobal.h
+-
+QtCore/qbasictimer.h
+-
+QtCore/qobject.h
+-
+chrono
+-
+
 /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtypeinfo.h
 QtCore/qglobal.h
 -
@@ -1272,6 +1326,10 @@ qprogressbar.h
 qpushbutton.h
 /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qpushbutton.h
 
+/usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QSplashScreen
+qsplashscreen.h
+/usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qsplashscreen.h
+
 /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QStackedWidget
 qstackedwidget.h
 /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qstackedwidget.h
@@ -1466,6 +1524,14 @@ QtCore/qalgorithms.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qabstractslider.h
+-
+
+/usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qsplashscreen.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtGui/qpixmap.h
+-
+QtWidgets/qwidget.h
 -
 
 /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qstackedwidget.h

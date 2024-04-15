@@ -116,8 +116,6 @@ CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o
 CMakeFiles/CocktailMachine.dir/main.cpp.o
  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Data.h
  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Indexes.h
- /home/DARA/embedded_systems_team_project/CocktailMachine/Include/LimitSwitch.h
- /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Motor.h
  /home/DARA/embedded_systems_team_project/CocktailMachine/main.cpp
  /home/DARA/embedded_systems_team_project/CocktailMachine/mainwindow.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/QTimer

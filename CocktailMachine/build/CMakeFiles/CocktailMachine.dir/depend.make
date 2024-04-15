@@ -115,8 +115,6 @@ CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o: /
 
 CMakeFiles/CocktailMachine.dir/main.cpp.o: ../Include/Data.h
 CMakeFiles/CocktailMachine.dir/main.cpp.o: ../Include/Indexes.h
-CMakeFiles/CocktailMachine.dir/main.cpp.o: ../Include/LimitSwitch.h
-CMakeFiles/CocktailMachine.dir/main.cpp.o: ../Include/Motor.h
 CMakeFiles/CocktailMachine.dir/main.cpp.o: ../main.cpp
 CMakeFiles/CocktailMachine.dir/main.cpp.o: ../mainwindow.h
 CMakeFiles/CocktailMachine.dir/main.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QTimer
