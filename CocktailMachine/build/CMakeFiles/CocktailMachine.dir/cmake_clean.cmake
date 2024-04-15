@@ -3,7 +3,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/CocktailMachine_autogen.dir/ParseCache.txt"
   "CocktailMachine_autogen"
   "CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o"
-  "CMakeFiles/CocktailMachine.dir/UnitTests/PIRUnitTest.cpp.o"
   "CMakeFiles/CocktailMachine.dir/main.cpp.o"
   "CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o"
   "CMakeFiles/CocktailMachine.dir/src/DataClass.cpp.o"

@@ -136,11 +136,6 @@
 			"GEFNOUJTFM/moc_MakeDrink.cpp"
 		],
 		[
-			"/home/DARA/embedded_systems_team_project/CocktailMachine/UnitTests/PIRUnitTest.h",
-			"MU",
-			"PK7EQ5YQ7P/moc_PIRUnitTest.cpp"
-		],
-		[
 			"/home/DARA/embedded_systems_team_project/CocktailMachine/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp"
@@ -198,10 +193,6 @@
 	"SETTINGS_FILE" : "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[
-			"/home/DARA/embedded_systems_team_project/CocktailMachine/UnitTests/PIRUnitTest.cpp",
-			"MU"
-		],
 		[
 			"/home/DARA/embedded_systems_team_project/CocktailMachine/main.cpp",
 			"MU"

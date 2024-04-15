@@ -228,33 +228,6 @@ CocktailMachine_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CocktailMachine.dir/build.make CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.s
 .PHONY : CocktailMachine_autogen/mocs_compilation.cpp.s
 
-UnitTests/PIRUnitTest.o: UnitTests/PIRUnitTest.cpp.o
-
-.PHONY : UnitTests/PIRUnitTest.o
-
-# target to build an object file
-UnitTests/PIRUnitTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CocktailMachine.dir/build.make CMakeFiles/CocktailMachine.dir/UnitTests/PIRUnitTest.cpp.o
-.PHONY : UnitTests/PIRUnitTest.cpp.o
-
-UnitTests/PIRUnitTest.i: UnitTests/PIRUnitTest.cpp.i
-
-.PHONY : UnitTests/PIRUnitTest.i
-
-# target to preprocess a source file
-UnitTests/PIRUnitTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CocktailMachine.dir/build.make CMakeFiles/CocktailMachine.dir/UnitTests/PIRUnitTest.cpp.i
-.PHONY : UnitTests/PIRUnitTest.cpp.i
-
-UnitTests/PIRUnitTest.s: UnitTests/PIRUnitTest.cpp.s
-
-.PHONY : UnitTests/PIRUnitTest.s
-
-# target to generate assembly for a file
-UnitTests/PIRUnitTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CocktailMachine.dir/build.make CMakeFiles/CocktailMachine.dir/UnitTests/PIRUnitTest.cpp.s
-.PHONY : UnitTests/PIRUnitTest.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -461,9 +434,6 @@ help:
 	@echo "... CocktailMachine_autogen/mocs_compilation.o"
 	@echo "... CocktailMachine_autogen/mocs_compilation.i"
 	@echo "... CocktailMachine_autogen/mocs_compilation.s"
-	@echo "... UnitTests/PIRUnitTest.o"
-	@echo "... UnitTests/PIRUnitTest.i"
-	@echo "... UnitTests/PIRUnitTest.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

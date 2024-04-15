@@ -3,9 +3,6 @@
 
 CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o: ../Include/Data.h
 CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o: ../Include/Indexes.h
-CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o: ../Include/LimitSwitch.h
-CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o: ../Include/MakeDrink.h
-CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o: ../Include/Motor.h
 CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o: CocktailMachine_autogen/EWIEGA46WW/moc_mainwindow.cpp
 CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o: CocktailMachine_autogen/mocs_compilation.cpp
 CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o: ../mainwindow.h
@@ -116,14 +113,9 @@ CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o: /
 CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qtwidgetsglobal.h
 CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qwidget.h
 
-CMakeFiles/CocktailMachine.dir/UnitTests/PIRUnitTest.cpp.o: ../Include/LimitSwitch.h
-CMakeFiles/CocktailMachine.dir/UnitTests/PIRUnitTest.cpp.o: ../UnitTests/PIRUnitTest.cpp
-CMakeFiles/CocktailMachine.dir/UnitTests/PIRUnitTest.cpp.o: ../UnitTests/PIRUnitTest.h
-
 CMakeFiles/CocktailMachine.dir/main.cpp.o: ../Include/Data.h
 CMakeFiles/CocktailMachine.dir/main.cpp.o: ../Include/Indexes.h
 CMakeFiles/CocktailMachine.dir/main.cpp.o: ../Include/LimitSwitch.h
-CMakeFiles/CocktailMachine.dir/main.cpp.o: ../Include/MakeDrink.h
 CMakeFiles/CocktailMachine.dir/main.cpp.o: ../Include/Motor.h
 CMakeFiles/CocktailMachine.dir/main.cpp.o: ../main.cpp
 CMakeFiles/CocktailMachine.dir/main.cpp.o: ../mainwindow.h
@@ -251,7 +243,6 @@ CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o: ../Include/MakeDrink.h
 CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o: ../Include/Motor.h
 CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o: ../Include/Data.h
 CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o: ../Include/Indexes.h
-CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o: ../Include/MakeDrink.h
 CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o: ../mainwindow.cpp
 CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o: ../mainwindow.h
 CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QVariant

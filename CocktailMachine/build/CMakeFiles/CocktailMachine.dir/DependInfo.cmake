@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CocktailMachine_autogen/mocs_compilation.cpp" "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o"
-  "/home/DARA/embedded_systems_team_project/CocktailMachine/UnitTests/PIRUnitTest.cpp" "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir/UnitTests/PIRUnitTest.cpp.o"
   "/home/DARA/embedded_systems_team_project/CocktailMachine/main.cpp" "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir/main.cpp.o"
   "/home/DARA/embedded_systems_team_project/CocktailMachine/mainwindow.cpp" "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o"
   "/home/DARA/embedded_systems_team_project/CocktailMachine/src/DataClass.cpp" "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir/src/DataClass.cpp.o"

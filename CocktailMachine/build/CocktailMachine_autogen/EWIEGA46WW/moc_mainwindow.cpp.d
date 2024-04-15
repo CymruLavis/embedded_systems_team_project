@@ -2,9 +2,6 @@
   /home/DARA/embedded_systems_team_project/CocktailMachine/build/CocktailMachine_autogen/moc_predefs.h \
   /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Data.h \
   /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Indexes.h \
-  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/LimitSwitch.h \
-  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/MakeDrink.h \
-  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Motor.h \
   /usr/include/arm-linux-gnueabihf/asm/errno.h \
   /usr/include/arm-linux-gnueabihf/bits/cpu-set.h \
   /usr/include/arm-linux-gnueabihf/bits/endian.h \
@@ -311,7 +308,6 @@
   /usr/include/features.h \
   /usr/include/linux/errno.h \
   /usr/include/locale.h \
-  /usr/include/pigpio.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \

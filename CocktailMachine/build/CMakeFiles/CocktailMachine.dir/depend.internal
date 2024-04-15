@@ -4,9 +4,6 @@
 CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o
  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Data.h
  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Indexes.h
- /home/DARA/embedded_systems_team_project/CocktailMachine/Include/LimitSwitch.h
- /home/DARA/embedded_systems_team_project/CocktailMachine/Include/MakeDrink.h
- /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Motor.h
  /home/DARA/embedded_systems_team_project/CocktailMachine/build/CocktailMachine_autogen/EWIEGA46WW/moc_mainwindow.cpp
  /home/DARA/embedded_systems_team_project/CocktailMachine/build/CocktailMachine_autogen/mocs_compilation.cpp
  /home/DARA/embedded_systems_team_project/CocktailMachine/mainwindow.h
@@ -116,15 +113,10 @@ CMakeFiles/CocktailMachine.dir/CocktailMachine_autogen/mocs_compilation.cpp.o
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qtwidgets-config.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qtwidgetsglobal.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qwidget.h
-CMakeFiles/CocktailMachine.dir/UnitTests/PIRUnitTest.cpp.o
- /home/DARA/embedded_systems_team_project/CocktailMachine/Include/LimitSwitch.h
- /home/DARA/embedded_systems_team_project/CocktailMachine/UnitTests/PIRUnitTest.cpp
- /home/DARA/embedded_systems_team_project/CocktailMachine/UnitTests/PIRUnitTest.h
 CMakeFiles/CocktailMachine.dir/main.cpp.o
  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Data.h
  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Indexes.h
  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/LimitSwitch.h
- /home/DARA/embedded_systems_team_project/CocktailMachine/Include/MakeDrink.h
  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Motor.h
  /home/DARA/embedded_systems_team_project/CocktailMachine/main.cpp
  /home/DARA/embedded_systems_team_project/CocktailMachine/mainwindow.h
@@ -252,7 +244,6 @@ CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o
  ../Include/Motor.h
  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Data.h
  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Indexes.h
- /home/DARA/embedded_systems_team_project/CocktailMachine/Include/MakeDrink.h
  /home/DARA/embedded_systems_team_project/CocktailMachine/mainwindow.cpp
  /home/DARA/embedded_systems_team_project/CocktailMachine/mainwindow.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/QVariant
