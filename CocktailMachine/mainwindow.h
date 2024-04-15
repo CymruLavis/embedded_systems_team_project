@@ -4,7 +4,6 @@
 #include <QMainWindow>
 #include <vector>
 #include "Include/Data.h"
-#include "Include/MakeDrink.h"
 using namespace std;
 
 QT_BEGIN_NAMESPACE
@@ -21,7 +20,6 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     Data* data = new Data();
-    MakeDrink* mk = new MakeDrink();
 
 private:
     Ui::MainWindow *ui;

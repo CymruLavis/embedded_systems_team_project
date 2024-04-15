@@ -213,8 +213,8 @@ void Motor::VERT_MOVE(const int &upper_switch, const int &lower_switch) {
             }
 
         // GOING UP
-        this->changeDirection();
-        // gpioWrite(this->getDirPin(), PI_HIGH);
+        //this->changeDirection();
+        gpioWrite(this->getDirPin(), PI_HIGH);
         for (int i = 0; i < up_steps; ++i) {
             // Check for motor fault
             //if (gpioRead(FLT_pin) == PI_LOW) {
@@ -239,8 +239,8 @@ void Motor::VERT_MOVE(const int &upper_switch, const int &lower_switch) {
         std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(2500)));
 
         //GOING DOWN
-        this->changeDirection();
-        // gpioWrite(this->getDirPin(), PI_LOW);
+        //this->changeDirection();
+        gpioWrite(this->getDirPin(), PI_LOW);
         while(gpioRead(lower_switch) == PI_LOW){
             // Check for motor fault
             //if (gpioRead(FLT_pin) == PI_LOW) {

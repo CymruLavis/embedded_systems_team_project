@@ -25,7 +25,6 @@ set(PROJECT_SOURCES
         src/IngredientIndexClass.cpp 
         src/MotorClass.cpp
         src/LimitSwitchClass.cpp
-        UnitTests/PIRUnitTest.cpp
         Include/MakeDrink.h
         src/MakeDrink.cpp
 )

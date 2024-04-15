@@ -83,6 +83,7 @@ void MainWindow::CT5()
     string pose = (ui->comboBox_2->currentText()).toStdString();
     string ing = (ui->comboBox_3->currentText()).toStdString();
     data->append_CSV(pose, ing);
+    
 }
 
 void MainWindow::CT6()
@@ -91,8 +92,8 @@ void MainWindow::CT6()
     connect(ui->pushButton, SIGNAL(clicked()), this, NULL);
     //data->updateVolume("6");
     string drinkName = (ui->comboBox->currentText()).toStdString();
-    mk->Make_a_drink_thread(drinkName);
-
+    Make_a_drink(drinkName);
+    ui->page->repaint();
 
 }
 

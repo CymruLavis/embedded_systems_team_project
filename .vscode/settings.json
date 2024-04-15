@@ -54,7 +54,16 @@
         "typeinfo": "cpp",
         "bitset": "cpp",
         "forward_list": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "chrono": "cpp",
+        "condition_variable": "cpp",
+        "map": "cpp",
+        "optional": "cpp",
+        "mutex": "cpp",
+        "ranges": "cpp",
+        "cinttypes": "cpp",
+        "variant": "cpp"
     },
-    "cmake.configureOnOpen": false
+    "cmake.configureOnOpen": true,
+    "cmake.sourceDirectory": "/home/DARA/embedded_systems_team_project/CocktailMachine"
 }
