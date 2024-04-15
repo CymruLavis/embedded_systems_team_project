@@ -236,7 +236,6 @@ CMakeFiles/CocktailMachine.dir/main.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/
 CMakeFiles/CocktailMachine.dir/main.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qtwidgetsglobal.h
 CMakeFiles/CocktailMachine.dir/main.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qwidget.h
 
-CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o: ../Include/LimitSwitch.h
 CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o: ../Include/MakeDrink.h
 CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o: ../Include/Motor.h
 CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o: ../Include/Data.h
@@ -411,14 +410,12 @@ CMakeFiles/CocktailMachine.dir/src/IngredientIndexClass.cpp.o: ../src/Ingredient
 
 CMakeFiles/CocktailMachine.dir/src/MakeDrink.cpp.o: ../Include/Data.h
 CMakeFiles/CocktailMachine.dir/src/MakeDrink.cpp.o: ../Include/Indexes.h
-CMakeFiles/CocktailMachine.dir/src/MakeDrink.cpp.o: ../Include/LimitSwitch.h
 CMakeFiles/CocktailMachine.dir/src/MakeDrink.cpp.o: ../Include/MakeDrink.h
 CMakeFiles/CocktailMachine.dir/src/MakeDrink.cpp.o: ../Include/Motor.h
 CMakeFiles/CocktailMachine.dir/src/MakeDrink.cpp.o: ../src/MakeDrink.cpp
 
 CMakeFiles/CocktailMachine.dir/src/MotorClass.cpp.o: ../Include/Data.h
 CMakeFiles/CocktailMachine.dir/src/MotorClass.cpp.o: ../Include/Indexes.h
-CMakeFiles/CocktailMachine.dir/src/MotorClass.cpp.o: ../Include/LimitSwitch.h
 CMakeFiles/CocktailMachine.dir/src/MotorClass.cpp.o: ../Include/Motor.h
 CMakeFiles/CocktailMachine.dir/src/MotorClass.cpp.o: ../src/MotorClass.cpp
 

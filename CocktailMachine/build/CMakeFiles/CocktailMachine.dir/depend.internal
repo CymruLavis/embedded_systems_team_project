@@ -237,7 +237,6 @@ CMakeFiles/CocktailMachine.dir/main.cpp.o
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qtwidgetsglobal.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qwidget.h
 CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o
- ../Include/LimitSwitch.h
  ../Include/MakeDrink.h
  ../Include/Motor.h
  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Data.h
@@ -412,13 +411,11 @@ CMakeFiles/CocktailMachine.dir/src/IngredientIndexClass.cpp.o
 CMakeFiles/CocktailMachine.dir/src/MakeDrink.cpp.o
  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Data.h
  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Indexes.h
- /home/DARA/embedded_systems_team_project/CocktailMachine/Include/LimitSwitch.h
  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/MakeDrink.h
  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Motor.h
  /home/DARA/embedded_systems_team_project/CocktailMachine/src/MakeDrink.cpp
 CMakeFiles/CocktailMachine.dir/src/MotorClass.cpp.o
  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Data.h
  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Indexes.h
- /home/DARA/embedded_systems_team_project/CocktailMachine/Include/LimitSwitch.h
  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Motor.h
  /home/DARA/embedded_systems_team_project/CocktailMachine/src/MotorClass.cpp

@@ -64,9 +64,11 @@ void Make_a_drink_thread(string DrinkName){
     for (int i = 0; i < Drink_steps.size(); i++) {
         cout << "MOVING TO POSITION:"<< Drink_Positions[i] << endl;
         cout << "MOVING TO POSITION:"<< Drink_steps[i] << endl;
+
         if (Drink_steps[i] < 0){
             clockwise = false;
         }
+        
         carousel_motor->motor_go(clockwise, abs(Drink_steps[i]), GPIO_LIGHTGATE);
         riser_motor->VERT_MOVE(GPIO_LIMIT_SWITCH_TOP, GPIO_LIMIT_SWITCH_BOTTOM); 
         myData->updateVolume(to_string(Drink_Positions[i]+1));
