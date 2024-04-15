@@ -24,7 +24,6 @@ set(PROJECT_SOURCES
         src/DataClass.cpp 
         src/IngredientIndexClass.cpp 
         src/MotorClass.cpp
-        src/LimitSwitchClass.cpp
         Include/MakeDrink.h
         src/MakeDrink.cpp
 )

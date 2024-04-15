@@ -9,7 +9,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/DARA/embedded_systems_team_project/CocktailMachine/mainwindow.cpp" "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o"
   "/home/DARA/embedded_systems_team_project/CocktailMachine/src/DataClass.cpp" "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir/src/DataClass.cpp.o"
   "/home/DARA/embedded_systems_team_project/CocktailMachine/src/IngredientIndexClass.cpp" "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir/src/IngredientIndexClass.cpp.o"
-  "/home/DARA/embedded_systems_team_project/CocktailMachine/src/LimitSwitchClass.cpp" "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir/src/LimitSwitchClass.cpp.o"
   "/home/DARA/embedded_systems_team_project/CocktailMachine/src/MakeDrink.cpp" "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir/src/MakeDrink.cpp.o"
   "/home/DARA/embedded_systems_team_project/CocktailMachine/src/MotorClass.cpp" "/home/DARA/embedded_systems_team_project/CocktailMachine/build/CMakeFiles/CocktailMachine.dir/src/MotorClass.cpp.o"
   )

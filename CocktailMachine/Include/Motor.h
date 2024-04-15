@@ -10,28 +10,29 @@ using namespace std;
 
 class Motor{
 public:
-    Motor(int dir, int step, int sleep, int fault);
-
+    Motor(int dir, int step, int sleep, int fault, int enable);
+   
     void setDirPin(int pin);
     int getDirPin();
+
     void setStepPin(int pin);
     int getStepPin();
+
     void setSleepPin(int pin);
     int getSleepPin();
+
     void setFaultPin(int pin);
     int getFaultPin();
-    /*
-    void setStepPerRev(int val);
-    int getStepPerRev();
-    void setStepAngle(double val);
-    double getStepAngle();*/
 
-    void initializePins(int dir, int step, int sleep, int fault);
+    void setEnPin(int pin);
+    int getEnPin();
 
+    void initializePins(int dir, int step, int sleep, int fault, int enable);
 
-    int getDistanceBetweenPositions(int currentPos, int desiredPos);
-    double getDegreesToSpin(int distanceBetweenPositions);
-    int getStepsToRotoate(double degreesToSpin);
+    void Enable_Motors();
+    void Disable_Motors();
+    void IsFaulty();
+
     vector<int> getStepQueue(vector<int> positionQueue);
     vector<double> calculateTimeIntervals(int steps, double t_end);    
     void VERT_MOVE(const int &upper_switch, const int &lower_switch);
@@ -43,6 +44,7 @@ public:
     int step_pin;
     int sleep_pin;
     int fault_pin;
+    int enable_pin;
 
     // // pin states
     // int dir_state;
@@ -51,10 +53,10 @@ public:
     // int fault_state;
 
     // Motor Characteristics
-    int step_per_rev;
-    double step_angle;
-    int clockwise = 1;
-    int counterClockwise = 0;
+    //int step_per_rev;
+    //double step_angle;
+    //int clockwise = 1;
+    //int counterClockwise = 0;
 };
 
 #endif

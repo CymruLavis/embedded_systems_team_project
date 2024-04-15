@@ -7,7 +7,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/CocktailMachine.dir/mainwindow.cpp.o"
   "CMakeFiles/CocktailMachine.dir/src/DataClass.cpp.o"
   "CMakeFiles/CocktailMachine.dir/src/IngredientIndexClass.cpp.o"
-  "CMakeFiles/CocktailMachine.dir/src/LimitSwitchClass.cpp.o"
   "CMakeFiles/CocktailMachine.dir/src/MakeDrink.cpp.o"
   "CMakeFiles/CocktailMachine.dir/src/MotorClass.cpp.o"
   "CocktailMachine"

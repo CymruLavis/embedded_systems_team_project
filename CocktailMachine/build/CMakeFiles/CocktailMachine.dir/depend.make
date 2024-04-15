@@ -409,9 +409,6 @@ CMakeFiles/CocktailMachine.dir/src/DataClass.cpp.o: ../src/DataClass.cpp
 CMakeFiles/CocktailMachine.dir/src/IngredientIndexClass.cpp.o: ../Include/Indexes.h
 CMakeFiles/CocktailMachine.dir/src/IngredientIndexClass.cpp.o: ../src/IngredientIndexClass.cpp
 
-CMakeFiles/CocktailMachine.dir/src/LimitSwitchClass.cpp.o: ../Include/LimitSwitch.h
-CMakeFiles/CocktailMachine.dir/src/LimitSwitchClass.cpp.o: ../src/LimitSwitchClass.cpp
-
 CMakeFiles/CocktailMachine.dir/src/MakeDrink.cpp.o: ../Include/Data.h
 CMakeFiles/CocktailMachine.dir/src/MakeDrink.cpp.o: ../Include/Indexes.h
 CMakeFiles/CocktailMachine.dir/src/MakeDrink.cpp.o: ../Include/LimitSwitch.h

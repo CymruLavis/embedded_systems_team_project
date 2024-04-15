@@ -336,33 +336,6 @@ src/IngredientIndexClass.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CocktailMachine.dir/build.make CMakeFiles/CocktailMachine.dir/src/IngredientIndexClass.cpp.s
 .PHONY : src/IngredientIndexClass.cpp.s
 
-src/LimitSwitchClass.o: src/LimitSwitchClass.cpp.o
-
-.PHONY : src/LimitSwitchClass.o
-
-# target to build an object file
-src/LimitSwitchClass.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CocktailMachine.dir/build.make CMakeFiles/CocktailMachine.dir/src/LimitSwitchClass.cpp.o
-.PHONY : src/LimitSwitchClass.cpp.o
-
-src/LimitSwitchClass.i: src/LimitSwitchClass.cpp.i
-
-.PHONY : src/LimitSwitchClass.i
-
-# target to preprocess a source file
-src/LimitSwitchClass.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CocktailMachine.dir/build.make CMakeFiles/CocktailMachine.dir/src/LimitSwitchClass.cpp.i
-.PHONY : src/LimitSwitchClass.cpp.i
-
-src/LimitSwitchClass.s: src/LimitSwitchClass.cpp.s
-
-.PHONY : src/LimitSwitchClass.s
-
-# target to generate assembly for a file
-src/LimitSwitchClass.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CocktailMachine.dir/build.make CMakeFiles/CocktailMachine.dir/src/LimitSwitchClass.cpp.s
-.PHONY : src/LimitSwitchClass.cpp.s
-
 src/MakeDrink.o: src/MakeDrink.cpp.o
 
 .PHONY : src/MakeDrink.o
@@ -446,9 +419,6 @@ help:
 	@echo "... src/IngredientIndexClass.o"
 	@echo "... src/IngredientIndexClass.i"
 	@echo "... src/IngredientIndexClass.s"
-	@echo "... src/LimitSwitchClass.o"
-	@echo "... src/LimitSwitchClass.i"
-	@echo "... src/LimitSwitchClass.s"
 	@echo "... src/MakeDrink.o"
 	@echo "... src/MakeDrink.i"
 	@echo "... src/MakeDrink.s"

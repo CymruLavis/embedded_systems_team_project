@@ -40,12 +40,6 @@ pigpio.h
 vector
 -
 
-/home/DARA/embedded_systems_team_project/CocktailMachine/Include/MakeDrink.h
-string
--
-../Include/Motor.h
-/home/DARA/embedded_systems_team_project/CocktailMachine/Include/Motor.h
-
 /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Motor.h
 iostream
 -
@@ -54,29 +48,25 @@ vector
 LimitSwitch.h
 /home/DARA/embedded_systems_team_project/CocktailMachine/Include/LimitSwitch.h
 
-/home/DARA/embedded_systems_team_project/CocktailMachine/src/MakeDrink.cpp
-../Include/MakeDrink.h
-/home/DARA/embedded_systems_team_project/CocktailMachine/Include/MakeDrink.h
+/home/DARA/embedded_systems_team_project/CocktailMachine/src/MotorClass.cpp
+../Include/Motor.h
+/home/DARA/embedded_systems_team_project/CocktailMachine/Include/Motor.h
 pigpio.h
+-
+pigpiod_if2.h
 -
 iostream
 -
 unistd.h
 -
-cstdlib
--
-cmath
--
-algorithm
+vector
 -
 thread
 -
-atomic
+algorithm
 -
-vector
+cmath
 -
 ../Include/Data.h
 /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Data.h
-pthread.h
--
 

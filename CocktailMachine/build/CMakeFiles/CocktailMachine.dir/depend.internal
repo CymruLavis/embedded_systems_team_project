@@ -409,9 +409,6 @@ CMakeFiles/CocktailMachine.dir/src/DataClass.cpp.o
 CMakeFiles/CocktailMachine.dir/src/IngredientIndexClass.cpp.o
  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Indexes.h
  /home/DARA/embedded_systems_team_project/CocktailMachine/src/IngredientIndexClass.cpp
-CMakeFiles/CocktailMachine.dir/src/LimitSwitchClass.cpp.o
- /home/DARA/embedded_systems_team_project/CocktailMachine/Include/LimitSwitch.h
- /home/DARA/embedded_systems_team_project/CocktailMachine/src/LimitSwitchClass.cpp
 CMakeFiles/CocktailMachine.dir/src/MakeDrink.cpp.o
  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Data.h
  /home/DARA/embedded_systems_team_project/CocktailMachine/Include/Indexes.h
