@@ -10,7 +10,7 @@ using namespace std;
 
 class Motor{
 public:
-    Motor(int dir, int step, int sleep, int fault, double step_angle);
+    Motor(int dir, int step, int sleep, int fault);
 
     void setDirPin(int pin);
     int getDirPin();
@@ -20,31 +20,18 @@ public:
     int getSleepPin();
     void setFaultPin(int pin);
     int getFaultPin();
-
-    // void setDirState(int val);
-    // int getDirState();
-    // void setStepState(int val);
-    // int getStepState();
-    // void setSleepState(int val);
-    // int getSleepState();
-    // void setFaultState(int val);
-    // int getFaultState();
-
+    /*
     void setStepPerRev(int val);
     int getStepPerRev();
     void setStepAngle(double val);
-    double getStepAngle();
+    double getStepAngle();*/
 
     void initializePins(int dir, int step, int sleep, int fault);
-	void setMotorCharacteristics(double step_angle);
-    // bool decideDirection(int steps);
-    void changeDirection();
-    // void step();
+
 
     int getDistanceBetweenPositions(int currentPos, int desiredPos);
     double getDegreesToSpin(int distanceBetweenPositions);
     int getStepsToRotoate(double degreesToSpin);
-
     vector<int> getStepQueue(vector<int> positionQueue);
     vector<double> calculateTimeIntervals(int steps, double t_end);    
     void VERT_MOVE(const int &upper_switch, const int &lower_switch);

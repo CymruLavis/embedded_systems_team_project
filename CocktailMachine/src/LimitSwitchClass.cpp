@@ -17,22 +17,7 @@ int LimitSwitch::getPin(){
 void LimitSwitch::setPin(int p){
 	this->pin = p;
 }
-// int LimitSwitch::getState(){
-// 	return this->state;
-// }
-// void LimitSwitch::setState(int s){
-// 	this->state = s;
-// }
-// void LimitSwitch::changeState(){
-// 	int currentState = this->getState();
-// 	if(currentState == 0){
-// 		this->setState(1);
-// 	}
-// 	else{
-// 		this->setState(0);
-// 	}
-	
-// }
+
 bool LimitSwitch::intialize() {
     if (gpioInitialise()< 0){
         std::cout<<"unable to intialize to pigpio.\n";
@@ -43,8 +28,6 @@ bool LimitSwitch::intialize() {
 	}
     return true;
 }
-
-//initializes the gpio pin
 
 //checks if the switchs is on 
 bool LimitSwitch::isSwitchOn(int index) {

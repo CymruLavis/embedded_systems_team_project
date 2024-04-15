@@ -11,8 +11,6 @@
 #include <vector>
 #include "../Include/Data.h"
 #include <pthread.h>
-//#include "../Include/Interrupt.h"
-
 
 using namespace std;
 
@@ -28,14 +26,9 @@ volatile bool inting = 0;
 thread myThread;
 
 LimitSwitch* PIR_sensor = new LimitSwitch(GPIO_PIR);
-
-Motor* carousel_motor = new Motor(21,20,16,12, 2.25);  // Physical pins 40,38,36,32
-Motor* riser_motor = new Motor(13,6,5,0,2.7);    // Physical pins 33, 31,29,27
-
-//Interrupt* inter = new Interrupt();
-
-// atomic<bool> system_running(true);
-//atomic<bool> program_running(true);
+                                    //Direction, Step, Sleep, Fault, Step_size
+Motor* carousel_motor = new Motor(21,20,16,12);  // Physical pins 40,38,36,32
+Motor* riser_motor = new Motor(13,6,5,0);    // Physical pins 33, 31,29,27
 
 void initializePins(){
     carousel_motor->initializePins(carousel_motor->getDirPin(),
@@ -74,37 +67,14 @@ void Make_a_drink_thread(string DrinkName){
     
 }
 
-// int MakeDrink::Make_a_drink(string DrinkName){
-
-//     if (gpioInitialise() < 0) {
-//         std::cerr << "pigpio initialization failed." << std::endl;
-//         return 1;
-//     }
-
-//     this->initializePins();
-//     // sets up the PIR safety which kills the below thread
-//     //gpioSetAlertFunc(PIR_sensor->getPin(), safteyCallback);
-
-//     // instantiates a thread, calls makedrink
-//     thread myThread(&MakeDrink::Make_a_drink_thread, ref(DrinkName));
-//     myThread.join();
-//     gpioTerminate();
-
-//     return 0;
-// }
-
 void displayInterrupt(int gpio, int edge, uint32_t tick)
 {
     if(inting == 0){
         cout << "Interrupted" << endl;
-
-        //gpioWrite(15, PI_HIGH); //gpio of vertical motor enable
-        //gpioWrite(18, PI_HIGH); //gpio of carousel motor enable
-
+        cout << "Motor pin turned off." << endl;
+        gpioWrite(15, PI_HIGH); //gpio of vertical motor enable
+        gpioWrite(18, PI_HIGH); //gpio of carousel motor enable
         //std::this_thread::sleep_for(std::chrono::seconds(10));
-
-        std::cout << "Motor pin turned off." << std::endl;
-        //inting = 1;
 
         pthread_cancel(myThread.native_handle());
 
@@ -119,22 +89,22 @@ int Make_a_drink(string DrinkName){
         std::cerr << "pigpio initialization failed." << std::endl;
         return 1;
     }
-
+    // low latency safety sensor
     gpioSetMode(GPIO_PIR, PI_INPUT); 
    	gpioSetPullUpDown(GPIO_PIR, PI_PUD_DOWN); 
+
+    // safety sensor interacts with the enable pins of the motor
+    // When set high it emergency stops the system.
     gpioSetMode(GPIO_VERT_ENABLE, PI_OUTPUT); 
     gpioSetMode(GPIO_CAR_ENABLE, PI_OUTPUT); 
 
     gpioWrite(GPIO_VERT_ENABLE, PI_LOW); //gpio of vertical motor enable
     gpioWrite(GPIO_CAR_ENABLE, PI_LOW); //gpio of carousel motor enable 
 
+    // sets up the interrupt in the PIR pin.
    	gpioSetISRFunc(GPIO_PIR, RISING_EDGE, 0, displayInterrupt);
 
-    //MakeDrink::initializePins();
-    // sets up the PIR safety which kills the below thread
-    // gpioSetAlertFunc(PIR_sensor->getPin(), safteyCallback);
-
-    // instantiates a thread, calls makedrink
+    // instantiates the make a drink thread as an independent thread 
     myThread = thread(Make_a_drink_thread, ref(DrinkName));
 
     myThread.join();
