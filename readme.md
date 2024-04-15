@@ -111,13 +111,12 @@ Trust Bearings: [Thrust Bearings](https://www.amazon.co.uk/sourcingmap-Single-Di
 
 
 # References
-[PIGPIO Library Documentation](https://abyz.me.uk/rpi/pigpio/)
-[Touch Screen Datasheet](https://osoyoo.com/2022/12/15/osoyoo-3-5-inch-spi-touch-display-for-rpi/)
-[DRV8825 Motor Driver Datasheet](https://www.ti.com/lit/ds/symlink/drv8825.pdf)
-[Lightgate Datasheet](https://omronfs.omron.com/en_US/ecb/products/pdf/en-ee_sx3009_p1_4009_p1.pdf)
-[PIR Datasheet](https://www.mpja.com/download/31227sc.pdf)
-[Stepper Motor Datasheet](https://www.omc-stepperonline.com/3-pcs-e-series-nema-17-bipolar-42ncm-59-49oz-in-1-5a-42x42x38mm-4-wires-w-1m-cable-connector-3-17he15-1504s)
-
-
-- links to documentation
-
+[PIGPIO Library Documentation](https://abyz.me.uk/rpi/pigpio/)  
+[QT5 Documentation](https://doc.qt.io/qt-5/classes.html)  
+[Cmake Documentation](https://cmake.org/cmake/help/v2.8.0/cmake.html)  
+[Realtime Coding Material - Bernd Porr](https://github.com/berndporr/realtime_cpp_coding)  
+[Touch Screen Datasheet](https://osoyoo.com/2022/12/15/osoyoo-3-5-inch-spi-touch-display-for-rpi/)  
+[DRV8825 Motor Driver Datasheet](https://www.ti.com/lit/ds/symlink/drv8825.pdf)  
+[Lightgate Datasheet](https://omronfs.omron.com/en_US/ecb/products/pdf/en-ee_sx3009_p1_4009_p1.pdf)  
+[PIR Datasheet](https://www.mpja.com/download/31227sc.pdf)  
+[Stepper Motor Datasheet](https://www.omc-stepperonline.com/3-pcs-e-series-nema-17-bipolar-42ncm-59-49oz-in-1-5a-42x42x38mm-4-wires-w-1m-cable-connector-3-17he15-1504s)  
